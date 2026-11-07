@@ -1,0 +1,1504 @@
+# Dictionnaire chinois -> francais pour XGIMI (Parametres + GlobalConfig)
+# Format : texte chinois<TAB>traduction. \n = retour a la ligne. %s, %1$s, @ = valeurs variables.
+取消	Annuler
+新版本安装完成	Nouvelle version installée
+更新失败	Échec de la mise à jour
+稍后再说	Plus tard
+立即重启	Redémarrer
+重试	Réessayer
+重启设备完成更新	Redémarrez pour terminer la mise à jour
+关于本机	À propos
+入网号	N° d'homologation
+请先关闭%1$s自适应后再重试	Désactivez d'abord l'adaptation %1$s, puis réessayez
+自适应增强	Amélioration adaptative
+根据环境光自动调整画面亮度，并且可以自定义色彩显示等增强功能	Ajuste la luminosité selon la lumière ambiante, avec réglages de couleur personnalisables
+根据环境光自动调整画面亮度和对比度	Ajuste luminosité et contraste selon la lumière ambiante
+提供更广的亮度与色彩调整范围以适应强光环境	Plage de luminosité et couleur élargie pour les pièces très éclairées
+根据偏好选择亮度自适应时画面显示调整的范围	Choisir la plage d'ajustement de la luminosité adaptative
+自适应设置	Réglages adaptatifs
+正在加载中...	Chargement…
+历史版本	Versions précédentes
+AI画质图像模式下不支持基础设置	Réglages de base indisponibles en mode image IA
+AI画质图像模式下不支持专业设置	Réglages pro indisponibles en mode image IA
+开机画面自动定位	Positionnement auto de l'image au démarrage
+进风温度	Température d'entrée d'air
+侧投梯形校正状态下进入3D模式，梯形校正效果将消失且暂时无法自动校正	En mode 3D avec projection de biais, la correction trapézoïdale sera perdue et la correction auto indisponible
+推荐正投画面后进入3D模式	Projetez de face avant d'activer la 3D
+环境	Ambiance
+环境光	Lumière ambiante
+亮度	Luminosité
+请关闭“亮度调节-亮度自适应”后重试	Désactivez « Luminosité – Luminosité adaptative » puis réessayez
+请关闭%1$s自适应后重试	Désactivez l'adaptation %1$s puis réessayez
+氛围音箱	Enceinte d'ambiance
+氛围音箱设置	Réglages enceinte d'ambiance
+Android版本	Version Android
+辅助安装	Installation assistée
+热点类型	Type de point d'accès
+系统设置	Paramètres système
+调整画面	Ajuster l'image
+内测尝鲜	Bêta privée
+软件公测	Bêta publique
+自动梯形功能校准	Calibrer le trapèze auto
+校正功能校准	Calibrer la correction
+自动对焦	Mise au point auto
+动态光圈下，亮度不可调节	Luminosité non réglable avec l'iris dynamique
+梯形校正校准	Calibrer la correction trapézoïdale
+正投画面至墙面，并保持设备水平放置	Projetez de face sur le mur, appareil à plat
+将投影仪放置在距墙面/幕布1.8–2.1米的水平桌面上	Placez le projecteur sur une table à 1,8–2,1 m du mur/de l'écran
+校准越精确，画面校正效果越佳	Plus la calibration est précise, meilleure est la correction
+若自动梯形校正后画面不是矩形，请使用梯形校准	Si l'image n'est pas rectangulaire après correction auto, utilisez la calibration trapézoïdale
+自动梯形校正	Correction trapézoïdale auto
+仅当自动梯形校正效果不方正时使用	À utiliser seulement si la correction auto n'est pas carrée
+移轴幕布对齐	Alignement écran par lens shift
+一键画面校正	Correction d'image en un clic
+自动画面调整	Ajustement auto de l'image
+请关闭%1$s自适应再使用3D设置	Désactivez l'adaptation %1$s avant les réglages 3D
+自动	Auto
+自动垂直翻转	Retournement vertical auto
+已开启自动翻转投影方式，可在设置中取消自动翻转	Retournement auto activé, désactivable dans les paramètres
+根据设备放置方向，自动转换为正装或吊装模式	Bascule auto en mode table ou plafond selon l'orientation
+智能动态调焦	Mise au point dynamique intelligente
+设备出现偶然虚焦时，系统将自动调整画面至清晰	En cas de flou passager, l'image est refocalisée automatiquement
+自动画面调整增强	Ajustement auto de l'image amélioré
+1分钟	1 minute
+10分钟	10 minutes
+15分钟	15 minutes
+30分钟	30 minutes
+5分钟	5 minutes
+永不	Jamais
+无信号自动关机	Extinction auto sans signal
+开启后将自动下载更新，并提示您安装最新的系统	Télécharge les mises à jour automatiquement et propose de les installer
+辅助幕布对齐	Alignement écran assisté
+调整后 按	Après réglage, appuyez sur
+开始对齐	Lancer l'alignement
+移动投影仪，使投影画面四边超出幕布边框	Déplacez le projecteur pour que l'image dépasse les bords de l'écran
+已安装幕布时，自动调整投影画面对齐幕布边框	Avec un écran installé, aligne l'image sur ses bords automatiquement
+返回	Retour
+后台更新	Mise à jour en arrière-plan
+开关打开时，识别到HDR Vivid等特定的图像模式片源，将自动切换至对应的图像模式	Activé : bascule auto vers le mode image adapté (HDR Vivid, etc.)
+取消配对	Annuler l'appairage
+“%1$s”请求蓝牙配对	« %1$s » demande un appairage Bluetooth
+配对	Appairer
+蓝灯温度	Température laser bleu
+音频共享	Partage audio
+音频共享功能仅支持声音输出为“自动”时使用	Partage audio disponible seulement avec sortie son « Auto »
+清除后将不保留有关该设备的所有数据	Toutes les données de cet appareil seront supprimées
+清除配对?	Supprimer l'appairage ?
+请确认以下配对码显示在“%1$s”上	Vérifiez que ce code s'affiche sur « %1$s »
+已连接	Connecté
+未连接	Non connecté
+已断开	Déconnecté
+开启时，可被发现为“%s”	Activé : visible sous le nom « %s »
+清除配对	Supprimer l'appairage
+清除	Supprimer
+清除后，无法使用遥控器控制此投影设备，可长按 和 重新配对	Sans appairage, la télécommande ne fonctionnera plus ; maintenez les touches pour réappairer
+清除无线HDMI同屏器配对？	Supprimer l'appairage de l'émetteur HDMI sans fil ?
+清除“极米智能光子幕布”配对后，可在”设置-蓝牙”中重新发起配对	Réappairage possible dans « Paramètres – Bluetooth »
+重新配对需要长按同屏器按钮	Réappairer : maintenez le bouton de l'émetteur
+清除配对后，需要重新进行配对	Il faudra appairer à nouveau
+清除“极米便携蓝牙音箱”配对后，可在”设置-蓝牙”中重新发起配对	Réappairage possible dans « Paramètres – Bluetooth »
+清除极米遥控器配对?	Supprimer l'appairage de la télécommande XGIMI ?
+清除遥控器配对?	Supprimer l'appairage de la télécommande ?
+清除开关面板配对?	Supprimer l'appairage de l'interrupteur ?
+连接	Connecter
+断开连接	Déconnecter
+请在该设备上输入以下配对码，然后按回车键	Saisissez ce code sur l'appareil puis appuyez sur Entrée
+开启时，可被发现为“XGIMI小鹏定制版投影仪”	Activé : visible sous le nom « Projecteur XGIMI édition Xpeng »
+无线同屏器	Émetteur sans fil
+来自： %1$s \n 要与此设备配对吗？	De : %1$s\nAppairer avec cet appareil ?
+调整幕布高度	Régler la hauteur de l'écran
+蓝牙	Bluetooth
+型号号码	Numéro de modèle
+幕布动画	Animation de l'écran
+开启后，开机幕布降落时显示动画	Animation lors de la descente de l'écran au démarrage
+序列号	Numéro de série
+极米智能光子幕布	Écran intelligent XGIMI
+版本更新	Mise à jour
+版本	Version
+最多支持3台唤醒设备同时连接，如需添加更多，请关闭其中1台设备的蓝牙	3 appareils de réveil max. ; coupez le Bluetooth de l'un pour en ajouter
+在手机上打开蓝牙，连接 “ %s ”	Activez le Bluetooth du téléphone et connectez « %s »
+添加唤醒设备	Ajouter un appareil de réveil
+快速唤醒	Réveil rapide
+唤醒设备在附近时，可通过蓝牙、投屏或说“你好极米”，唤醒投影仪	Appareil proche : réveil via Bluetooth, cast ou « Bonjour XGIMI »
+电池电量	Batterie
+极米便携蓝牙音箱	Enceinte Bluetooth XGIMI
+我的设备	Mes appareils
+其他	Autres
+快捷键	Raccourcis
+可配置【快捷键】，快速前往指定功能	Configurez des raccourcis vers vos fonctions préférées
+正在充电	En charge
+极米遥控器	Télécommande XGIMI
+遥控器	Télécommande
+添加更多设备	Ajouter d'autres appareils
+当前设备可被发现为“%s”，可将蓝牙或 Wi-Fi设备添加至我的设备	Visible sous le nom « %s » ; ajoutez des appareils Bluetooth ou Wi-Fi
+可用设备	Appareils disponibles
+开关面板	Interrupteur mural
+关屏并退出	Éteindre l'écran et quitter
+降低亮度以获得更鲜艳的色彩，退出过程中将保持屏幕关闭一段时间，完成后将自动亮屏	Baisse la luminosité pour des couleurs plus vives ; l'écran reste éteint un moment puis se rallume
+再按一次 @ 可退出 Boost 档	Appuyez encore sur @ pour quitter le mode Boost
+再按一次左键可退出 Boost 档	Appuyez encore à gauche pour quitter le mode Boost
+退出“Boost 档位”以获得更鲜艳的色彩？	Quitter le mode Boost pour des couleurs plus vives ?
+关屏并切换	Éteindre l'écran et basculer
+切换过程将保持屏幕关闭一段时间，完成后自动亮屏	L'écran reste éteint un moment puis se rallume
+Boost 亮度档位下不支持色彩空间	Espace couleur indisponible en mode Boost
+请退出 Boost 亮度档位后重试	Quittez le mode Boost puis réessayez
+3D设置下不支持切换 Boost 亮度档位	Mode Boost indisponible en 3D
+再按一次 @ 切换至 Boost 档	Appuyez encore sur @ pour le mode Boost
+再按一次右键切换至 Boost 档	Appuyez encore à droite pour le mode Boost
+切换至“Boost 档位”获得更高亮度？	Passer en mode Boost pour plus de luminosité ?
+开/关机设置	Allumage / extinction
+设备每次开机时会自动调整画面对焦	Mise au point auto à chaque démarrage
+开机自动梯形校正	Correction trapézoïdale auto au démarrage
+设备每次开机时会自动进行画面校正	Correction de l'image à chaque démarrage
+开机自动校正	Correction auto au démarrage
+开机自动画面调整	Ajustement auto de l'image au démarrage
+我的应用	Mes applis
+开机后自动打开对应的应用	Ouvre l'appli choisie au démarrage
+支架模式	Mode support
+亮度自适应已关闭	Luminosité adaptative désactivée
+亮度自适应已开启	Luminosité adaptative activée
+亮度调节	Luminosité
+10+: 切换至 Boost 档可提供更高亮度	10+ : mode Boost pour plus de luminosité
+通过 IRIS (光圈) 调节亮度，低亮度下\n对比度更高，画面更清晰	Luminosité via l'IRIS : à faible luminosité,\nmeilleur contraste, image plus nette
+: IRIS调节亮度，低亮度下画面对比度更高，画面更清晰\n10+: 切换至 Boost 档可提供更高亮度	 : luminosité via l'IRIS, meilleur contraste à faible luminosité\n10+ : mode Boost pour plus de luminosité
+通过 IRIS（光圈）调节亮度，低亮度下对比度更高，画面更清晰	Luminosité via l'IRIS : meilleur contraste et netteté à faible luminosité
+亮度增强	Luminosité renforcée
+更多	Plus
+亮度自适应	Luminosité adaptative
+切换	Basculer
+确认	Confirmer
+继续	Continuer
+存储空间	Stockage
+上一步	Précédent
+微调投影角度至正投，保证当前投影画面为矩形	Ajustez l'angle pour projeter de face, image rectangulaire
+当前画面更接近以下哪种情况	À quoi ressemble l'image actuelle ?
+继续校准	Continuer la calibration
+完成校准	Terminer la calibration
+去调整	Ajuster
+恢复默认	Par défaut
+自动梯形功能将恢复至默认状态	Le trapèze auto reviendra à son état par défaut
+对焦效果将恢复出厂默认状态	La mise au point reviendra aux réglages d'usine
+恢复默认校准数据	Restaurer la calibration par défaut
+已恢复至默认校准状态	Calibration par défaut restaurée
+自动画面调整功能将恢复至默认状态	L'ajustement auto reviendra à son état par défaut
+结束校准	Arrêter la calibration
+输入距离	Saisir la distance
+校准画面	Image de calibration
+若方正请选择完成校准，不方正请选择继续校准	Image carrée : Terminer ; sinon : Continuer
+陀螺仪已校准\n当前画面是否方正？	Gyroscope calibré\nL'image est-elle bien carrée ?
+陀螺仪校准	Calibration du gyroscope
+保持投影仪水平放置并正投\n确保画面矩形且底边和地面平行	Projecteur à plat et de face\nImage rectangulaire, bas parallèle au sol
+梯形校正已校准\n当前画面是否方正？	Trapèze calibré\nL'image est-elle bien carrée ?
+否则将影响校准效果	Sinon, la calibration sera faussée
+请确认当前画面	Vérifiez l'image actuelle
+自动画面调整功能已校准\n当前画面是否方正？	Ajustement auto calibré\nL'image est-elle bien carrée ?
+左右调整	Gauche / droite
+梯形校准	Calibration trapézoïdale
+调整画面至矩形	Rendre l'image rectangulaire
+将投影仪放置在距墙面/幕布15–30cm的水平桌面上	Placez le projecteur sur une table à 15–30 cm du mur/de l'écran
+下一步	Suivant
+联系客服	Contacter le SAV
+好的	OK
+若确认当前投影距离已是1.8-2.1米，否则将影响校准效果	Vérifiez que la distance est bien de 1,8–2,1 m, sinon la calibration sera faussée
+若确认当前投影距离已是1.8–2.1米，可能是测距感应器异常，请联系客服	Si la distance est bien de 1,8–2,1 m, le capteur de distance est peut-être en panne : contactez le SAV
+若确认当前投影距离已是15–30cm，可能是测距感应器异常，请联系客服	Si la distance est bien de 15–30 cm, le capteur de distance est peut-être en panne : contactez le SAV
+投影距离过近，请调整后再试	Trop près, ajustez puis réessayez
+投影距离过远，请调整后再试	Trop loin, ajustez puis réessayez
+已确认	Confirmé
+重新校准	Recalibrer
+请在引导下完成右侧步骤恢复正常画面	Suivez les étapes à droite pour rétablir l'image
+画面是否方正将影响校准效果	La forme de l'image influence la calibration
+重新摆放	Replacer
+请确认投影画面是否方正?	L'image est-elle bien carrée ?
+请联系客服处理	Contactez le SAV
+手机和投影连接同一个网络，当前网络：	Téléphone et projecteur sur le même réseau, réseau actuel :
+手机和投影连接同一个网络	Téléphone et projecteur sur le même réseau
+手机扫描二维码	Scannez le QR code avec le téléphone
+手机拍照上传，完成幕布对齐	Prenez une photo avec le téléphone pour aligner l'écran
+调整投影仪位置（侧投角度不超过20度），使投影画面完全覆盖幕布	Placez le projecteur (biais ≤ 20°) pour que l'image couvre tout l'écran
+•调整投影仪位置，使画面完全覆盖幕布\n•侧投角度不超过20度	• Placez le projecteur pour que l'image couvre tout l'écran\n• Biais ≤ 20°
+开启后，投影可与车载系统进行配对连接。\n请注意：\n为保障驾驶安全，请务必将车辆停稳后使用。因本品内含电池，请勿将本品置于高温环境中，离开车辆时请随身携带	Permet l'appairage avec le système de la voiture.\nAttention :\nUtilisez-le uniquement véhicule à l'arrêt. Batterie intégrée : ne pas laisser à la chaleur, emportez-le en quittant le véhicule
+立即开启	Activer
+车载蓝牙模式	Mode Bluetooth voiture
+切换控制点	Changer de point de réglage
+清除后，无法使用遥控器控制此投影设备，可\n长按back和home重新配对	Sans appairage, la télécommande ne fonctionnera plus ;\nmaintenez Retour + Accueil pour réappairer
+清除配对？	Supprimer l'appairage ?
+请关闭原帧显示后重试	Désactivez la cadence d'origine puis réessayez
+请关闭高帧率后重试	Désactivez la haute fréquence d'image puis réessayez
+请关闭开机画面自动定位后重试	Désactivez le positionnement auto au démarrage puis réessayez
+请关闭开机源-灵动墙后重试	Désactivez la source de démarrage « Mur dynamique » puis réessayez
+请关闭VRR后重试	Désactivez le VRR puis réessayez
+已最大化还原色彩表现	Rendu des couleurs restauré au maximum
+请退出 3D 模式后重试	Quittez le mode 3D puis réessayez
+请退出杜比视界后重试	Quittez Dolby Vision puis réessayez
+请恢复 Turbo Light 后重试	Rétablissez Turbo Light puis réessayez
+已还原至开启前色彩表现	Couleurs rétablies comme avant activation
+将自动更改亮度及色彩相关设置，同时调整图像模式自定义参数，以实现最佳色彩准确度	Ajuste luminosité, couleurs et mode image pour une précision des couleurs optimale
+∗ 开启后，调节亮度、色彩及图像模式将影响色准效果	∗ Une fois activé, modifier luminosité, couleurs ou mode image affecte la précision
+专业色准	Couleurs pro (calibrées)
+色彩增强	Amélioration des couleurs
+色彩自适应	Couleur adaptative
+中	Moyen
+强	Fort
+根据偏好为色彩调节选择增强效果	Choisir l'intensité de l'amélioration des couleurs
+自定义色彩增强	Amélioration des couleurs perso
+弱	Faible
+色彩风格	Style de couleur
+根据偏好选择或自定义色彩显示的整体风格	Choisir ou personnaliser le style général des couleurs
+色彩范围	Plage de couleurs
+将投影设备显示的色彩范围与信号源相匹配	Accorde la plage de couleurs du projecteur à la source
+完整	Complète
+限制	Limitée
+仅限于使用无法正确输出RGB范围信息的HDMI设备时进行变更	À modifier seulement si un appareil HDMI n'envoie pas la bonne plage RGB
+将投影显示的色彩范围与信号源相匹配	Accorde la plage de couleurs à la source
+专业摄影(Adobe RGB)	Photo pro (Adobe RGB)
+专业摄影	Photo pro
+广色域(BT.2020)	Gamut large (BT.2020)
+强（推荐）	Fort (recommandé)
+广色域	Gamut large
+适用于杜比视界、IMAX Enhanced、HDR等片源，提供更鲜艳、细致的颜色使图像更逼真	Pour Dolby Vision, IMAX Enhanced, HDR : couleurs plus vives et détaillées, image plus réaliste
+电影色域(DCI-P3)	Gamut cinéma (DCI-P3)
+电影色域	Gamut cinéma
+适合大多数常规视频 ，根据DCI P3标准，显示更丰富的颜色，让视频更绚丽	Pour la plupart des vidéos : norme DCI-P3, couleurs plus riches
+选择亮度与色彩调整的强度，以获得偏好的观影显示效果	Choisir l'intensité des réglages de luminosité et couleur
+原始色域	Gamut natif
+适合HDR、杜比视界等广色域视频，使用最广的色彩空间，显示最丰富的颜色细节	Pour HDR, Dolby Vision : espace couleur le plus large, détails de couleur maximum
+标准色域(Rec.709)	Gamut standard (Rec.709)
+标准色域	Gamut standard
+适合大多数常规视频，根据Rec.709标准，显示基础的颜色	Pour la plupart des vidéos : norme Rec.709, couleurs de base
+弱（推荐）	Faible (recommandé)
+色彩调节	Réglage des couleurs
+电影D65	Cinéma D65
+三色激光模式专属色彩风格生效中	Style de couleur laser RGB actif
+图像风格	Style d'image
+标准（推荐）	Standard (recommandé)
+色温	Température de couleur
+冷色	Froid
+暖色	Chaud
+色彩	Couleur
+手动添加网络	Ajouter un réseau
+请输入密码	Saisissez le mot de passe
+安全性	Sécurité
+请输入SSID	Saisissez le SSID
+确认自动梯形功能已校准	Vérifiez que le trapèze auto est calibré
+确认自动画面调整功能已校准	Vérifiez que l'ajustement auto est calibré
+网络变化，请重试	Réseau modifié, réessayez
+请连接网络后重试	Connectez-vous à un réseau puis réessayez
+手势控制	Contrôle gestuel
+便捷梯形校正	Correction trapézoïdale rapide
+恢复默认画面/精准校正	Image par défaut / correction précise
+便捷校正	Correction rapide
+校正成功	Correction réussie
+开始校准	Lancer la calibration
+一键校准？	Calibrer en un clic ?
+校正设置	Réglages de correction
+调整设备角度，使设备水平放置，再点击校准\n水平校准越精确，画面校准效果越佳	Mettez l'appareil bien à plat, puis lancez la calibration\nPlus c'est précis, meilleure est la correction
+画面校正设置	Réglages de correction d'image
+画面调整设置	Réglages d'ajustement d'image
+当前图像模式下，不支持长辈色彩优化	Optimisation couleur « seniors » indisponible dans ce mode image
+当前信号刷新率	Fréquence du signal actuel
+当前信号	Signal actuel
+当前信号分辨率	Résolution du signal actuel
+当前光圈下，亮度不可调节	Luminosité non réglable avec cet iris
+当前模式不能调整风速	Vitesse du ventilateur non réglable dans ce mode
+画幕自动对齐	Alignement auto sur l'écran
+智能调整画面以对齐幕布边缘，校准前请确保投影画面完全覆盖住幕布	Aligne l'image sur les bords de l'écran ; l'image doit couvrir tout l'écran avant
+画面校正时，自动对齐幕布边缘，需先确保投影画面超出幕布四边	Aligne sur les bords de l'écran ; l'image doit dépasser des 4 côtés
+自定义模式下不支持亮度调节	Luminosité non réglable en mode personnalisé
+自定义模式下不支持墙面颜色适配	Adaptation couleur du mur indisponible en mode personnalisé
+卧室的	de la chambre
+客厅的	du salon
+我的	Mon
+的	de
+自定义设备名称	Nom personnalisé
+自定义	Personnalisé
+云备份	Sauvegarde cloud
+帮助与反馈	Aide et commentaires
+家长设置	Contrôle parental
+删除所有内容	Tout effacer
+将删除所有设置数据、本地文件和已安装应用	Efface réglages, fichiers locaux et applis installées
+将删除所有设置数据，同时保留本地文件和\n已安装应用	Efface les réglages, garde les fichiers locaux et\nles applis installées
+保留应用	Garder les applis
+将删除所有设置数据，\n保留已安装的应用和本地文件	Efface les réglages,\ngarde les applis et fichiers locaux
+保留已下载应用	Garder les applis téléchargées
+将删除所有设置数据，同时保留本地文件和已安装应用	Efface les réglages, garde les fichiers locaux et les applis
+不保留应用	Ne pas garder les applis
+将删除所有设置数据、本地文件、已安装的应用	Efface réglages, fichiers locaux et applis installées
+是否保留已下载的应用？	Garder les applis téléchargées ?
+恢复出厂设置？	Réinitialiser aux paramètres d'usine ?
+恢复出厂	Réinitialisation d'usine
+物联网	Objets connectés (IoT)
+删除自定义	Supprimer le mode perso
+删除自定义图像模式？	Supprimer le mode image personnalisé ?
+删除后，将自动切换至AI画质。您可以在“设置-亮度与显示-图像模式”中重新选择。	Bascule ensuite en « Qualité IA ». Modifiable dans « Paramètres – Luminosité et affichage – Mode image ».
+设备信息	Infos appareil
+设备型号	Modèle
+投影使用时间	Durée d'utilisation
+远程控制设备并定位问题	Contrôle à distance et diagnostic
+切换至专家模式	Passer en mode expert
+切换至智能模式	Passer en mode intelligent
+将恢复至默认画面位置\n智能模式可使用一键画面校正、自动对焦、墙面颜色适配、智能防射眼等功能	Retour à la position d'image par défaut\nMode intelligent : correction en un clic, mise au point auto, adaptation au mur, anti-éblouissement…
+专家模式可使用光学移轴等高阶功能，但不能使用一键画面校正、自动对焦、墙面颜色适配、智能防射眼等智能功能	Mode expert : lens shift optique, etc., mais sans correction en un clic, mise au point auto, adaptation au mur, anti-éblouissement
+为了保证显示效果最佳，将清除墙面颜色适配数据	Les données d'adaptation couleur du mur seront effacées pour un rendu optimal
+投影仪倒挂于画面前方天花板上时使用，调节画面翻转\n∗ 吊装下暂不支持部分功能，如实时画面校正、墙面平整度适配等（具体功能可能因不同型号有所差异）。如需了解后续支持情况，请联系客服	Projecteur suspendu au plafond devant l'image : retourne l'image\n∗ Certaines fonctions (correction en temps réel, adaptation au mur…) indisponibles au plafond selon le modèle. Contactez le SAV pour plus d'infos
+切换游戏模式	Changer de mode jeu
+游戏模式延迟更低，但不支持“ %s ” 。	Mode jeu à latence réduite, mais sans « %s ».
+校准后效果不好，可选择恢复默认	Résultat décevant ? Restaurez les réglages par défaut
+请将投影放在水平面上，再开始校准陀螺仪	Posez le projecteur à plat avant de calibrer le gyroscope
+切换前请确保设备通风口无遮挡、且室温不超过25°C。请勿长时间使用此模式，否则可能造成设备过热影响使用寿命。	Vérifiez que les aérations sont dégagées et la pièce ≤ 25 °C. N'utilisez pas ce mode longtemps : risque de surchauffe et usure.
+切换性能模式	Changer de mode performance
+请确认画面矩形、底边和地面平行，且校准完成\n前不要移动设备，否则会影响自动梯形校正效果	Image rectangulaire, bas parallèle au sol ; ne bougez pas\nl'appareil avant la fin, sinon le trapèze auto sera faussé
+切换至“三色激光”模式？	Passer en mode « laser RGB » ?
+切换极速模式	Passer en mode ultra-rapide
+切换前请将投影设备移动至正投状态，否则将导致画面歪斜。	Mettez le projecteur de face avant de basculer, sinon l'image sera de travers.
+极速模式延迟更低，但不支持“ %s ” 。	Mode ultra-rapide à latence réduite, mais sans « %s ».
+专家校正模式	Mode correction expert
+通过光学变焦和移轴实现专业级安装精度和无损画质体验，推荐搭配幕布场景使用	Zoom et lens shift optiques : installation pro sans perte d'image, idéal avec un écran
+*专家模式不支持一键画面校正、自动对焦、墙面颜色适配、智能防射眼等智能功能	*Le mode expert n'a pas : correction en un clic, mise au point auto, adaptation au mur, anti-éblouissement
+切换至智能校正模式？	Passer en correction intelligente ?
+切换至专家校正模式？	Passer en correction expert ?
+切换至吊装？	Passer en mode plafond ?
+升级	Mettre à niveau
+更新	Mettre à jour
+本次更新将删除当前设置数据、本地文件、已安装应用，\n过程中请勿断开电源及U盘	Cette mise à jour efface réglages, fichiers et applis.\nNe coupez ni l'alimentation ni la clé USB
+检测到安装包，是否更新？	Paquet de mise à jour détecté. Mettre à jour ?
+本次更新将保留当前设置数据、本地文件、已安装应用，\n过程中请勿断开电源及U盘	Cette mise à jour garde réglages, fichiers et applis.\nNe coupez ni l'alimentation ni la clé USB
+升级系统？	Mettre à jour le système ?
+删除	Supprimer
+删除“%s”?	Supprimer « %s » ?
+我知道了	J'ai compris
+超出上限，请先删除设备	Limite atteinte, supprimez d'abord un appareil
+配对失败，请在“%s”上重试	Échec de l'appairage, réessayez sur « %s »
+DICOM图像模式下不支持Gamma指数	Gamma indisponible en mode image DICOM
+数码位移	Décalage numérique
+数码缩放与位移	Zoom et décalage numériques
+数码变焦	Zoom numérique
+位移自动校正	Correction auto après déplacement
+开机状态下，移动设备会自动画面校正	Corrige l'image automatiquement si l'appareil est déplacé allumé
+位移自动对焦	Mise au point auto après déplacement
+设备开机状态下发生位移时会自动调整画面对焦	Refait la mise au point si l'appareil est déplacé allumé
+位移自动梯形校正	Trapèze auto après déplacement
+开机状态下移动设备会自动进行画面校正	Corrige l'image automatiquement si l'appareil est déplacé allumé
+位移自动画面调整	Ajustement auto après déplacement
+位移可能造成画面模糊，按"@"手动对焦	Image floue après déplacement ? Appuyez sur « @ » pour la mise au point
+DMD温度	Température DMD
+正装	Table
+正装正投	Table, de face
+动态对焦补偿	Compensation de mise au point dynamique
+实时动态对焦，保持画面清晰	Mise au point dynamique en temps réel, image toujours nette
+节能模式	Mode économie
+关闭节能模式	Désactiver le mode économie
+关闭节能模式？	Désactiver le mode économie ?
+使用极米电池支架、充电宝供电时，关闭节能模式可能会导致耗电量增加或关机	Sur support batterie XGIMI ou batterie externe, désactiver l'économie peut augmenter la consommation ou éteindre l'appareil
+开启节能模式	Activer le mode économie
+· 节能模式下会降低亮度和听觉效果\n· 使用极米电池支架、充电宝供电时，为提升续航、保\n   护设备，推荐开启节能模式	· Le mode économie baisse luminosité et son\n· Sur support batterie XGIMI ou batterie externe,\n   recommandé pour l'autonomie
+开启节能模式？	Activer le mode économie ?
+降低亮度和听觉效果，以获得更长的续航时间，推荐接入极米电池支架、充电宝时使用	Baisse luminosité et son pour plus d'autonomie ; recommandé sur batterie
+长辈模式自动开启	Mode seniors automatique
+设备接通电源时将自动开机，使用时请做好电源安全管理	S'allume dès qu'il est branché ; attention à la sécurité électrique
+上电自动开机	Allumage à la mise sous tension
+关闭墙面颜色适配后再进行%1$s自适应	Désactivez l'adaptation couleur du mur avant l'adaptation %1$s
+开	Activé
+进入屏保	Lancer l'écran de veille
+环境自适应	Adaptation à l'environnement
+环境自适应已关闭	Adaptation à l'environnement désactivée
+环境自适应已开启	Adaptation à l'environnement activée
+环境光自适应	Adaptation à la lumière ambiante
+根据环境光自动调整画面亮度，以达到最佳的观影效果	Ajuste la luminosité selon la lumière ambiante pour un visionnage optimal
+根据环境光自动调整画面亮度	Ajuste la luminosité selon la lumière ambiante
+投影环境检测	Analyse de l'environnement
+智能检测投影环境，以匹配最佳校正方式	Analyse l'environnement pour choisir la meilleure correction
+设备名称	Nom de l'appareil
+开始导出	Lancer l'export
+•︎请使用FAT32格式的U盘连接投影	• Utilisez une clé USB au format FAT32
+是否导出批量文件？	Exporter les fichiers de configuration ?
+•︎请使用FAT32格式的U盘连接投影\n•︎导出过程中请勿操作投影	• Utilisez une clé USB au format FAT32\n• Ne touchez pas au projecteur pendant l'export
+批量设置数据导出中......	Export des réglages en cours…
+安心模式	Mode sérénité
+检测到人体后自动息屏或全屏遮罩，人体离开或按【返回键】恢复屏幕	Personne détectée : écran éteint ou masqué ; revient quand la personne part ou avec Retour
+关闭	Désactivé
+已关闭智能防射眼	Anti-éblouissement désactivé
+关闭后，镜头前有人时不再自动降低亮度。 请注意保护眼睛，避免直视光源	Une fois désactivé, la luminosité ne baisse plus si quelqu'un passe devant. Ne regardez pas la source lumineuse
+开启后，检测到镜头前有人时，降低投影仪亮度，避免人眼刺激\n*该功能处于Beta测试中，可能存在不稳定现象	Baisse la luminosité si quelqu'un est devant l'objectif\n*Fonction bêta, peut être instable
+开启	Activé
+关闭“%1$s”功能？	Désactiver « %1$s » ?
+开启“%1$s”功能？	Activer « %1$s » ?
+跟随模式	Mode suivi
+跟随人体移动实时降低局部亮度，不影响观看	Baisse localement la luminosité en suivant la personne, sans gêner le film
+检测到镜头前有人时，降低亮度，避免人眼刺激	Baisse la luminosité si quelqu'un est devant l'objectif
+检测到镜头前有人时，自动关闭屏幕	Éteint l'écran si quelqu'un est devant l'objectif
+护眼三色激光	Laser RGB confort visuel
+达到中国标准化研究院视觉舒适度A+等级，提供更高亮度的同时大幅提升观影舒适度	Confort visuel niveau A+ (norme chinoise) : plus lumineux et plus confortable
+达到中国标准化研究院视觉舒适度A等级，提供更高亮度的同时大幅提升观影舒适度	Confort visuel niveau A (norme chinoise) : plus lumineux et plus confortable
+手动	Manuel
+风速已调整为“自动”	Ventilateur réglé sur « Auto »
+请先在隐藏设置中关闭“支架模式”后重试	Désactivez d'abord le « Mode support » dans les réglages cachés
+滤镜分类	Catégories de filtres
+删除我上传的滤镜后，会同步删除云端数据	Supprimer mes filtres supprime aussi les données cloud
+删除后无法恢复，是否继续？	Suppression définitive. Continuer ?
+输入分享码	Saisir un code de partage
+滤镜管理	Gestion des filtres
+设置	Paramètres
+滤镜类型	Type de filtre
+滤镜用户协议	Conditions des filtres
+墙面平整适配	Adaptation mur irrégulier
+针对不平整的墙面进行智能适配，以呈现最佳画面	S'adapte aux murs irréguliers pour une image optimale
+扫码下载极米 App，使用极米 App “爱机 > 墙面平整” 进行\n智能适配	Scannez pour télécharger l'appli XGIMI, puis « Mon appareil > Mur » pour\nl'adaptation
+*此功能吊装下不支持	*Indisponible en mode plafond
+一键校准	Calibration en un clic
+校准还原	Annuler la calibration
+若自动对焦后画面仍然不清晰，请使用对焦校准	Image floue après mise au point auto ? Utilisez la calibration de mise au point
+对焦校准	Calibration de mise au point
+将设备 正投 并保持投影距离在 1—2米，再进行对焦校准	Projetez de face à 1–2 m, puis calibrez la mise au point
+请确认画面矩形、且校准完成前不要移动设备，\n 否则会影响自动对焦效果	Image rectangulaire ; ne bougez pas l'appareil avant la fin,\n sinon la mise au point auto sera faussée
+可按【对焦键】自动对焦，或长按使用手动对焦	Touche Focus : mise au point auto ; appui long : manuelle
+可按侧边【对焦键】自动对焦，或长按使用手动对焦	Touche Focus latérale : mise au point auto ; appui long : manuelle
+按【对焦键】自动对焦，或长按使用手动对焦	Touche Focus : mise au point auto ; appui long : manuelle
+可按【对焦键】手动对焦	Touche Focus : mise au point manuelle
+可将底部拨杆拨至Focus自动对焦，或继续按音量【加减键】手动对焦	Levier du bas sur Focus pour l'auto, ou touches volume +/- pour le manuel
+参考图像对整个画面进行精准调焦	Mise au point précise sur l'image de référence
+已调整上限	Limite atteinte
+对焦	Mise au point
+当画面模糊时，通过对焦调整清晰度	Corrige le flou de l'image
+正装背投	Table, rétroprojection
+游戏增强模式	Mode jeu amélioré
+优化HDMI外接游戏设备的体验；更低延迟、专用游戏图像模式，并提供更多游戏工具	Optimise les consoles en HDMI : latence réduite, mode image jeu, outils de jeu
+“游戏增强模式”为自动或打开时，在信号源画面下可长按【设置键】呼出游戏增强工具	Mode jeu sur Auto ou Activé : appui long sur la touche Réglages sur une source HDMI pour les outils de jeu
+请打开游戏增强模式后重试	Activez le mode jeu amélioré puis réessayez
+请接入HDMI并打开游戏增强模式后重试	Branchez une source HDMI et activez le mode jeu amélioré
+识别到游戏内容时（ALLM）	Contenu jeu détecté (ALLM)
+若游戏设备不支持ALLM，请选择“识别到游戏设备时”或选择“打开”	Si la console ne gère pas l'ALLM, choisissez « Console détectée » ou « Activé »
+识别到游戏设备时	Console détectée
+自动切换时机	Déclenchement auto
+若选择“自动”，当识别到HDMI进入游戏内容或接入游戏设备后，将切换游戏增强模式	« Auto » : bascule en mode jeu dès qu'un jeu ou une console est détecté en HDMI
+极速模式下不支持自动画面调整	Ajustement auto indisponible en mode ultra-rapide
+降低画面延迟，同时保证画面分辨率	Latence réduite, résolution conservée
+基础	Basique
+模式选择	Choix du mode
+极速	Ultra-rapide
+画面延迟更低，但不支持“画面校正”	Latence encore plus basse, mais sans « Correction d'image »
+极速模式下不支持手动梯形校正	Trapèze manuel indisponible en mode ultra-rapide
+3D播放下不支持游戏模式	Mode jeu indisponible en 3D
+请在信号源画面下进行设置	À régler depuis une source vidéo
+极速模式下不支持投影环境检测	Analyse de l'environnement indisponible en ultra-rapide
+极速模式下不支持画面位移	Décalage d'image indisponible en ultra-rapide
+极速模式下不支持画面旋转	Rotation d'image indisponible en ultra-rapide
+极速模式下不支持画面缩放	Zoom d'image indisponible en ultra-rapide
+极速模式下不支持画面自动定位	Positionnement auto indisponible en ultra-rapide
+极速模式下不支持画面缩放与位移	Zoom et décalage indisponibles en ultra-rapide
+打开	Activé
+选择“自动”，将自动识别游戏设备并切换至游戏模式; 选择“打开”保持游戏模式常开; 选择“关闭”保持游戏模式常关	« Auto » : détecte la console et passe en mode jeu ; « Activé » : toujours ; « Désactivé » : jamais
+选择“自动”，将自动识别游戏设备并切换至游戏模式; 选择“关闭”保持游戏模式常关	« Auto » : détecte la console et passe en mode jeu ; « Désactivé » : jamais
+降低延迟提升游戏体验，提供基础、极速两种模式	Latence réduite pour jouer, modes Basique et Ultra-rapide
+手动梯形校正”与“画面缩放	Trapèze manuel » et « Zoom d'image
+梯形校正”、“墙面平整适配	Correction trapézoïdale » et « Adaptation mur irrégulier
+游戏模式	Mode jeu
+不支持Gamma指数	Gamma indisponible
+HDMI控制投影	Contrôle du projecteur via HDMI
+HDMI连接的设备可控制投影开关机	Un appareil HDMI peut allumer/éteindre le projecteur
+CEC控制	Contrôle CEC
+投影可控制HDMI连接的设备，关闭后，音频ARC输出将不可用	Le projecteur pilote les appareils HDMI ; si désactivé, la sortie audio ARC ne marche plus
+对焦图	Mire de mise au point
+INUI版本	Version INUI
+GMUI版本	Version GMUI
+绿灯温度	Température laser vert
+若校准后效果不佳，可尝试恢复至默认校准状态	Résultat décevant ? Restaurez la calibration par défaut
+恢复至默认校准状态？	Restaurer la calibration par défaut ?
+将投影仪放置在水平桌面上，调整投影角度至正投，确保投影画面矩形且底边与地面平行	Projecteur sur une table, de face ; image rectangulaire, bas parallèle au sol
+当前为合适的投影角度	Angle de projection correct
+请调整投影角度后重试	Ajustez l'angle puis réessayez
+当前角度过大	Angle trop important
+自动对焦中，请勿移动机器	Mise au point auto, ne bougez pas l'appareil
+请将投影放置于距离墙面约1.8m~2.1m的位置，并确保侧投角度小于20度，俯仰角度小于10度\n校准时角度尽量与日常使用角度一致	Placez le projecteur à 1,8–2,1 m du mur, biais < 20°, inclinaison < 10°\nGardez l'angle de votre usage habituel
+当前为合适的距离	Distance correcte
+确认投影距离	Vérifier la distance
+请调整投影距离后重试	Ajustez la distance puis réessayez
+当前距离过远	Trop loin
+当前距离过近	Trop près
+请确保投影稳定后再重试	Stabilisez le projecteur puis réessayez
+按@退出	@ pour quitter
+校准已完成	Calibration terminée
+请移动投影或投射其他墙面，确认校准后的对焦效果	Visez un autre mur pour vérifier la mise au point
+校准中，请勿移动机器	Calibration en cours, ne bougez pas l'appareil
+如自动对焦后，面面仍不清晰，请使用对焦校准	Image floue après mise au point auto ? Utilisez la calibration de mise au point
+当前水平角度过大，请调整投影角度后重试	Angle horizontal trop grand, ajustez puis réessayez
+当前俯仰角度过大，请调整投影角度后重试	Inclinaison trop grande, ajustez puis réessayez
+当前水平、俯仰角度过大，请调整投影角度后重试	Angles horizontal et vertical trop grands, ajustez puis réessayez
+HDBaseT画面比例	Format d'image HDBaseT
+应用	Appliquer
+此功能仅在信号源下可用\n输入起始位置坐标和显示范围	Disponible seulement sur une source vidéo\nSaisissez les coordonnées de départ et la zone d'affichage
+显示高度	Hauteur d'affichage
+显示宽度	Largeur d'affichage
+请在信号输入大于100Hz时使用	À utiliser avec un signal > 100 Hz
+请输入大于100的数字	Saisissez un nombre > 100
+HDMI画面比例	Format d'image HDMI
+像素	Pixels
+输入数据过大	Valeur trop grande
+拼接参数设置	Réglages de fusion multi-projecteurs
+X坐标	Coordonnée X
+Y坐标	Coordonnée Y
+HDR Vivid图像模式生效中	Mode image HDR Vivid actif
+蓝牙与配件	Bluetooth et accessoires
+通用	Général
+3D设置	Réglages 3D
+视频图像模式	Mode image vidéo
+亮度与显示	Luminosité et affichage
+灯光	Éclairage
+网络	Réseau
+画面校正	Correction d'image
+图像	Image
+信号源	Source
+声音	Son
+系统	Système
+远程诊断时，极米将远程控制您的设备，了解并定位您的问题。远程诊断后，请根据客服引导结束此次诊断。	Pendant le diagnostic, XGIMI contrôle votre appareil à distance. Terminez-le ensuite en suivant le SAV.
+开始诊断	Lancer le diagnostic
+远程诊断	Diagnostic à distance
+上电开机	Allumage à la mise sous tension
+接通电源后投影自动开机	S'allume dès qu'il est branché
+风速等级	Niveau de ventilation
+风速	Ventilation
+输入法	Clavier
+日志上报	Envoi des journaux
+接通电源后投影仪自动开机	Le projecteur s'allume dès qu'il est branché
+隐藏设置	Réglages cachés
+智能幕布	Écran intelligent
+日	Jour
+时	Heure
+分	Minute
+月	Mois
+时间设置	Date et heure
+年	Année
+高海拔模式	Mode haute altitude
+建议在高海拔地区使用，将加大风扇转速、提高散热效率	Recommandé en altitude : ventilateur plus rapide, meilleur refroidissement
+当前温度过高	Température trop élevée
+高帧率下不支持3D设置	Réglages 3D indisponibles en haute fréquence
+吊装	Plafond
+吊装正投	Plafond, de face
+水平角度	Angle horizontal
+水平辅助安装	Installation horizontale assistée
+热点:	Point d'accès :
+热点	Point d'accès
+至臻120Hz下不能3D播放	3D indisponible en 120 Hz Ultime
+至臻120Hz下不支持原帧显示	Cadence d'origine indisponible en 120 Hz Ultime
+至臻120Hz下不支持3D设置	Réglages 3D indisponibles en 120 Hz Ultime
+11点白平衡	Balance des blancs 11 points
+2点白平衡	Balance des blancs 2 points
+AI对比度	Contraste IA
+根据视频画面内容，AI实时调整对比度	L'IA ajuste le contraste en temps réel selon l'image
+清晰度	Netteté
+动态黑位增强	Noirs dynamiques renforcés
+画面暗部场景较多时，动态调整画面对比度，提升暗部细节表现	Scènes sombres : contraste dynamique, plus de détails dans les ombres
+画面融合	Fusion d'image
+图像模式	Mode image
+基础设置	Réglages de base
+基于预设模式	Basé sur le préréglage
+HDR动态亮度映射	Mappage dynamique HDR
+选择“自动”，将自动识别游戏设备并切换至游戏模式；选择“打开”保持游戏模式常开；选择“关闭”保持游戏模式常关	« Auto » : détecte la console et passe en mode jeu ; « Activé » : toujours ; « Désactivé » : jamais
+低延迟	Faible latence
+基础模式	Mode basique
+极速模式	Mode ultra-rapide
+ISF白天	ISF Jour
+专业校准画质，适合白天观看	Image calibrée pro, pour le jour
+ISF黑夜	ISF Nuit
+专业校准画质，适合夜晚观看	Image calibrée pro, pour le soir
+请关闭游戏增强模式后重试	Désactivez le mode jeu amélioré puis réessayez
+杜比视界专属图像模式生效中	Mode image Dolby Vision actif
+请关闭节能模式后重试	Désactivez le mode économie puis réessayez
+游戏模式下不支持图像模式	Mode image indisponible en mode jeu
+游戏模式生效中	Mode jeu actif
+低延迟下不支持图像模式	Mode image indisponible en faible latence
+办公图像模式下不支持色温调节	Température de couleur non réglable en mode Bureau
+大师色准	Couleurs Maître
+专业级色彩校准，还原真实色彩	Calibration couleur pro, couleurs fidèles
+专业设置	Réglages pro
+白平衡	Balance des blancs
+恢复默认设置	Rétablir les réglages par défaut
+重置图像设置	Réinitialiser l'image
+画面暗部场景较多时，通过硬件加速提升暗部细节和层次	Scènes sombres : accélération matérielle pour plus de détails dans les ombres
+图像设置	Réglages d'image
+根据观看内容选择模式，自定义色彩空间、运动补偿等	Mode selon le contenu ; espace couleur, compensation de mouvement…
+动态黑位校正	Correction dynamique des noirs
+通过校准，在增强暗部细节时维持色彩还原度	Calibré : plus de détails sombres sans altérer les couleurs
+原帧显示	Cadence d'origine
+解决播放特定帧视频时，不均匀补帧导致的画面抖动问题	Évite les saccades dues à l'interpolation irrégulière sur certaines vidéos
+原帧	Cadence d'origine
+游戏模式下不支持图像比例设置	Format d'image indisponible en mode jeu
+低延迟下不支持图像比例设置	Format d'image indisponible en faible latence
+请在HDMI源下调整图像比例设置	Réglez le format d'image sur une source HDMI
+请在HDMI源下调整HDMI模式	Réglez le mode HDMI sur une source HDMI
+关闭3D	Désactiver la 3D
+左右3D转2D	3D côte à côte → 2D
+左右3D	3D côte à côte
+蓝光3D	3D Blu-ray
+上下3D转2D	3D haut/bas → 2D
+上下3D	3D haut/bas
+明亮	Lumineux
+适用于白天或开灯环境使用	Pour le jour ou une pièce éclairée
+识别到支持的片源时，自动切换到HDR Vivid模式	Bascule en HDR Vivid si la source le permet
+观影画面过渡更加顺滑，开启后将降低分辨率，如需低延迟请使用游戏模式-高帧率模式	Mouvements plus fluides mais résolution réduite ; pour la faible latence, utilisez Mode jeu – Haute fréquence
+AI画质	Qualité IA
+AI智能识别场景，自动匹配最优图像参数	L'IA reconnaît la scène et ajuste l'image
+自动切换	Bascule auto
+影院	Cinéma
+色彩校正	Correction des couleurs
+蓝色	Bleu
+青色	Cyan
+绿色	Vert
+色相	Teinte
+品红	Magenta
+红色	Rouge
+饱和度	Saturation
+肤色	Teint de peau
+黄色	Jaune
+色彩优化	Optimisation des couleurs
+色温1	Température 1
+色温2	Température 2
+色温3	Température 3
+蓝色偏移	Décalage bleu
+蓝色增益	Gain bleu
+蓝	Bleu
+冷	Froid
+绿色偏移	Décalage vert
+绿色增益	Gain vert
+绿	Vert
+红色偏移	Décalage rouge
+红色增益	Gain rouge
+红	Rouge
+标准	Standard
+暖	Chaud
+对比度	Contraste
+动态对比度	Contraste dynamique
+动态	Dynamique
+足球	Football
+游戏	Jeu
+Gamma指数	Gamma
+艳丽	Éclatant
+色彩增强，适用于观看动画、记录片等	Couleurs renforcées, pour animés et documentaires
+高级设置	Réglages avancés
+高	Élevé
+低	Bas
+运动补偿	Compensation de mouvement
+观影	Film
+电影	Film
+还原影院级色彩与对比度，适合暗场观影	Couleurs et contraste cinéma, pour une pièce sombre
+降噪	Réduction du bruit
+关	Désactivé
+办公	Bureau
+优化文字和图表显示，适合办公场景	Texte et graphiques optimisés, pour le travail
+局部对比度	Contraste local
+性能	Performance
+亮度MAX | 较大噪音，不推荐观影	Luminosité MAX | plus bruyant, déconseillé pour les films
+至臻120Hz	120 Hz Ultime
+锐度	Piqué
+运动	Sport
+动态流畅，适合观看体育赛事等	Mouvements fluides, pour le sport
+画质均衡，适用日常大多数场景	Image équilibrée, pour la plupart des usages
+电视	TV
+舒适画质，适合日常观看电视剧/综艺	Image confortable pour séries et émissions
+用户	Utilisateur
+原始比例	Format d'origine
+臻彩	Couleurs riches
+柔和	Doux
+柔和舒适，适合长时间观看	Doux et reposant, pour un long visionnage
+IMAX Enhanced模式下暂不支持	Indisponible en mode IMAX Enhanced
+IMAX Enhanced不支持风格滤镜	Filtres de style indisponibles en IMAX Enhanced
+IMAX Enhanced专属图像模式生效中	Mode image IMAX Enhanced actif
+电影D65（推荐）	Cinéma D65 (recommandé)
+开始导入	Lancer l'import
+批量设置数据导入完成	Import des réglages terminé
+检查到批量设置文件，是否导入？	Fichier de réglages détecté. L'importer ?
+导入时出现异常，请重试	Erreur pendant l'import, réessayez
+•︎请使用FAT32格式的U盘连接投影\n•︎导入过程中请勿操作投影	• Utilisez une clé USB au format FAT32\n• Ne touchez pas au projecteur pendant l'import
+批量设置数据导入中......	Import des réglages en cours…
+实时画面校正	Correction d'image en temps réel
+输入已达最大限制	Limite de saisie atteinte
+安装方式	Type d'installation
+请接入U盘后重试	Branchez une clé USB puis réessayez
+XGIMI Sound+低音炮	XGIMI Sound+ caisson de basses
+XGIMI Sound+内部扬声器 (低音)	XGIMI Sound+ haut-parleurs internes (basses)
+光圈调节	Réglage de l'iris
+开启后我们将推送软件新版本到您的设备，您可以通过论坛发帖分享您的使用感受和建议，我们会不定期挑选优质回复给予奖励，您的建议会让我们产品做的更好	Recevez les nouvelles versions en avant-première ; partagez vos retours sur le forum, les meilleurs sont récompensés
+保持3D模式	Rester en 3D
+全键盘	Clavier complet
+九宫格	Clavier 9 touches
+吊装场景下暂不支持	Indisponible en mode plafond
+画面自动定位	Positionnement auto de l'image
+画面自动定位启动失败	Échec du positionnement auto
+云台自动转向，将画面调整至最佳投影位置	Le support motorisé oriente l'image à la meilleure position
+极速模式下不能触发一键校准	Calibration en un clic indisponible en ultra-rapide
+请确认画面矩形、且校准完成前不要移动设备，\n 否则会影响自动梯形校正效果	Image rectangulaire ; ne bougez pas l'appareil avant la fin,\n sinon le trapèze auto sera faussé
+长按查看更多功能	Appui long pour plus d'options
+查看更多功能	Plus d'options
+工程测试图样	Mire de test
+已恢复至默认画面	Image par défaut restaurée
+精准校正	Correction précise
+四点画面调整	Réglage 4 points
+恢复默认画面	Restaurer l'image par défaut
+八点画面调整	Réglage 8 points
+局域网	Réseau local
+简体中文	Chinois simplifié
+语言/Language	Langue / Language
+法律信息	Mentions légales
+隐私政策	Politique de confidentialité
+隐私政策（摘要版）	Politique de confidentialité (résumé)
+第三方共享信息清单	Liste des partages avec des tiers
+用户协议	Conditions d'utilisation
+个人信息收集清单	Liste des données personnelles collectées
+均衡	Équilibré
+鲜艳	Vif
+沉浸	Immersif
+节能	Économie
+护眼	Confort visuel
+清新	Frais
+高亮	Haute luminosité
+高能	Haute puissance
+镜头锁定	Verrouillage de l'objectif
+请先关闭「镜头锁定」再重试	Désactivez d'abord le « Verrouillage de l'objectif »
+镜头设置	Réglages de l'objectif
+镜头位移	Lens shift
+已调整到上限	Limite atteinte
+校准	Calibrer
+陀螺仪水平校准	Calibration horizontale du gyroscope
+若自动梯形校正后投影出现旋转，请使用陀螺仪水平校准	Image inclinée après trapèze auto ? Calibrez le gyroscope
+吊装背投	Plafond, rétroprojection
+选择生效的光源	Choisir la source lumineuse active
+光源1	Source lumineuse 1
+光源2	Source lumineuse 2
+全开	Toutes
+光源模式	Mode de la source lumineuse
+切换不同的光源模式，选择偏好的显示效果	Changer de mode de source lumineuse selon l'affichage préféré
+光源使用时间	Durée d'utilisation de la source lumineuse
+色温智能跟随日光调节，提供自然规律的生活照明	La couleur suit la lumière du jour pour un éclairage naturel
+延时关灯键	Touche extinction différée
+可配置【延时关灯键】，定义每次按下后自动关灯的延迟时间	Réglez le délai d'extinction de la lumière à chaque appui
+生日快乐	Joyeux anniversaire
+灯光模式	Mode d'éclairage
+节律光	Lumière circadienne
+小夜灯	Veilleuse
+阅读	Lecture
+放松	Détente
+工作	Travail
+罗曼蒂克	Romantique
+关灯	Éteindre la lumière
+灯	Lumière
+将用于获取所在地天气、出行等服务信息	Utilisé pour la météo et les infos de trajet locales
+为解决您的问题，我们将上传日志开启期间的系统操作记录，不会侵犯您的任何隐私，感谢您的配合	Pour résoudre votre problème, nous enverrons le journal des opérations système de cette période, sans données privées. Merci
+长按恢复默认画面	Appui long : image par défaut
+手动对焦	Mise au point manuelle
+当前投影角度过大，请正投后重试	Angle trop grand, projetez de face puis réessayez
+与德国 CONNECT TESTLAB 联合开发，通过精细拆解显示效果，基于高色准的显示进一步精调参数，以最大化还原色彩和细节表现，实现最佳色彩准确度。	Développé avec CONNECT TESTLAB (Allemagne) : réglage fin pour une précision des couleurs et des détails maximale.
+大师色准模式	Mode Couleurs Maître
+与德国 CONNECT TESTLAB 联合开发，最大化还原色彩表现，实现最佳色彩准确度	Développé avec CONNECT TESTLAB (Allemagne) : précision des couleurs maximale
+内存信息	Mémoire
+菜单旋转	Rotation du menu
+默认	Par défaut
+左旋90度	90° à gauche
+右旋90度	90° à droite
+连接帮助	Aide à la connexion
+麦克风	Microphone
+1. 按电源键打开麦克风\n2. 长按电源键重新配对	1. Appuyez sur la touche Marche du micro\n2. Appui long pour réappairer
+连接有问题？请试试\n以下办法：	Problème de connexion ? Essayez\nceci :
+米家	Mi Home
+至少输入8个字符	8 caractères minimum
+密码长度应大于等于5个字符	Le mot de passe doit faire au moins 5 caractères
+搜索	Rechercher
+自定义模式下不支持%1$s自适应	Adaptation %1$s indisponible en mode personnalisé
+性能模式下不支持%1$s自适应	Adaptation %1$s indisponible en mode performance
+3D设置下不支持%1$s自适应	Adaptation %1$s indisponible en 3D
+打开失败	Échec de l'ouverture
+请先连接手机蓝牙播放音乐	Connectez d'abord le Bluetooth du téléphone et lancez la musique
+蓝牙音乐	Musique Bluetooth
+未在播放	Aucune lecture
+未知音乐	Titre inconnu
+未知歌手	Artiste inconnu
+%s图像模式下，不支持抗彩虹效应	Anti-arc-en-ciel indisponible en mode image %s
+办公模式	Mode bureau
+开启后，投影可与车载系统进行配对连接	Permet l'appairage avec le système de la voiture
+开机动画	Animation de démarrage
+开机时显示开机动画	Afficher l'animation au démarrage
+长辈色彩优化	Couleurs adaptées aux seniors
+针对长辈视觉特点优化色彩，提高长辈使用体验	Couleurs optimisées pour la vue des seniors
+导出批量设置	Exporter les réglages
+将设置中除Wi-Fi和投影ID外的其他参数导出到U盘	Exporte tous les réglages sauf Wi-Fi et ID projecteur vers une clé USB
+地理位置	Localisation
+导入批量设置	Importer les réglages
+多点校正	Correction multipoint
+网格数量	Nombre de points de grille
+开始校正	Lancer la correction
+切换网格数量将恢复默认画面，是否继续？	Changer la grille restaure l'image par défaut. Continuer ?
+投影数据同步	Synchro entre projecteurs
+连接方式	Type de connexion
+设备模式	Rôle de l'appareil
+同步开关	Synchronisation
+开启后，将主控设备的亮度或设置参数同步至被控机器	Synchronise la luminosité ou les réglages du maître vers les autres projecteurs
+亮度同步	Synchro luminosité
+开启后将保证同步的投影亮度一致	Luminosité identique sur les projecteurs synchronisés
+主控	Maître
+被控	Esclave
+画质同步	Synchro image
+开机后将主控设备的画质参数同步给被控设备	Au démarrage, copie les réglages d'image du maître vers les esclaves
+设置同步	Synchro réglages
+将主控设备设置内除画质参数和亮度、网络设置、ID设置、设备名称外的其他设置参数同步给被控设备	Copie vers les esclaves tous les réglages du maître sauf image, luminosité, réseau, ID et nom
+同步内容设置	Contenu synchronisé
+投影ID设置	ID du projecteur
+移焦或者按返回键退出时保存	Enregistré en changeant de champ ou avec Retour
+更多设置	Plus de réglages
+更多墙面设置	Plus de réglages du mur
+str开机	Démarrage rapide (STR)
+色觉优化	Optimisation daltonisme
+色觉异常人群可使用色觉优化来区分颜色	Aide les personnes daltoniennes à distinguer les couleurs
+观影灯光联动	Éclairage lié au visionnage
+投影开机时，灯光将切换至观影模式	Les lumières passent en mode cinéma à l'allumage du projecteur
+清除后，无法使用遥控器控制此投影设备，可\n长按@和$重新配对	Sans appairage, la télécommande ne fonctionnera plus ;\nmaintenez @ et $ pour réappairer
+清除音乐控制器配对信息	Supprimer l'appairage du contrôleur musical
+一碰同屏	Toucher pour caster
+保持手机和投影在同一局域网，手机轻碰音乐控制器可实现同屏。（仅支持华为NFC手机，且EMUI11及以上版本）	Téléphone et projecteur sur le même réseau ; touchez le contrôleur musical pour caster (Huawei NFC, EMUI 11+ uniquement)
+一碰传音	Toucher pour transférer le son
+手机轻碰音乐控制器，可将手机播放的音乐传到投影上。(仅支持安卓NFC手机)	Touchez le contrôleur musical avec le téléphone pour envoyer la musique au projecteur (Android NFC uniquement)
+音乐控制器	Contrôleur musical
+导致动态黑位增强失效	désactive les noirs dynamiques renforcés
+关闭 Turbo Light	Désactiver Turbo Light
+Turbo light 是通过光学变焦缩小画面以提升亮度。关闭后可能出现画面大小和亮度变化。	Turbo Light réduit l'image par zoom optique pour gagner en luminosité. Le désactiver peut changer taille et luminosité.
+请关闭“Turbo Light”后再试	Désactivez « Turbo Light » puis réessayez
+原帧显示下不支持至臻120Hz	120 Hz Ultime indisponible en cadence d'origine
+原帧显示下不支持3D设置	Réglages 3D indisponibles en cadence d'origine
+%s输入错误	%s incorrect
+当前配置已保存	Configuration enregistrée
+连接中	Connexion…
+请输入" %s "的密码	Saisissez le mot de passe de « %s »
+忽略此网络	Oublier ce réseau
+忽略后，设备将不会再加入此网络	L'appareil ne se connectera plus à ce réseau
+忽略网络	Oublier le réseau
+密码错误，请重新输入密码	Mot de passe incorrect, réessayez
+已保存	Enregistré
+热点已关闭	Point d'accès désactivé
+未知异常，请稍后再试	Erreur inconnue, réessayez plus tard
+成功打开 %s 热点	Point d'accès %s activé
+名称	Nom
+密码	Mot de passe
+常规信息	Informations générales
+清除蓝牙配对信息	Supprimer l'appairage Bluetooth
+清除配对后，不再保留该设备信息	Les infos de cet appareil seront supprimées
+共享中	Partage en cours
+扫描查找设备	Rechercher des appareils
+已扫描设备	Appareils trouvés
+确定	OK
+已配对	Appairé
+网络修复失败	Échec de la réparation réseau
+已对网络进行修复	Réseau réparé
+网络受限	Réseau limité
+同时使用Wi-Fi和热点将导致网速变慢	Wi-Fi et point d'accès en même temps ralentissent la connexion
+无线热点	Point d'accès sans fil
+DNS服务器	Serveur DNS
+默认网关	Passerelle par défaut
+IP地址	Adresse IP
+IP修复	Réparer l'IP
+IP地址获取	Obtention de l'IP
+子网掩码	Masque de sous-réseau
+配置方式	Configuration
+Wi-Fi详情	Détails Wi-Fi
+Wi-Fi连接	Connexion Wi-Fi
+有线网络	Réseau filaire
+USB(%s的U盘)	USB (clé de %s)
+USB有线同屏	Recopie d'écran USB filaire
+网络不可用	Réseau indisponible
+无法连接此网络	Connexion à ce réseau impossible
+无法保存网络	Enregistrement du réseau impossible
+忽略	Ignorer
+显示密码	Afficher le mot de passe
+请输入%s	Saisissez %s
+至少输入5个字符	5 caractères minimum
+新版本	Nouvelle version
+无网络连接	Pas de connexion réseau
+勿扰模式	Ne pas déranger
+开启后，关机时将无风扇噪音，但无法使用语音、投屏和蓝牙唤醒功能	Éteint, plus de bruit de ventilateur, mais plus de réveil par la voix, le cast ou le Bluetooth
+仍要开启	Activer quand même
+结束	Fin
+开始	Début
+设定时间	Programmer
+未检测到可导入的文件	Aucun fichier à importer détecté
+请插入电源适配器后重试	Branchez l'adaptateur secteur puis réessayez
+IMAX Enhanced下不支持调节	Non réglable en IMAX Enhanced
+当前HDMI模式下不支持	Indisponible dans ce mode HDMI
+HDR Vivid片源下不支持调节	Non réglable avec une source HDR Vivid
+移轴后不支持此功能，请恢复默认画面后重试	Indisponible après lens shift, restaurez l'image par défaut
+请关闭投影数据同步-亮度同步后重试	Désactivez la synchro luminosité puis réessayez
+请关闭投影数据同步-画质同步后重试	Désactivez la synchro image puis réessayez
+当前画质同步模式不支持此功能	Indisponible dans ce mode de synchro image
+办公模式下不支持色彩空间	Espace couleur indisponible en mode bureau
+图像模式-办公下不支持动态黑位增强	Noirs dynamiques indisponibles en mode image Bureau
+办公模式下，不支持长辈色彩优化	Couleurs seniors indisponibles en mode bureau
+办公模式下，光圈不可调节	Iris non réglable en mode bureau
+仅对HDR10生效	HDR10 uniquement
+仅支持一个存储分区的外接存储	Stockage externe à une seule partition uniquement
+请打开画面拼接再使用	Activez d'abord la fusion d'image
+通过手机扫码上传图片，并设置为开机图	Envoyez une image depuis le téléphone (QR code) comme écran de démarrage
+光学无损	Optique sans perte
+光学变焦	Zoom optique
+光学变焦与移轴	Zoom et lens shift optiques
+其他设置	Autres réglages
+密码:	Mot de passe :
+暂停	Pause
+执行画面校准	Lancer la correction d'image
+性能模式下不支持亮度调节	Luminosité non réglable en mode performance
+节能模式下不支持性能模式	Mode performance indisponible en mode économie
+性能模式下不支持墙面颜色适配	Adaptation au mur indisponible en mode performance
+性能图像模式下不支持基础设置	Réglages de base indisponibles en mode image Performance
+性能图像模式下不支持专业设置	Réglages pro indisponibles en mode image Performance
+性能模式下，不支持长辈色彩优化	Couleurs seniors indisponibles en mode performance
+性能模式下，光圈不可调节	Iris non réglable en mode performance
+个性化推荐	Recommandations personnalisées
+根据观影记录进行智能化内容推荐；关闭后，将根据全网热度展示内容	Recommandations selon votre historique ; désactivé : contenus populaires
+风格滤镜	Filtres de style
+画面校正增强	Correction d'image renforcée
+抗彩虹效应	Anti-arc-en-ciel
+识别到FILMMAKER MODE片源时,自动切换至对应模式	Bascule auto en FILMMAKER MODE si la source le permet
+亮度与色彩	Luminosité et couleur
+亮度模式	Mode de luminosité
+对比度增强	Contraste renforcé
+开启后，画面对比度将增强，暗部细节更加清晰可见	Contraste accru, détails sombres plus visibles
+杜比视界	Dolby Vision
+100寸	100 pouces
+110寸	110 pouces
+120寸	120 pouces
+130寸	130 pouces
+135寸	135 pouces
+140寸	140 pouces
+150寸	150 pouces
+160寸	160 pouces
+170寸	170 pouces
+180寸	180 pouces
+190寸	190 pouces
+200寸	200 pouces
+250寸	250 pouces
+300寸	300 pouces
+80寸	80 pouces
+88寸	88 pouces
+90寸	90 pouces
+杜比视界明亮	Dolby Vision Lumineux
+适合在明亮环境下使用	Pour une pièce éclairée
+杜比视界设置	Réglages Dolby Vision
+幕布增益	Gain de l'écran
+设置幕布参数，以获取最佳杜比视界效果。*仅支持官方配套幕布，使用其他幕布或不使用幕布无法达到最佳效果	Réglez l'écran pour un Dolby Vision optimal. *Écran officiel uniquement, sinon rendu non optimal
+幕布尺寸	Taille de l'écran
+杜比视界柔和	Dolby Vision Doux
+适合在黑暗环境下使用	Pour une pièce sombre
+采用突破性的高动态范围 (HDR) 和广色域影像技术，实现令人惊叹的画面质量	HDR et gamut large de pointe pour une qualité d'image impressionnante
+根据内容动态调整亮度和细节平衡	Équilibre luminosité et détails selon le contenu
+还原导演意图，适用于体验原汁原味的电影	Respecte l'intention du réalisateur
+对焦设置	Réglages de mise au point
+模式选项	Options du mode
+色彩空间	Espace couleur
+HDR片源下不支持色彩空间	Espace couleur indisponible avec une source HDR
+原始	Natif
+HDR增强	HDR renforcé
+支持IMAX Enhanced内容，提供沉浸式体验	Compatible IMAX Enhanced, expérience immersive
+为 IMAX Enhanced 片源提供震撼影音和独占画幅	Son et format d'image exclusifs pour les contenus IMAX Enhanced
+已调整到最大	Maximum atteint
+已调整到最小	Minimum atteint
+亮度与色彩风格	Style luminosité et couleur
+四点校正	Correction 4 points
+手动梯形校正	Trapèze manuel
+手动画面调整	Ajustement manuel de l'image
+选择符合观看内容的图像模式，自定义色彩空间、运动补偿等	Mode image selon le contenu ; espace couleur, compensation de mouvement…
+根据观看内容选择，自定义运动补偿等，仅在视频或HDMI下生效	Selon le contenu ; compensation de mouvement… (vidéo ou HDMI uniquement)
+请输入自定义名称	Saisissez un nom
+判断画面问题	Identifier le problème d'image
+画面旋转	Rotation de l'image
+已旋转至最大角度	Rotation maximale atteinte
+恢复初始角度	Angle d'origine
+超分辨率	Super-résolution
+通过AI算法提升图像清晰度与细节	L'IA améliore la netteté et les détails
+Windows HDR映射	Mappage HDR Windows
+适用于接入Windows设备的HDR映射方案	Mappage HDR pour les appareils Windows
+端口号	Port
+PJLink开关	PJLink
+打开后，可通过PJLink协议控制本机	Activé : contrôle du projecteur via le protocole PJLink
+平面调整	Réglage de planéité
+播放	Lecture
+试听VIP	Écoute VIP
+播放VIP	Lecture VIP
+播放列表	Liste de lecture
+通电自动开机	Allumage à la mise sous tension
+我的蓝牙设备:	Mes appareils Bluetooth :
+专家校正	Correction expert
+可使用一键画面校准、自动对焦、墙面颜色适配、智能防射眼等功能	Correction en un clic, mise au point auto, adaptation au mur, anti-éblouissement…
+画面智能避障	Évitement d'obstacles
+自动梯形校正时智能调整画面大小和位置，避开墙面开关等障碍物	Ajuste taille et position de l'image pour éviter interrupteurs et obstacles
+画面校正时，智能避开墙面开关等障碍物	Évite interrupteurs et obstacles lors de la correction
+投影方式	Type de projection
+选择设备投影方向，以调节画面翻转	Choisir l'orientation pour retourner l'image
+投影亮度	Luminosité de projection
+投影ID	ID du projecteur
+全自动云台	Support motorisé auto
+云台位移	Déplacement du support
+开机云台还原	Position du support au démarrage
+开机时，自动恢复至上次观影角度，无需每次手动调整	Reprend l'angle du dernier visionnage au démarrage
+关机云台复位	Repli du support à l'extinction
+关机时，云台将自动收起至开机前位置，维持美观角度	Le support se replie à l'extinction
+开关机复位	Position à l'allumage / extinction
+开机自动恢复至上次观影角度，关机云台将自动收起，无需手动调整	Reprend le dernier angle à l'allumage, se replie à l'extinction
+手推屏	Déplacement à la main
+拉：将手握拳放在画面内，出现提示后缓慢向后拉	Tirer : poing dans l'image, tirez lentement après l'indication
+推：将手靠近画面边缘外，出现提示后缓慢向前推	Pousser : main près du bord, poussez lentement après l'indication
+学习手推屏	Apprendre le geste
+人在画面边缘时，通过推拉控制画面位移	Déplacez l'image par un geste de la main au bord
+背投	Rétroprojection
+观看者和投影仪位于画面两侧	Spectateur et projecteur de chaque côté de l'image
+红灯温度	Température laser rouge
+[{key:ZOOM_UI_SYSTEM_SETTING,name:缩放,pkg:com.android.newsettings,category:[]}]	[{key:ZOOM_UI_SYSTEM_SETTING,name:Zoom,pkg:com.android.newsettings,category:[]}]
+[{key:ZOOM_MODE_SYSTEM_SETTING,name:缩放,value:1,valueType:0,pkg:com.android.newsettings,category:[]}]	[{key:ZOOM_MODE_SYSTEM_SETTING,name:Zoom,value:1,valueType:0,pkg:com.android.newsettings,category:[]}]
+遥控器模式	Mode télécommande
+鼠标	Souris
+遥控器对焦	Mise au point à la télécommande
+遥控器ID	ID télécommande
+还原	Restaurer
+恢复至默认画面大小？	Revenir à la taille d'image par défaut ?
+将清除当前画面校正效果	La correction d'image actuelle sera effacée
+恢复画面参数至出厂默认设置	Rétablit les paramètres d'image d'usine
+已还原校准	Calibration restaurée
+配置已恢复默认	Configuration par défaut restaurée
+已恢复最大默认画面	Taille maximale par défaut restaurée
+应用打开失败，请稍后重试	Impossible d'ouvrir l'appli, réessayez
+正在加载中…	Chargement…
+三色激光	Laser RGB
+提供高色彩鲜艳的显示效果，推荐对彩边、散斑不敏感的人群使用	Couleurs très vives ; pour ceux peu sensibles aux franges et au speckle
+画面位移	Décalage de l'image
+已调整到最低	En bas
+已调整到最左	À gauche
+已调整到最右	À droite
+已调整到最高	En haut
+墙面记忆	Mémoire des murs
+添加	Ajouter
+更新画面参数	Mettre à jour l'image
+画面参数包括画面形状、大小	Paramètres d'image : forme et taille
+将当前的画面参数更新至选择的画面	Applique les paramètres actuels à l'image choisie
+记忆不同投影角度的画面参数，手掰云台至对应位置后一键应用，无需再次调整即享大屏观影	Mémorise l'image pour chaque angle ; orientez le support et appliquez en un clic
+巨幕模式下仅支持手动梯形校正	Seul le trapèze manuel est disponible en mode écran géant
+屏保	Écran de veille
+屏幕保护	Écran de veille
+3分钟	3 minutes
+1个小时	1 heure
+等待时间	Délai
+分段	Segments
+可用网络	Réseaux disponibles
+机器序列号	Numéro de série
+串口ID组	Groupe d'ID série
+与串口ID号组成本机的串口ID，用于响应针对本串口ID的控制指令	Avec le n° d'ID série, forme l'ID série du projecteur pour les commandes
+串口ID号	N° d'ID série
+与串口ID组组成本机的串口ID，用于响应针对本串口ID的控制指令	Avec le groupe d'ID série, forme l'ID série du projecteur pour les commandes
+并联	Parallèle
+串联	Série
+主控模式	Mode maître
+串口应答（全部）	Réponse série (toutes)
+开启后，当接收到所有ID同时执行的命令时，本机会进行应答，请注意所有设备只能设置一台设备进行应答	Répond aux commandes envoyées à tous les ID ; un seul appareil doit répondre
+串口应答（组）	Réponse série (groupe)
+开启后，当接收到ID组同时执行的命令时，本机会进行应答，请注意相同串口ID组内只能设置一台设备进行应答	Répond aux commandes du groupe ; un seul appareil par groupe doit répondre
+串口控制开关	Contrôle série
+关闭后，将不再执行任何串口指令	Désactivé : plus aucune commande série exécutée
+串口控制	Contrôle série
+可通过串口指令控制本机	Contrôle du projecteur par commandes série
+此功能需配套使用极米官方「USB转RS232转换器」，方可使用RS232串口控制功能	Nécessite l'adaptateur officiel XGIMI USB vers RS232
+串口类型	Type de port série
+蓝牙可被发现	Bluetooth visible
+关闭后已配对手机无法再连接，其他设备不受影响	Désactivé : les téléphones appairés ne peuvent plus se connecter, les autres appareils oui
+蓝牙绝对音量	Volume Bluetooth absolu
+开启后，投影音量将与蓝牙设备音量始终保持同步，可能会导致音量无法调节。	Volume synchronisé avec l'appareil Bluetooth ; peut bloquer le réglage du volume.
+常规开机时显示开机动画	Animation lors d'un démarrage normal
+手机蓝牙唤醒	Réveil par Bluetooth du téléphone
+当投影仪待机时，手机可蓝牙唤醒投影仪	Le téléphone peut réveiller le projecteur en veille par Bluetooth
+开机图	Image de démarrage
+无	Aucun
+智能防射眼	Anti-éblouissement intelligent
+•︎同步时间约4分钟\n•同步过程中请勿操作设备，同步完成将自动退出	• Environ 4 minutes\n• Ne touchez pas à l'appareil, fermeture automatique à la fin
+设置同步已完成	Synchronisation terminée
+同步失败，请重试	Échec de la synchro, réessayez
+设置数据同步中......	Synchronisation des réglages…
+设置同步中	Synchronisation…
+全部设置	Tous les réglages
+请重新尝试连接	Réessayez la connexion
+正在连接...	Connexion…
+按遥控器	Appuyez sur la touche
+键调整设备音量	pour régler le volume
+请确保“%s"已打开，并重新尝试连接	Vérifiez que « %s » est allumé, puis réessayez
+%s断开	%s déconnecté
+断开连接...	Déconnexion…
+音频共享失败	Échec du partage audio
+音频共享中	Partage audio en cours
+可共享设备	Appareils partageables
+保持蓝牙音频设备可被发现，选择2个共享	Rendez les appareils audio visibles, choisissez-en 2
+如「HDMI控制投影」已开启并接收到CEC开机信号时，优先进入对应HDMI通道，此时「开机源」设置将不生效	Si « Contrôle via HDMI » est actif et reçoit un signal CEC, l'entrée HDMI correspondante est prioritaire sur la « Source de démarrage »
+优先考虑与连接设备的兼容性	Priorité à la compatibilité
+HDMI 2.0 支持全色彩范围的 4K 60Hz	HDMI 2.0 : 4K 60 Hz en plage complète
+HDMI 2.1 支持全色彩范围的 4K 60Hz	HDMI 2.1 : 4K 60 Hz en plage complète
+1. 将同屏器接入电脑、电视盒子、游戏机等信号源\n2. 长按同屏器按钮以配对投影设备	1. Branchez l'émetteur sur PC, box TV, console…\n2. Maintenez son bouton pour l'appairer
+无线同屏器\n即插即用，小屏秒变大屏	Émetteur sans fil\nBrancher et projeter
+一键即玩	Jouer en un clic
+HDMI连接的设备可控制投影自动切换至其画面	Un appareil HDMI peut faire basculer le projecteur sur son entrée
+开机源	Source de démarrage
+HDMI 设置	Réglages HDMI
+信号源设置	Réglages des sources
+信号源备份	Source de secours
+主信号	Signal principal
+备份信号	Signal de secours
+全局设置	Réglages globaux
+画面拼接	Fusion d'image
+使用2台投影仪拼接更大的投影画面\n此功能仅在信号源下可用，输入源必须连接投影的HDMI或HDBaseT端口	Deux projecteurs pour une image plus grande\nSur source uniquement, via HDMI ou HDBaseT
+HDMI即插即播	HDMI brancher-lire
+HDMI模式	Mode HDMI
+兼容模式	Mode compatible
+增强模式	Mode amélioré
+静音模式	Mode silencieux
+基本	Basique
+显示	Affichage
+扩展	Étendu
+安装	Installation
+梯形校正	Correction trapézoïdale
+智能自动对焦	Mise au point auto intelligente
+投影仪移动时自动对焦，保持画面清晰	Mise au point auto quand le projecteur bouge
+选择“上升”或“下降”，将幕布调至最佳观看高度	« Monter » ou « Descendre » l'écran à la bonne hauteur
+下降	Descendre
+完成	Terminé
+上升	Monter
+智能模式	Mode intelligent
+灵动屏	Écran partagé
+支持将屏幕分为“左右屏”及“画中画”两种模式	Deux modes : « gauche/droite » et « image dans l'image »
+灵动墙面	Mur dynamique
+天花板观影	Projection au plafond
+创建新墙面	Nouveau mur
+自定义1	Perso 1
+日常观影	Visionnage habituel
+保存当前画面参数	Enregistrer l'image actuelle
+保存	Enregistrer
+画面参数包括当前云台角度与画面形状	Paramètres : angle du support et forme de l'image
+将当前的画面参数保存至选择的墙面	Enregistre l'image actuelle sur le mur choisi
+我的墙面	Mes murs
+天窗	Lucarne
+适用于专家用户，可使用光学移轴等高阶功能	Pour experts : lens shift optique et autres fonctions avancées
+退出巨幕模式后重试	Quittez le mode écran géant puis réessayez
+一键切换，云台自动转向新墙面，并同步将投影画面精准适配至该预设位置	Un clic : le support se tourne vers le mur et l'image s'y ajuste
+当前已自动切换为“光纤/ARC”，可切换输出格式	Basculé sur « Optique/ARC », format de sortie modifiable
+当声音输出设备接入后，自动切换为对应输出。关闭后，可手动切换声音输出	Bascule auto vers l'appareil audio branché ; désactivé : choix manuel
+DTS音效	Son DTS
+哈曼音效	Son Harman
+全局音效	Son global
+声光影氛围	Ambiance son et lumière
+手动切换	Manuel
+K歌	Karaoké
+优化K歌音效，麦克风语音键可用	Son optimisé karaoké, touche micro active
+会议	Réunion
+优化会议音效，防止误碰麦克风语音键	Son optimisé réunion, évite d'appuyer sur la touche micro par erreur
+音量	Volume
+AI音效	Son IA
+低音增强	Basses renforcées
+提高嘈杂背景音中人声的清晰度	Voix plus claires sur un fond bruyant
+人声清晰	Voix claires
+杜比全景声	Dolby Atmos
+自动调节剧烈的音量变化	Atténue les variations brusques de volume
+自动音量平衡	Équilibrage auto du volume
+原声	Son d'origine
+哈曼卡顿原声	Harman Kardon original
+哈曼卡顿	Harman Kardon
+鸿鹄音效	Son Honghu
+搭配专属Total Immersion 天空音效、Total Surround 环绕音效,沉浸观影视听享受	Avec Total Immersion et Total Surround pour un son immersif
+音乐	Musique
+新闻	Infos
+体育	Sport
+虚拟环绕声	Surround virtuel
+根据播放内容选择偏好的音效	Choisir le son selon le contenu
+音效模式	Mode sonore
+音效	Effets sonores
+人声	Voix
+选择“自动”，并使用 HDMI 2.1以上线材连接支持eARC的音频系统，可输出高质量声音	« Auto » + câble HDMI 2.1 vers un système eARC : son haute qualité
+选择“关闭”，声音将通过HDMI-ARC向功放输出	« Désactivé » : son vers l'ampli via HDMI-ARC
+eARC 模式	Mode eARC
+光纤/ARC	Optique/ARC
+光纤/ARC-Passthrough	Optique/ARC-Passthrough
+光纤/ARC-PCM	Optique/ARC-PCM
+光纤/ARC-AUTO	Optique/ARC-AUTO
+内部扬声器+XGIMI Sound	HP internes + XGIMI Sound
+内部扬声器+低音炮	HP internes + caisson
+内部扬声器+XGIMI Sound+低音炮	HP internes + XGIMI Sound + caisson
+增强音效	Son amélioré
+可为当前音效模式自定义增强音效	Personnaliser l'amélioration du mode sonore actuel
+当前已自动切换为“音响系统”，可控制发声的设备组合	Basculé sur « Système audio », combinaison d'enceintes réglable
+音量调节	Réglage du volume
+音量平衡	Balance
+XGIMI Sound 组合	Combinaison XGIMI Sound
+取消音响组合	Annuler la combinaison
+声道配置	Configuration des canaux
+连接状态	État de la connexion
+当前声道	Canal actuel
+左声道(L)	Gauche (L)
+左前	Avant gauche
+左	Gauche
+右声道(R)	Droit (R)
+右前	Avant droit
+右	Droit
+左环绕(LS)	Surround gauche (LS)
+左后	Arrière gauche
+右环绕(RS)	Surround droit (RS)
+右后	Arrière droit
+取消组合	Dissocier
+取消后，将无法享受增强音质	Annuler supprime l'amélioration du son
+清除 “XGIMI Sound 组合” 配对后，可长按音箱按钮重新发起配对	Réappairage : maintenez le bouton de l'enceinte
+创建音响组合	Créer une combinaison d'enceintes
+清除 “XGIMI Sound” 配对后，可长按音箱按钮重新发起配对	Réappairage : maintenez le bouton de l'enceinte
+空间位置	Position dans la pièce
+灵动分屏模式下不支持系统设置	Réglages système indisponibles en écran partagé
+3D模式	Mode 3D
+强度	Intensité
+通过AI算法，提升视频清晰度	L'IA améliore la netteté de la vidéo
+[{"key": "SUPPORT_GMUI6_MISCKEY","pkg": "com.xgimi.misckey","name": "是否支持Gmui6"}]	[{"key": "SUPPORT_GMUI6_MISCKEY","pkg": "com.xgimi.misckey","name": "Support Gmui6"}]
+曲面调整	Correction de surface courbe
+曲面1	Courbe 1
+曲面2	Courbe 2
+曲面3	Courbe 3
+曲面4	Courbe 4
+曲面5	Courbe 5
+曲面6	Courbe 6
+适用于投影面非平面的使用场景	Pour une surface de projection non plane
+切换悬浮歌词	Afficher les paroles flottantes
+画质同步中，请稍后重试	Synchro image en cours, réessayez plus tard
+开机自动对焦	Mise au point auto au démarrage
+温度	Température
+系统升级	Mise à niveau système
+系统更新	Mise à jour système
+系统版本	Version du système
+蓝牙音乐播控栏	Barre de contrôle musique Bluetooth
+白昼主题	Thème clair
+暗夜主题	Thème sombre
+根据日出日落时间启动切换白昼、暗夜主题；此功能需要连接网络	Bascule clair/sombre selon lever et coucher du soleil ; nécessite le réseau
+黑色	Noir
+主题风格	Thème
+白色	Blanc
+4K视频下不支持3D设置	Réglages 3D indisponibles en vidéo 4K
+游戏模式下不支持3D设置	Réglages 3D indisponibles en mode jeu
+HDR视频下不支持3D设置	Réglages 3D indisponibles en vidéo HDR
+3D模式下，不支持抗彩虹效应	Anti-arc-en-ciel indisponible en 3D
+请播放视频或接入信号源后重试	Lancez une vidéo ou branchez une source puis réessayez
+3D设置下不支持图像比例设置	Format d'image indisponible en 3D
+请关闭3D设置后重试	Désactivez la 3D puis réessayez
+3D设置下不支持画面校正	Correction d'image indisponible en 3D
+3D设置下不支持原帧显示	Cadence d'origine indisponible en 3D
+3D设置下不支持墙面颜色适配	Adaptation au mur indisponible en 3D
+3D播放下不支持画面高帧率	Haute fréquence indisponible en 3D
+天猫精灵	Tmall Genie
+配置3D模式，需搭配3D眼镜方可体验立体效果	Mode 3D ; lunettes 3D nécessaires
+根据视频画面内容，AI实时调整对比度，仅在SDR视频下生效	L'IA ajuste le contraste en temps réel (vidéo SDR uniquement)
+安装引导，简化设备调试流程	Guide d'installation pour simplifier le réglage
+自动调整投影焦距，确保画面清晰	Règle la mise au point automatiquement pour une image nette
+通过信号处理调整画面的整体明暗观感	Règle la luminosité perçue par traitement du signal
+调整投影光机的物理输出亮度	Règle la luminosité physique du bloc optique
+适用于打造家庭影院体验	Pour une expérience home cinéma
+专业工具精确校准六基色和肤色	Outils pro pour calibrer les 6 couleurs primaires et le teint
+智能识别内容，自动调整色彩	Reconnaît le contenu et ajuste les couleurs
+选择设备所能呈现的色彩范围标准	Choisir la norme de couleurs affichées
+调整画面色调冷暖	Règle la teinte chaude/froide
+调整画面最亮与最暗部分的差异	Règle l'écart entre zones claires et sombres
+提供多项校正功能	Plusieurs fonctions de correction
+根据画面内容自动调整整体对比度	Ajuste le contraste selon l'image
+调整从黑到白的亮度响应曲线	Règle la courbe de luminosité du noir au blanc
+Gamma曲线的具体数值。2.2为通用标准，2.4更适合暗室观影。	Valeur de la courbe gamma. 2,2 = standard, 2,4 = pièce sombre.
+提升高动态范围（HDR）内容的整体效果	Améliore le rendu des contenus HDR
+选择适合观看内容的预设画质模式	Choisir le mode image selon le contenu
+精准控制进光量，优化亮度层次，增强画面对比度	Contrôle précis de la lumière, plus de nuances et de contraste
+分区调整画面不同区域的对比度，增强立体感	Contraste réglé par zones pour plus de relief
+手动微调投影焦距，精准控制清晰度	Mise au point manuelle précise
+通过手动调整多个校准点校正画面形状	Corrige la forme de l'image via plusieurs points
+通过插帧技术，使运动画面更流畅，减少拖影	Interpolation d'images pour des mouvements plus fluides
+减少画面中的噪点，使图像更纯净	Réduit le bruit pour une image plus propre
+一键自动优化，确保画面方正清晰	Optimisation en un clic : image carrée et nette
+一键自动优化，移轴无损构图，确保画面方正清晰	Optimisation en un clic avec lens shift sans perte : image carrée et nette
+光学级调整，实现画面的无损缩放与位移	Réglage optique : zoom et décalage sans perte
+调整画面基础参数	Réglages de base de l'image
+移动时，实时确保画面方正清晰	Image carrée et nette en temps réel lors d'un déplacement
+恢复所有图像参数至默认值	Remet tous les réglages d'image par défaut
+调整色彩鲜艳程度	Règle l'intensité des couleurs
+仅在数码变焦后，才可用画面位移调整画面位置	Décalage d'image disponible seulement après zoom numérique
+旋转画面方向，适配安装环境	Fait pivoter l'image selon l'installation
+调整图像边缘清晰度	Règle la netteté des contours
+采用画质优先算法，自动避开障碍时，最大限度减少画面损失。	Priorité à la qualité : perte d'image minimale en évitant les obstacles.
+采用画质优先算法，自动识别精准对齐幕布时，最大限度减少画面损失。	Priorité à la qualité : perte d'image minimale en s'alignant sur l'écran.
+应用特殊视觉效果（如复古、黑白）	Effets visuels (rétro, noir et blanc…)
+请将更新文件存放在（FAT32格式）U盘根目录中，并将U盘插入投影仪的USB2.0接口	Copiez le fichier à la racine d'une clé USB FAT32 et branchez-la sur le port USB 2.0
+校准画面中白色的准确性，避免偏色	Calibre le blanc pour éviter les dominantes
+画面对焦	Mise au point
+梯形校正至中心圆为正圆	Corrigez jusqu'à ce que le cercle central soit rond
+画面调整	Ajustement de l'image
+大小和位置	Taille et position
+智能	Intelligent
+定时切换需要连接网络	Le changement programmé nécessite le réseau
+性能模式下暂不支持色彩调节	Réglage des couleurs indisponible en mode performance
+自定义模式不支持%1$s自适应	Adaptation %1$s indisponible en mode personnalisé
+自定义名称不能为空	Le nom ne peut pas être vide
+名称已重复，请重新输入	Nom déjà utilisé, choisissez-en un autre
+文件检测出错，错误代码：001	Erreur de vérification du fichier, code : 001
+手动设置时间可能会导致设备无法访问网络	Régler l'heure à la main peut bloquer l'accès au réseau
+性能模式下暂不支持亮度调节	Luminosité non réglable en mode performance
+性能模式下暂不支持对比度增强	Contraste renforcé indisponible en mode performance
+请先恢复Turbo Light后重试	Rétablissez d'abord Turbo Light
+当前方向到达极限，无法继续移动	Limite atteinte dans cette direction
+网络异常，请检查后重试	Erreur réseau, vérifiez puis réessayez
+服务器异常，请稍后重试	Erreur serveur, réessayez plus tard
+暂无历史版本	Aucune version précédente
+打开智能幕布应用失败，请检查是否安装了此应用	Impossible d'ouvrir l'appli écran intelligent ; est-elle installée ?
+性能模式不支持%1$s自适应	Adaptation %1$s indisponible en mode performance
+请先插入U盘	Branchez d'abord une clé USB
+请先添加唤醒设备	Ajoutez d'abord un appareil de réveil
+校准完成	Calibration terminée
+当前距离过远，请调整	Trop loin, ajustez
+当前距离过近，请调整	Trop près, ajustez
+当前距离合适	Distance correcte
+校准失败	Échec de la calibration
+距离过远,校准失败	Trop loin, échec de la calibration
+距离过近,校准失败	Trop près, échec de la calibration
+当前刷新率已不可提升	Fréquence déjà au maximum
+确定开启Turbo Light ？	Activer Turbo Light ?
+当环境光过强时，应用Turbo Light效果可通过光学变焦提升画面亮度，同时画面缩放0–20%	Lumière ambiante forte : Turbo Light augmente la luminosité par zoom optique, image réduite de 0–20 %
+请将亮度调整为10后重试	Mettez la luminosité à 10 puis réessayez
+恢复	Rétablir
+点击后恢复到Turbo Light之前的画面亮度和大小	Revient à la luminosité et taille d'avant Turbo Light
+Turbo Light 自适应	Turbo Light adaptatif
+环境光过强时，自动通过光学变焦提升画面亮度，同时画面缩放 0-20%	Lumière ambiante forte : zoom optique pour plus de luminosité, image réduite de 0–20 %
+环境光过强时，应用 Turbo Light 效果可提升画面亮度，同时画面缩放 0-20%	Lumière ambiante forte : Turbo Light augmente la luminosité, image réduite de 0–20 %
+重启设备立即体验新版本	Redémarrez pour profiter de la nouvelle version
+自动升级	Mise à niveau auto
+自动更新	Mise à jour auto
+在线更新	Mise à jour en ligne
+在线升级	Mise à niveau en ligne
+升级系统	Mettre à niveau le système
+U盘更新	Mise à jour par USB
+U盘升级	Mise à niveau par USB
+请将升级文件存放于FAT32格式的U盘根目录中，插入设备USB2.0接口（包名被修改后将不能被读取）	Fichier à la racine d'une clé USB FAT32, sur le port USB 2.0 (ne pas renommer le fichier)
+检测到安装包	Paquet de mise à jour détecté
+未检测到安装包	Aucun paquet détecté
+未检测到U盘	Aucune clé USB détectée
+用户体验改进计划	Programme d'amélioration
+加入用户体验改进计划	Participer au programme d'amélioration
+查看用户体验改进计划	Voir le programme d'amélioration
+俯仰角度	Inclinaison
+自动垂直梯形校正	Trapèze vertical auto
+自动垂直梯形为开时不支持画面校正	Correction d'image indisponible avec le trapèze vertical auto
+请在视频播放状态下切换至臻120Hz	Activez le 120 Hz Ultime pendant la lecture d'une vidéo
+IMAX 片源下暂不支持	Indisponible avec une source IMAX
+视频比例	Format vidéo
+画面缩放 	Zoom de l'image
+蓝/黄滤镜	Filtre bleu/jaune
+灰度	Niveaux de gris
+绿/红滤镜	Filtre vert/rouge
+红/绿滤镜	Filtre rouge/vert
+HDR Vivid下不支持动态黑位增强	Noirs dynamiques indisponibles en HDR Vivid
+音频输出格式	Format de sortie audio
+透传	Passthrough
+语音助手	Assistant vocal
+耳机	Casque
+光纤	Optique
+内部扬声器	Haut-parleurs internes
+开机音乐	Musique de démarrage
+AC4对白增强	Dialogues renforcés AC4
+USB（Harman Kardon低音音响）	USB (caisson Harman Kardon)
+按键音	Son des touches
+麦克风模式	Mode micro
+麦克风音量	Volume du micro
+声音输出	Sortie audio
+输出	Sortie
+可选择声音输出设备，音频输出格式	Choisir l'appareil et le format de sortie audio
+音画同步	Synchro audio/vidéo
+音响系统	Système audio
+墙面颜色适配	Adaptation à la couleur du mur
+亮度调节导致墙面颜色适配失效	Le réglage de luminosité annule l'adaptation au mur
+切换模式导致墙面颜色适配失效	Le changement de mode annule l'adaptation au mur
+调节色彩导致墙面颜色适配失效	Le réglage des couleurs annule l'adaptation au mur
+%1$s自适应导致墙面颜色适配失效	L'adaptation %1$s annule l'adaptation au mur
+开始适配	Lancer l'adaptation
+为获得最佳色彩效果，画面将自动升至最高亮度，并关闭环境亮度自适应相关功能	Pour un rendu optimal, la luminosité passe au maximum et l'adaptation à la lumière ambiante est coupée
+智能匹配投影墙面颜色，以达到最佳色彩效果	S'adapte à la couleur du mur pour des couleurs optimales
+动态黑位增强导致墙面颜色适配失效	Les noirs dynamiques annulent l'adaptation au mur
+画面校正时，画面颜色匹配墙面颜色	Lors de la correction, adapte les couleurs à celle du mur
+1.开启后，使用自动画面调整功能时将执行墙面\n颜色适配，以获得最佳色彩效果\n  \n2.自定义色彩风格、3D模式和亮度自适应下将\n不支持墙面颜色适配	1. Activé : l'ajustement auto adapte aussi les couleurs\nau mur pour un rendu optimal\n \n2. Indisponible avec style de couleur perso, 3D et\nluminosité adaptative
+开启墙面颜色适配？	Activer l'adaptation à la couleur du mur ?
+正在加载中	Chargement
+请输入ssid	Saisissez le SSID
+如出现加载异常或无内容显示，按【返回】退出	En cas d'erreur ou d'écran vide, appuyez sur Retour
+网络认证	Authentification réseau
+请拔出网线后再连接Wi-Fi	Débranchez le câble réseau avant d'utiliser le Wi-Fi
+立即连接	Se connecter
+Wi-Fi未连接	Wi-Fi non connecté
+当前连接WIFI:   	Wi-Fi actuel :
+有线MAC地址	Adresse MAC filaire
+无线MAC地址	Adresse MAC Wi-Fi
+网络好像有问题，错误码：%s	Problème réseau, code : %s
+请查看系统时间日期是否正确，错误码：%s	Vérifiez la date et l'heure du système, code : %s
+网络请求超时，错误码：%s	Délai de requête dépassé, code : %s
+网络连接超时，错误码：%s	Délai de connexion dépassé, code : %s
+未知异常，错误码：%s	Erreur inconnue, code : %s
+未连接网络，错误码：%s	Pas de réseau, code : %s
+存储空间不足，错误码：%s	Stockage insuffisant, code : %s
+服务器开小差了，错误码：%s	Le serveur ne répond pas, code : %s
+暂无数据	Aucune donnée
+出错啦！	Une erreur s'est produite !
+连接网络	Se connecter au réseau
+仅在杜比视界片源下支持调整	Réglable seulement avec une source Dolby Vision
+Total Surround 环绕音效	Surround Total Surround
+XGIMI Sound 音效	Son XGIMI Sound
+XGIMI Sound 专属音效使用中	Son dédié XGIMI Sound actif
+Total Immersion 天空音效	Son Total Immersion
+缩放与位移	Zoom et décalage
+云台位移与缩放	Déplacement et zoom du support
+画面不清晰？按 @ 自动对焦	Image floue ? Appuyez sur @ pour la mise au point auto
+注意：移轴后防射眼会在部分范围时失效。墙面颜色适配、墙面记忆功能将不可用	Attention : après lens shift, l'anti-éblouissement peut ne pas couvrir toute la zone ; adaptation au mur et mémoire des murs indisponibles
+注意：移轴后防射眼会在部分范围时失效。墙面颜色适配、画面自动定位、灵动墙面功能将不可用	Attention : après lens shift, l'anti-éblouissement peut ne pas couvrir toute la zone ; adaptation au mur, positionnement auto et mur dynamique indisponibles
+画面比例	Format d'image
+转到首页	Revenir à l'accueil
+转到上一层级	Revenir en haut de la page
+更多选项	Autres options
+查看全部	Tout afficher
+选择应用	Sélectionner une application
+Delete 键	supprimer
+Enter 键	entrée
+空格键	espace
+搜索…	Rechercher…
+清除查询	Effacer la requête
+搜索查询	Requête de recherche
+提交查询	Envoyer la requête
+语音搜索	Recherche vocale
+分享对象	Partager avec
+与%s分享	Partager avec %s
+收起	Réduire
+已优化到%s模式	Optimisé pour le mode %s
+AI画质增强	Amélioration de la qualité d’image par IA
+后台服务已启动	Service d’arrière-plan démarré
+启动防射眼弹窗	Activer la fenêtre contextuelle anti-éblouissement
+启动外设断开提示	Activer l’alerte de déconnexion des périphériques
+启动外设弹窗	Activer la fenêtre contextuelle périphérique
+启动播放器动画	Lancer l’animation du lecteur
+音效： 原生	Effet sonore : Natif
+幕布	Rideau
+按 @ 退出	Appuyez sur @ pour quitter.
+关闭智能防射眼功能？	Désactiver la fonction Protection oculaire intelligente ?
+感应区域内检测到人体移动，已调低投影亮度以减少人眼刺激	Mouvement humain détecté dans la zone de détection. La luminosité de la projection a été réduite afin de limiter la fatigue oculaire.
+长按 @ 关闭功能	Appuyez longuement sur @ pour fermer
+下次可通过“快捷设置”\n快速访问U盘	La prochaine fois, vous pourrez accéder rapidement à la clé USB via « Paramètres rapides »
+长按 @ 查看	Appui long sur @ pour afficher
+按 @ 查看	Appuyez sur @ pour afficher
+下次可通过“快捷设置”\n快速进入信号源	La prochaine fois, vous pourrez accéder rapidement à la source d’entrée via « Paramètres rapides »
+电量不足	Batterie faible
+小黄人	« Minions »
+怪兽	« Monstre »
+音效： %s	« Effet sonore : %s »
+麦克风电量低	Microphone : batterie faible
+手机蓝牙	Téléphone via Bluetooth
+连接成功	Connexion effectuée
+正在连接	Connexion en cours…
+可至“设置 > 视频”管理	À régler dans « Paramètres > Vidéo »
+可至“设置 > 图像”管理	À régler dans « Paramètres > Image »
+可至“设置 > 亮度与显示”管理	À régler dans « Paramètres > Luminosité et affichage »
+超分辨率已开启	Super-résolution activée
+30天过去了，看看%1$s有没有长高	30 jours se sont écoulés, voyons si %1$s a grandi
+记得测量%1$s等%2$s人的最新身高	N’oubliez pas de mesurer la taille récente de %1$s et %2$s
+短按麦克风 “开机键” 切换音效	Appuyez brièvement sur le bouton « Power ON » (marche) du micro pour basculer entre les effets sonores.
+已退出智能防射眼	La protection oculaire intelligente a été désactivée
+按 @ 前往	Appuyez sur @ pour continuer
+可至“设置>通用”管理	À régler dans « Paramètres > Général »
+按 @ 去量身高	Appuyez sur @ pour mesurer la hauteur

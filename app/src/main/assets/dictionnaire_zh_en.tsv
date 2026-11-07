@@ -1,0 +1,1506 @@
+# Chinese -> English dictionary for XGIMI (Settings + GlobalConfig)
+# Format: Chinese text<TAB>translation. \n = line break. %s, %1$s, @ = variable values.
+取消	Cancel
+新版本安装完成	New version installed
+更新失败	Update failed
+稍后再说	Later
+立即重启	Restart now
+重试	Retry
+重启设备完成更新	Restart to finish the update
+关于本机	About
+入网号	Network access number
+请先关闭%1$s自适应后再重试	Turn off %1$s adaptation first, then retry
+自适应增强	Adaptive enhancement
+根据环境光自动调整画面亮度，并且可以自定义色彩显示等增强功能	Adjusts brightness to ambient light, with customizable color enhancements
+根据环境光自动调整画面亮度和对比度	Adjusts brightness and contrast to ambient light
+提供更广的亮度与色彩调整范围以适应强光环境	Wider brightness and color range for bright rooms
+根据偏好选择亮度自适应时画面显示调整的范围	Choose the adjustment range for adaptive brightness
+自适应设置	Adaptive settings
+正在加载中...	Loading…
+历史版本	Previous versions
+AI画质图像模式下不支持基础设置	Basic settings unavailable in AI picture mode
+AI画质图像模式下不支持专业设置	Pro settings unavailable in AI picture mode
+开机画面自动定位	Auto image positioning at startup
+进风温度	Air intake temperature
+侧投梯形校正状态下进入3D模式，梯形校正效果将消失且暂时无法自动校正	Entering 3D while side-projecting removes keystone correction and disables auto correction
+推荐正投画面后进入3D模式	Project straight on before entering 3D
+环境	Ambient
+环境光	Ambient light
+亮度	Brightness
+请关闭“亮度调节-亮度自适应”后重试	Turn off "Brightness – Adaptive brightness" and retry
+请关闭%1$s自适应后重试	Turn off %1$s adaptation and retry
+氛围音箱	Ambient speaker
+氛围音箱设置	Ambient speaker settings
+Android版本	Android version
+辅助安装	Installation assistant
+热点类型	Hotspot type
+系统设置	System settings
+调整画面	Adjust picture
+内测尝鲜	Private beta
+软件公测	Public beta
+自动梯形功能校准	Calibrate auto keystone
+校正功能校准	Calibrate correction
+自动对焦	Autofocus
+动态光圈下，亮度不可调节	Brightness not adjustable with dynamic iris
+梯形校正校准	Keystone calibration
+正投画面至墙面，并保持设备水平放置	Project straight onto the wall, device level
+将投影仪放置在距墙面/幕布1.8–2.1米的水平桌面上	Place the projector on a table 1.8–2.1 m from the wall/screen
+校准越精确，画面校正效果越佳	The more precise the calibration, the better the correction
+若自动梯形校正后画面不是矩形，请使用梯形校准	If the picture isn't rectangular after auto keystone, use keystone calibration
+自动梯形校正	Auto keystone correction
+仅当自动梯形校正效果不方正时使用	Only use if auto keystone isn't square
+移轴幕布对齐	Lens-shift screen alignment
+一键画面校正	One-click picture correction
+自动画面调整	Auto picture adjustment
+请关闭%1$s自适应再使用3D设置	Turn off %1$s adaptation before 3D settings
+自动	Auto
+自动垂直翻转	Auto vertical flip
+已开启自动翻转投影方式，可在设置中取消自动翻转	Auto flip is on; you can disable it in settings
+根据设备放置方向，自动转换为正装或吊装模式	Switches between table and ceiling mode based on orientation
+智能动态调焦	Smart dynamic focus
+设备出现偶然虚焦时，系统将自动调整画面至清晰	If the picture goes out of focus, it refocuses automatically
+自动画面调整增强	Enhanced auto picture adjustment
+1分钟	1 minute
+10分钟	10 minutes
+15分钟	15 minutes
+30分钟	30 minutes
+5分钟	5 minutes
+永不	Never
+无信号自动关机	Auto power off with no signal
+开启后将自动下载更新，并提示您安装最新的系统	Downloads updates automatically and prompts you to install
+辅助幕布对齐	Assisted screen alignment
+调整后 按	After adjusting, press
+开始对齐	Start alignment
+移动投影仪，使投影画面四边超出幕布边框	Move the projector so the picture overflows the screen edges
+已安装幕布时，自动调整投影画面对齐幕布边框	With a screen installed, aligns the picture to its edges automatically
+返回	Back
+后台更新	Background update
+开关打开时，识别到HDR Vivid等特定的图像模式片源，将自动切换至对应的图像模式	When on: switches to the matching picture mode for HDR Vivid etc.
+取消配对	Cancel pairing
+“%1$s”请求蓝牙配对	"%1$s" wants to pair via Bluetooth
+配对	Pair
+蓝灯温度	Blue laser temperature
+音频共享	Audio sharing
+音频共享功能仅支持声音输出为“自动”时使用	Audio sharing only works with sound output set to "Auto"
+清除后将不保留有关该设备的所有数据	All data for this device will be deleted
+清除配对?	Remove pairing?
+请确认以下配对码显示在“%1$s”上	Check this code is shown on "%1$s"
+已连接	Connected
+未连接	Not connected
+已断开	Disconnected
+开启时，可被发现为“%s”	When on: visible as "%s"
+清除配对	Remove pairing
+清除	Remove
+清除后，无法使用遥控器控制此投影设备，可长按 和 重新配对	Without pairing the remote won't work; hold the keys to re-pair
+清除无线HDMI同屏器配对？	Remove the wireless HDMI transmitter pairing?
+清除“极米智能光子幕布”配对后，可在”设置-蓝牙”中重新发起配对	You can re-pair in "Settings – Bluetooth"
+重新配对需要长按同屏器按钮	To re-pair, hold the transmitter button
+清除配对后，需要重新进行配对	You'll need to pair again
+清除“极米便携蓝牙音箱”配对后，可在”设置-蓝牙”中重新发起配对	You can re-pair in "Settings – Bluetooth"
+清除极米遥控器配对?	Remove XGIMI remote pairing?
+清除遥控器配对?	Remove remote pairing?
+清除开关面板配对?	Remove wall switch pairing?
+连接	Connect
+断开连接	Disconnect
+请在该设备上输入以下配对码，然后按回车键	Enter this code on the device, then press Enter
+开启时，可被发现为“XGIMI小鹏定制版投影仪”	When on: visible as "XGIMI projector Xpeng edition"
+无线同屏器	Wireless transmitter
+来自： %1$s \n 要与此设备配对吗？	From: %1$s\nPair with this device?
+调整幕布高度	Adjust screen height
+蓝牙	Bluetooth
+型号号码	Model number
+幕布动画	Screen animation
+开启后，开机幕布降落时显示动画	Show an animation when the screen lowers at startup
+序列号	Serial number
+极米智能光子幕布	XGIMI smart screen
+版本更新	Updates
+版本	Version
+最多支持3台唤醒设备同时连接，如需添加更多，请关闭其中1台设备的蓝牙	Max 3 wake devices; turn off Bluetooth on one to add more
+在手机上打开蓝牙，连接 “ %s ”	Turn on Bluetooth on your phone and connect to "%s"
+添加唤醒设备	Add wake device
+快速唤醒	Quick wake
+唤醒设备在附近时，可通过蓝牙、投屏或说“你好极米”，唤醒投影仪	Nearby device: wake via Bluetooth, casting or "Hello XGIMI"
+电池电量	Battery
+极米便携蓝牙音箱	XGIMI portable Bluetooth speaker
+我的设备	My devices
+其他	Other
+快捷键	Shortcuts
+可配置【快捷键】，快速前往指定功能	Set up shortcuts to your favorite features
+正在充电	Charging
+极米遥控器	XGIMI remote
+遥控器	Remote
+添加更多设备	Add more devices
+当前设备可被发现为“%s”，可将蓝牙或 Wi-Fi设备添加至我的设备	Visible as "%s"; add Bluetooth or Wi-Fi devices
+可用设备	Available devices
+开关面板	Wall switch
+关屏并退出	Turn off screen and exit
+降低亮度以获得更鲜艳的色彩，退出过程中将保持屏幕关闭一段时间，完成后将自动亮屏	Lowers brightness for richer colors; screen stays off briefly, then comes back
+再按一次 @ 可退出 Boost 档	Press @ again to exit Boost
+再按一次左键可退出 Boost 档	Press left again to exit Boost
+退出“Boost 档位”以获得更鲜艳的色彩？	Exit Boost mode for richer colors?
+关屏并切换	Turn off screen and switch
+切换过程将保持屏幕关闭一段时间，完成后自动亮屏	Screen stays off briefly, then comes back on
+Boost 亮度档位下不支持色彩空间	Color space unavailable in Boost mode
+请退出 Boost 亮度档位后重试	Exit Boost mode and retry
+3D设置下不支持切换 Boost 亮度档位	Boost mode unavailable in 3D
+再按一次 @ 切换至 Boost 档	Press @ again for Boost mode
+再按一次右键切换至 Boost 档	Press right again for Boost mode
+切换至“Boost 档位”获得更高亮度？	Switch to Boost mode for more brightness?
+开/关机设置	Power on / off
+设备每次开机时会自动调整画面对焦	Autofocus at every startup
+开机自动梯形校正	Auto keystone at startup
+设备每次开机时会自动进行画面校正	Picture correction at every startup
+开机自动校正	Auto correction at startup
+开机自动画面调整	Auto picture adjustment at startup
+我的应用	My apps
+开机后自动打开对应的应用	Opens the chosen app at startup
+支架模式	Stand mode
+亮度自适应已关闭	Adaptive brightness off
+亮度自适应已开启	Adaptive brightness on
+亮度调节	Brightness
+10+: 切换至 Boost 档可提供更高亮度	10+: Boost mode for more brightness
+通过 IRIS (光圈) 调节亮度，低亮度下\n对比度更高，画面更清晰	Brightness via IRIS: at low brightness,\nhigher contrast and sharper picture
+: IRIS调节亮度，低亮度下画面对比度更高，画面更清晰\n10+: 切换至 Boost 档可提供更高亮度	: brightness via IRIS, higher contrast at low brightness\n10+: Boost mode for more brightness
+通过 IRIS（光圈）调节亮度，低亮度下对比度更高，画面更清晰	Brightness via IRIS: higher contrast and sharpness at low brightness
+亮度增强	Brightness boost
+更多	More
+亮度自适应	Adaptive brightness
+切换	Switch
+确认	Confirm
+继续	Continue
+存储空间	Storage
+上一步	Previous
+微调投影角度至正投，保证当前投影画面为矩形	Adjust the angle to project straight on, rectangular picture
+当前画面更接近以下哪种情况	Which best matches the current picture?
+继续校准	Continue calibration
+完成校准	Finish calibration
+去调整	Adjust
+恢复默认	Default
+自动梯形功能将恢复至默认状态	Auto keystone will return to default
+对焦效果将恢复出厂默认状态	Focus will return to factory default
+恢复默认校准数据	Restore default calibration
+已恢复至默认校准状态	Default calibration restored
+自动画面调整功能将恢复至默认状态	Auto picture adjustment will return to default
+结束校准	Stop calibration
+输入距离	Enter distance
+校准画面	Calibration picture
+若方正请选择完成校准，不方正请选择继续校准	Square picture: Finish; otherwise: Continue
+陀螺仪已校准\n当前画面是否方正？	Gyroscope calibrated\nIs the picture square?
+陀螺仪校准	Gyroscope calibration
+保持投影仪水平放置并正投\n确保画面矩形且底边和地面平行	Projector level and straight on\nRectangular picture, bottom edge parallel to the floor
+梯形校正已校准\n当前画面是否方正？	Keystone calibrated\nIs the picture square?
+否则将影响校准效果	Otherwise the calibration will be off
+请确认当前画面	Check the current picture
+自动画面调整功能已校准\n当前画面是否方正？	Auto adjustment calibrated\nIs the picture square?
+左右调整	Left / right
+梯形校准	Keystone calibration
+调整画面至矩形	Make the picture rectangular
+将投影仪放置在距墙面/幕布15–30cm的水平桌面上	Place the projector on a table 15–30 cm from the wall/screen
+下一步	Next
+联系客服	Contact support
+好的	OK
+若确认当前投影距离已是1.8-2.1米，否则将影响校准效果	Make sure the distance is 1.8–2.1 m, otherwise the calibration will be off
+若确认当前投影距离已是1.8–2.1米，可能是测距感应器异常，请联系客服	If the distance really is 1.8–2.1 m, the distance sensor may be faulty: contact support
+若确认当前投影距离已是15–30cm，可能是测距感应器异常，请联系客服	If the distance really is 15–30 cm, the distance sensor may be faulty: contact support
+投影距离过近，请调整后再试	Too close, adjust and retry
+投影距离过远，请调整后再试	Too far, adjust and retry
+已确认	Confirmed
+重新校准	Recalibrate
+请在引导下完成右侧步骤恢复正常画面	Follow the steps on the right to restore the picture
+画面是否方正将影响校准效果	The picture's shape affects calibration
+重新摆放	Reposition
+请确认投影画面是否方正?	Is the picture square?
+请联系客服处理	Contact support
+手机和投影连接同一个网络，当前网络：	Phone and projector on the same network, current network:
+手机和投影连接同一个网络	Phone and projector on the same network
+手机扫描二维码	Scan the QR code with your phone
+手机拍照上传，完成幕布对齐	Take a photo with your phone to align the screen
+调整投影仪位置（侧投角度不超过20度），使投影画面完全覆盖幕布	Position the projector (angle ≤ 20°) so the picture covers the whole screen
+•调整投影仪位置，使画面完全覆盖幕布\n•侧投角度不超过20度	• Position the projector so the picture covers the whole screen\n• Side angle ≤ 20°
+开启后，投影可与车载系统进行配对连接。\n请注意：\n为保障驾驶安全，请务必将车辆停稳后使用。因本品内含电池，请勿将本品置于高温环境中，离开车辆时请随身携带	Allows pairing with the car system.\nNote:\nOnly use when the vehicle is parked. Built-in battery: don't leave it in the heat, take it with you when leaving the car
+立即开启	Turn on
+车载蓝牙模式	Car Bluetooth mode
+切换控制点	Switch control point
+清除后，无法使用遥控器控制此投影设备，可\n长按back和home重新配对	Without pairing the remote won't work;\nhold Back + Home to re-pair
+清除配对？	Remove pairing?
+请关闭原帧显示后重试	Turn off native frame rate and retry
+请关闭高帧率后重试	Turn off high frame rate and retry
+请关闭开机画面自动定位后重试	Turn off auto positioning at startup and retry
+请关闭开机源-灵动墙后重试	Turn off the "Dynamic wall" startup source and retry
+请关闭VRR后重试	Turn off VRR and retry
+已最大化还原色彩表现	Color rendering restored to maximum
+请退出 3D 模式后重试	Exit 3D mode and retry
+请退出杜比视界后重试	Exit Dolby Vision and retry
+请恢复 Turbo Light 后重试	Restore Turbo Light and retry
+已还原至开启前色彩表现	Colors restored to before activation
+将自动更改亮度及色彩相关设置，同时调整图像模式自定义参数，以实现最佳色彩准确度	Adjusts brightness, color and picture mode for best color accuracy
+∗ 开启后，调节亮度、色彩及图像模式将影响色准效果	∗ Once on, changing brightness, color or picture mode affects accuracy
+专业色准	Pro color accuracy
+色彩增强	Color enhancement
+色彩自适应	Adaptive color
+中	Medium
+强	Strong
+根据偏好为色彩调节选择增强效果	Choose the color enhancement strength
+自定义色彩增强	Custom color enhancement
+弱	Weak
+色彩风格	Color style
+根据偏好选择或自定义色彩显示的整体风格	Choose or customize the overall color style
+色彩范围	Color range
+将投影设备显示的色彩范围与信号源相匹配	Matches the projector's color range to the source
+完整	Full
+限制	Limited
+仅限于使用无法正确输出RGB范围信息的HDMI设备时进行变更	Only change for HDMI devices that don't output the correct RGB range
+将投影显示的色彩范围与信号源相匹配	Matches the color range to the source
+专业摄影(Adobe RGB)	Pro photo (Adobe RGB)
+专业摄影	Pro photo
+广色域(BT.2020)	Wide gamut (BT.2020)
+强（推荐）	Strong (recommended)
+广色域	Wide gamut
+适用于杜比视界、IMAX Enhanced、HDR等片源，提供更鲜艳、细致的颜色使图像更逼真	For Dolby Vision, IMAX Enhanced, HDR: more vivid, detailed and lifelike colors
+电影色域(DCI-P3)	Cinema gamut (DCI-P3)
+电影色域	Cinema gamut
+适合大多数常规视频 ，根据DCI P3标准，显示更丰富的颜色，让视频更绚丽	For most videos: DCI-P3 standard, richer colors
+选择亮度与色彩调整的强度，以获得偏好的观影显示效果	Choose how strongly brightness and color are adjusted
+原始色域	Native gamut
+适合HDR、杜比视界等广色域视频，使用最广的色彩空间，显示最丰富的颜色细节	For HDR, Dolby Vision: widest color space, maximum color detail
+标准色域(Rec.709)	Standard gamut (Rec.709)
+标准色域	Standard gamut
+适合大多数常规视频，根据Rec.709标准，显示基础的颜色	For most videos: Rec.709 standard, basic colors
+弱（推荐）	Weak (recommended)
+色彩调节	Color adjustment
+电影D65	Cinema D65
+三色激光模式专属色彩风格生效中	RGB laser color style active
+图像风格	Picture style
+标准（推荐）	Standard (recommended)
+色温	Color temperature
+冷色	Cool
+暖色	Warm
+色彩	Color
+手动添加网络	Add network
+请输入密码	Enter password
+安全性	Security
+请输入SSID	Enter SSID
+确认自动梯形功能已校准	Make sure auto keystone is calibrated
+确认自动画面调整功能已校准	Make sure auto adjustment is calibrated
+网络变化，请重试	Network changed, retry
+请连接网络后重试	Connect to a network and retry
+手势控制	Gesture control
+便捷梯形校正	Quick keystone correction
+恢复默认画面/精准校正	Default picture / precise correction
+便捷校正	Quick correction
+校正成功	Correction successful
+开始校准	Start calibration
+一键校准？	One-click calibration?
+校正设置	Correction settings
+调整设备角度，使设备水平放置，再点击校准\n水平校准越精确，画面校准效果越佳	Level the device, then start calibration\nThe more precise, the better the correction
+画面校正设置	Picture correction settings
+画面调整设置	Picture adjustment settings
+当前图像模式下，不支持长辈色彩优化	Senior color optimization unavailable in this picture mode
+当前信号刷新率	Current signal refresh rate
+当前信号	Current signal
+当前信号分辨率	Current signal resolution
+当前光圈下，亮度不可调节	Brightness not adjustable with this iris
+当前模式不能调整风速	Fan speed not adjustable in this mode
+画幕自动对齐	Auto screen alignment
+智能调整画面以对齐幕布边缘，校准前请确保投影画面完全覆盖住幕布	Aligns the picture to the screen edges; the picture must cover the whole screen first
+画面校正时，自动对齐幕布边缘，需先确保投影画面超出幕布四边	Aligns to screen edges; the picture must overflow all 4 sides
+自定义模式下不支持亮度调节	Brightness not adjustable in custom mode
+自定义模式下不支持墙面颜色适配	Wall color adaptation unavailable in custom mode
+卧室的	Bedroom's
+客厅的	Living room's
+我的	My
+的	's
+自定义设备名称	Custom device name
+自定义	Custom
+云备份	Cloud backup
+帮助与反馈	Help & feedback
+家长设置	Parental controls
+删除所有内容	Erase everything
+将删除所有设置数据、本地文件和已安装应用	Erases settings, local files and installed apps
+将删除所有设置数据，同时保留本地文件和\n已安装应用	Erases settings, keeps local files and\ninstalled apps
+保留应用	Keep apps
+将删除所有设置数据，\n保留已安装的应用和本地文件	Erases settings,\nkeeps installed apps and local files
+保留已下载应用	Keep downloaded apps
+将删除所有设置数据，同时保留本地文件和已安装应用	Erases settings, keeps local files and installed apps
+不保留应用	Don't keep apps
+将删除所有设置数据、本地文件、已安装的应用	Erases settings, local files and installed apps
+是否保留已下载的应用？	Keep downloaded apps?
+恢复出厂设置？	Reset to factory settings?
+恢复出厂	Factory reset
+物联网	IoT
+删除自定义	Delete custom mode
+删除自定义图像模式？	Delete custom picture mode?
+删除后，将自动切换至AI画质。您可以在“设置-亮度与显示-图像模式”中重新选择。	It will switch to AI picture. You can change this in "Settings – Brightness & display – Picture mode".
+设备信息	Device info
+设备型号	Model
+投影使用时间	Projection time
+远程控制设备并定位问题	Remote control and diagnostics
+切换至专家模式	Switch to expert mode
+切换至智能模式	Switch to smart mode
+将恢复至默认画面位置\n智能模式可使用一键画面校正、自动对焦、墙面颜色适配、智能防射眼等功能	Returns to the default picture position\nSmart mode: one-click correction, autofocus, wall color adaptation, eye protection…
+专家模式可使用光学移轴等高阶功能，但不能使用一键画面校正、自动对焦、墙面颜色适配、智能防射眼等智能功能	Expert mode: optical lens shift and other advanced features, but no one-click correction, autofocus, wall adaptation or eye protection
+为了保证显示效果最佳，将清除墙面颜色适配数据	Wall color adaptation data will be cleared for best results
+投影仪倒挂于画面前方天花板上时使用，调节画面翻转\n∗ 吊装下暂不支持部分功能，如实时画面校正、墙面平整度适配等（具体功能可能因不同型号有所差异）。如需了解后续支持情况，请联系客服	For a projector mounted upside down on the ceiling in front of the picture: flips the image\n∗ Some features (real-time correction, wall flatness adaptation…) aren't supported on ceiling mounts depending on the model. Contact support for details
+切换游戏模式	Switch game mode
+游戏模式延迟更低，但不支持“ %s ” 。	Game mode has lower latency, but no "%s".
+校准后效果不好，可选择恢复默认	Not happy with the result? Restore the defaults
+请将投影放在水平面上，再开始校准陀螺仪	Place the projector on a level surface before calibrating the gyroscope
+切换前请确保设备通风口无遮挡、且室温不超过25°C。请勿长时间使用此模式，否则可能造成设备过热影响使用寿命。	Make sure vents are unobstructed and the room is ≤ 25 °C. Don't use this mode for long: risk of overheating and wear.
+切换性能模式	Switch performance mode
+请确认画面矩形、底边和地面平行，且校准完成\n前不要移动设备，否则会影响自动梯形校正效果	Rectangular picture, bottom edge parallel to the floor; don't move\nthe device until done, or auto keystone will be off
+切换至“三色激光”模式？	Switch to "RGB laser" mode?
+切换极速模式	Switch to ultra-fast mode
+切换前请将投影设备移动至正投状态，否则将导致画面歪斜。	Project straight on before switching, or the picture will be skewed.
+极速模式延迟更低，但不支持“ %s ” 。	Ultra-fast mode has lower latency, but no "%s".
+专家校正模式	Expert correction mode
+通过光学变焦和移轴实现专业级安装精度和无损画质体验，推荐搭配幕布场景使用	Optical zoom and lens shift: pro installation, lossless picture, ideal with a screen
+*专家模式不支持一键画面校正、自动对焦、墙面颜色适配、智能防射眼等智能功能	*Expert mode lacks one-click correction, autofocus, wall adaptation and eye protection
+切换至智能校正模式？	Switch to smart correction?
+切换至专家校正模式？	Switch to expert correction?
+切换至吊装？	Switch to ceiling mode?
+升级	Upgrade
+更新	Update
+本次更新将删除当前设置数据、本地文件、已安装应用，\n过程中请勿断开电源及U盘	This update erases settings, files and apps.\nDon't unplug power or the USB drive
+检测到安装包，是否更新？	Update package found. Update now?
+本次更新将保留当前设置数据、本地文件、已安装应用，\n过程中请勿断开电源及U盘	This update keeps settings, files and apps.\nDon't unplug power or the USB drive
+升级系统？	Update the system?
+删除	Delete
+删除“%s”?	Delete "%s"?
+我知道了	Got it
+超出上限，请先删除设备	Limit reached, remove a device first
+配对失败，请在“%s”上重试	Pairing failed, retry on "%s"
+DICOM图像模式下不支持Gamma指数	Gamma unavailable in DICOM picture mode
+数码位移	Digital shift
+数码缩放与位移	Digital zoom & shift
+数码变焦	Digital zoom
+位移自动校正	Auto correction after moving
+开机状态下，移动设备会自动画面校正	Corrects the picture automatically if the device is moved while on
+位移自动对焦	Autofocus after moving
+设备开机状态下发生位移时会自动调整画面对焦	Refocuses if the device is moved while on
+位移自动梯形校正	Auto keystone after moving
+开机状态下移动设备会自动进行画面校正	Corrects the picture automatically if the device is moved while on
+位移自动画面调整	Auto adjustment after moving
+位移可能造成画面模糊，按"@"手动对焦	Blurry after moving? Press "@" to focus
+DMD温度	DMD temperature
+正装	Table
+正装正投	Table, front
+动态对焦补偿	Dynamic focus compensation
+实时动态对焦，保持画面清晰	Real-time dynamic focus, always sharp
+节能模式	Power saving mode
+关闭节能模式	Turn off power saving
+关闭节能模式？	Turn off power saving?
+使用极米电池支架、充电宝供电时，关闭节能模式可能会导致耗电量增加或关机	On an XGIMI battery stand or power bank, turning it off may increase drain or shut down the device
+开启节能模式	Turn on power saving
+· 节能模式下会降低亮度和听觉效果\n· 使用极米电池支架、充电宝供电时，为提升续航、保\n   护设备，推荐开启节能模式	· Power saving lowers brightness and sound\n· Recommended on an XGIMI battery stand or\n   power bank for longer runtime
+开启节能模式？	Turn on power saving?
+降低亮度和听觉效果，以获得更长的续航时间，推荐接入极米电池支架、充电宝时使用	Lowers brightness and sound for longer runtime; recommended on battery
+长辈模式自动开启	Auto senior mode
+设备接通电源时将自动开机，使用时请做好电源安全管理	Turns on as soon as it's plugged in; mind electrical safety
+上电自动开机	Power on when plugged in
+关闭墙面颜色适配后再进行%1$s自适应	Turn off wall color adaptation before %1$s adaptation
+开	On
+进入屏保	Start screensaver
+环境自适应	Environment adaptation
+环境自适应已关闭	Environment adaptation off
+环境自适应已开启	Environment adaptation on
+环境光自适应	Ambient light adaptation
+根据环境光自动调整画面亮度，以达到最佳的观影效果	Adjusts brightness to ambient light for the best viewing
+根据环境光自动调整画面亮度	Adjusts brightness to ambient light
+投影环境检测	Environment detection
+智能检测投影环境，以匹配最佳校正方式	Analyzes the environment to pick the best correction
+设备名称	Device name
+开始导出	Start export
+•︎请使用FAT32格式的U盘连接投影	• Use a FAT32 USB drive
+是否导出批量文件？	Export settings files?
+•︎请使用FAT32格式的U盘连接投影\n•︎导出过程中请勿操作投影	• Use a FAT32 USB drive\n• Don't touch the projector during export
+批量设置数据导出中......	Exporting settings…
+安心模式	Peace-of-mind mode
+检测到人体后自动息屏或全屏遮罩，人体离开或按【返回键】恢复屏幕	Person detected: screen off or masked; restores when they leave or on Back
+关闭	Off
+已关闭智能防射眼	Eye protection turned off
+关闭后，镜头前有人时不再自动降低亮度。 请注意保护眼睛，避免直视光源	Once off, brightness won't drop when someone is in front of the lens. Don't look into the light
+开启后，检测到镜头前有人时，降低投影仪亮度，避免人眼刺激\n*该功能处于Beta测试中，可能存在不稳定现象	Lowers brightness when someone is in front of the lens\n*Beta feature, may be unstable
+开启	On
+关闭“%1$s”功能？	Turn off "%1$s"?
+开启“%1$s”功能？	Turn on "%1$s"?
+跟随模式	Follow mode
+跟随人体移动实时降低局部亮度，不影响观看	Lowers brightness locally following the person, without affecting viewing
+检测到镜头前有人时，降低亮度，避免人眼刺激	Lowers brightness when someone is in front of the lens
+检测到镜头前有人时，自动关闭屏幕	Turns the screen off when someone is in front of the lens
+护眼三色激光	Eye-care RGB laser
+达到中国标准化研究院视觉舒适度A+等级，提供更高亮度的同时大幅提升观影舒适度	Visual comfort grade A+ (Chinese standard): brighter and more comfortable
+达到中国标准化研究院视觉舒适度A等级，提供更高亮度的同时大幅提升观影舒适度	Visual comfort grade A (Chinese standard): brighter and more comfortable
+手动	Manual
+风速已调整为“自动”	Fan set to "Auto"
+请先在隐藏设置中关闭“支架模式”后重试	Turn off "Stand mode" in hidden settings first
+滤镜分类	Filter categories
+删除我上传的滤镜后，会同步删除云端数据	Deleting my filters also deletes cloud data
+删除后无法恢复，是否继续？	This can't be undone. Continue?
+输入分享码	Enter share code
+滤镜管理	Filter management
+设置	Settings
+滤镜类型	Filter type
+滤镜用户协议	Filter terms
+墙面平整适配	Uneven wall adaptation
+针对不平整的墙面进行智能适配，以呈现最佳画面	Adapts to uneven walls for the best picture
+扫码下载极米 App，使用极米 App “爱机 > 墙面平整” 进行\n智能适配	Scan to get the XGIMI app, then use "My device > Wall" for\nadaptation
+*此功能吊装下不支持	*Not supported on ceiling mount
+一键校准	One-click calibration
+校准还原	Undo calibration
+若自动对焦后画面仍然不清晰，请使用对焦校准	Still blurry after autofocus? Use focus calibration
+对焦校准	Focus calibration
+将设备 正投 并保持投影距离在 1—2米，再进行对焦校准	Project straight on at 1–2 m, then calibrate focus
+请确认画面矩形、且校准完成前不要移动设备，\n 否则会影响自动对焦效果	Rectangular picture; don't move the device until done,\n or autofocus will be off
+可按【对焦键】自动对焦，或长按使用手动对焦	Focus key: autofocus; long press: manual
+可按侧边【对焦键】自动对焦，或长按使用手动对焦	Side Focus key: autofocus; long press: manual
+按【对焦键】自动对焦，或长按使用手动对焦	Focus key: autofocus; long press: manual
+可按【对焦键】手动对焦	Focus key: manual focus
+可将底部拨杆拨至Focus自动对焦，或继续按音量【加减键】手动对焦	Bottom lever to Focus for auto, or volume +/- for manual
+参考图像对整个画面进行精准调焦	Precise focus on the reference image
+已调整上限	Limit reached
+对焦	Focus
+当画面模糊时，通过对焦调整清晰度	Fixes a blurry picture
+正装背投	Table, rear projection
+游戏增强模式	Game enhancement mode
+优化HDMI外接游戏设备的体验；更低延迟、专用游戏图像模式，并提供更多游戏工具	Optimizes HDMI game consoles: lower latency, game picture mode, game tools
+“游戏增强模式”为自动或打开时，在信号源画面下可长按【设置键】呼出游戏增强工具	Game mode Auto or On: long press Settings on an HDMI source for game tools
+请打开游戏增强模式后重试	Turn on game enhancement mode and retry
+请接入HDMI并打开游戏增强模式后重试	Connect HDMI and turn on game enhancement mode
+识别到游戏内容时（ALLM）	Game content detected (ALLM)
+若游戏设备不支持ALLM，请选择“识别到游戏设备时”或选择“打开”	If your console doesn't support ALLM, choose "Console detected" or "On"
+识别到游戏设备时	Console detected
+自动切换时机	Auto switch trigger
+若选择“自动”，当识别到HDMI进入游戏内容或接入游戏设备后，将切换游戏增强模式	"Auto": switches to game mode when a game or console is detected on HDMI
+极速模式下不支持自动画面调整	Auto adjustment unavailable in ultra-fast mode
+降低画面延迟，同时保证画面分辨率	Lower latency, resolution kept
+基础	Basic
+模式选择	Mode
+极速	Ultra-fast
+画面延迟更低，但不支持“画面校正”	Even lower latency, but no "Picture correction"
+极速模式下不支持手动梯形校正	Manual keystone unavailable in ultra-fast mode
+3D播放下不支持游戏模式	Game mode unavailable in 3D
+请在信号源画面下进行设置	Set this from a video source
+极速模式下不支持投影环境检测	Environment detection unavailable in ultra-fast
+极速模式下不支持画面位移	Picture shift unavailable in ultra-fast
+极速模式下不支持画面旋转	Picture rotation unavailable in ultra-fast
+极速模式下不支持画面缩放	Picture zoom unavailable in ultra-fast
+极速模式下不支持画面自动定位	Auto positioning unavailable in ultra-fast
+极速模式下不支持画面缩放与位移	Zoom & shift unavailable in ultra-fast
+打开	On
+选择“自动”，将自动识别游戏设备并切换至游戏模式; 选择“打开”保持游戏模式常开; 选择“关闭”保持游戏模式常关	"Auto": detects the console and switches to game mode; "On": always; "Off": never
+选择“自动”，将自动识别游戏设备并切换至游戏模式; 选择“关闭”保持游戏模式常关	"Auto": detects the console and switches to game mode; "Off": never
+降低延迟提升游戏体验，提供基础、极速两种模式	Lower latency for gaming, Basic and Ultra-fast modes
+手动梯形校正”与“画面缩放	Manual keystone" and "Picture zoom
+梯形校正”、“墙面平整适配	Keystone correction" and "Uneven wall adaptation
+游戏模式	Game mode
+不支持Gamma指数	Gamma unavailable
+HDMI控制投影	HDMI controls projector
+HDMI连接的设备可控制投影开关机	HDMI devices can turn the projector on/off
+CEC控制	CEC control
+投影可控制HDMI连接的设备，关闭后，音频ARC输出将不可用	Projector controls HDMI devices; when off, ARC audio output won't work
+对焦图	Focus test pattern
+INUI版本	INUI version
+GMUI版本	GMUI version
+绿灯温度	Green laser temperature
+若校准后效果不佳，可尝试恢复至默认校准状态	Not happy with the result? Restore the default calibration
+恢复至默认校准状态？	Restore default calibration?
+将投影仪放置在水平桌面上，调整投影角度至正投，确保投影画面矩形且底边与地面平行	Projector on a table, straight on; rectangular picture, bottom edge parallel to the floor
+当前为合适的投影角度	Projection angle OK
+请调整投影角度后重试	Adjust the angle and retry
+当前角度过大	Angle too large
+自动对焦中，请勿移动机器	Autofocusing, don't move the device
+请将投影放置于距离墙面约1.8m~2.1m的位置，并确保侧投角度小于20度，俯仰角度小于10度\n校准时角度尽量与日常使用角度一致	Place the projector 1.8–2.1 m from the wall, side angle < 20°, tilt < 10°\nKeep your usual viewing angle
+当前为合适的距离	Distance OK
+确认投影距离	Check distance
+请调整投影距离后重试	Adjust the distance and retry
+当前距离过远	Too far
+当前距离过近	Too close
+请确保投影稳定后再重试	Keep the projector steady and retry
+按@退出	@ to exit
+校准已完成	Calibration complete
+请移动投影或投射其他墙面，确认校准后的对焦效果	Aim at another wall to check the focus
+校准中，请勿移动机器	Calibrating, don't move the device
+如自动对焦后，面面仍不清晰，请使用对焦校准	Still blurry after autofocus? Use focus calibration
+当前水平角度过大，请调整投影角度后重试	Horizontal angle too large, adjust and retry
+当前俯仰角度过大，请调整投影角度后重试	Tilt too large, adjust and retry
+当前水平、俯仰角度过大，请调整投影角度后重试	Horizontal and vertical angles too large, adjust and retry
+HDBaseT画面比例	HDBaseT aspect ratio
+应用	Apply
+此功能仅在信号源下可用\n输入起始位置坐标和显示范围	Only available on a video source\nEnter start coordinates and display area
+显示高度	Display height
+显示宽度	Display width
+请在信号输入大于100Hz时使用	Use with a signal above 100 Hz
+请输入大于100的数字	Enter a number > 100
+HDMI画面比例	HDMI aspect ratio
+像素	Pixels
+输入数据过大	Value too large
+拼接参数设置	Edge blending settings
+X坐标	X coordinate
+Y坐标	Y coordinate
+HDR Vivid图像模式生效中	HDR Vivid picture mode active
+蓝牙与配件	Bluetooth & accessories
+通用	General
+3D设置	3D settings
+视频图像模式	Video picture mode
+亮度与显示	Brightness & display
+灯光	Lighting
+网络	Network
+画面校正	Picture correction
+图像	Picture
+信号源	Input source
+声音	Sound
+系统	System
+远程诊断时，极米将远程控制您的设备，了解并定位您的问题。远程诊断后，请根据客服引导结束此次诊断。	During diagnostics, XGIMI controls your device remotely. End it afterwards by following support's instructions.
+开始诊断	Start diagnostics
+远程诊断	Remote diagnostics
+上电开机	Power on when plugged in
+接通电源后投影自动开机	Turns on as soon as it's plugged in
+风速等级	Fan level
+风速	Fan
+输入法	Keyboard
+日志上报	Log upload
+接通电源后投影仪自动开机	The projector turns on as soon as it's plugged in
+隐藏设置	Hidden settings
+智能幕布	Smart screen
+日	Day
+时	Hour
+分	Minute
+月	Month
+时间设置	Date & time
+年	Year
+高海拔模式	High altitude mode
+建议在高海拔地区使用，将加大风扇转速、提高散热效率	Recommended at altitude: faster fan, better cooling
+当前温度过高	Temperature too high
+高帧率下不支持3D设置	3D settings unavailable at high frame rate
+吊装	Ceiling
+吊装正投	Ceiling, front
+水平角度	Horizontal angle
+水平辅助安装	Horizontal installation assistant
+热点:	Hotspot:
+热点	Hotspot
+至臻120Hz下不能3D播放	3D unavailable in Ultimate 120Hz
+至臻120Hz下不支持原帧显示	Native frame rate unavailable in Ultimate 120Hz
+至臻120Hz下不支持3D设置	3D settings unavailable in Ultimate 120Hz
+11点白平衡	11-point white balance
+2点白平衡	2-point white balance
+AI对比度	AI contrast
+根据视频画面内容，AI实时调整对比度	AI adjusts contrast in real time based on the picture
+清晰度	Sharpness
+动态黑位增强	Dynamic black enhancement
+画面暗部场景较多时，动态调整画面对比度，提升暗部细节表现	Dark scenes: dynamic contrast, more shadow detail
+画面融合	Edge blending
+图像模式	Picture mode
+基础设置	Basic settings
+基于预设模式	Based on preset
+HDR动态亮度映射	HDR dynamic tone mapping
+选择“自动”，将自动识别游戏设备并切换至游戏模式；选择“打开”保持游戏模式常开；选择“关闭”保持游戏模式常关	"Auto": detects the console and switches to game mode; "On": always; "Off": never
+低延迟	Low latency
+基础模式	Basic mode
+极速模式	Ultra-fast mode
+ISF白天	ISF Day
+专业校准画质，适合白天观看	Pro-calibrated picture for daytime
+ISF黑夜	ISF Night
+专业校准画质，适合夜晚观看	Pro-calibrated picture for evenings
+请关闭游戏增强模式后重试	Turn off game enhancement mode and retry
+杜比视界专属图像模式生效中	Dolby Vision picture mode active
+请关闭节能模式后重试	Turn off power saving and retry
+游戏模式下不支持图像模式	Picture mode unavailable in game mode
+游戏模式生效中	Game mode active
+低延迟下不支持图像模式	Picture mode unavailable in low latency
+办公图像模式下不支持色温调节	Color temperature not adjustable in Office mode
+大师色准	Master color accuracy
+专业级色彩校准，还原真实色彩	Pro color calibration, true-to-life colors
+专业设置	Pro settings
+白平衡	White balance
+恢复默认设置	Restore defaults
+重置图像设置	Reset picture settings
+画面暗部场景较多时，通过硬件加速提升暗部细节和层次	Dark scenes: hardware acceleration for more shadow detail
+图像设置	Picture settings
+根据观看内容选择模式，自定义色彩空间、运动补偿等	Mode by content; color space, motion compensation…
+动态黑位校正	Dynamic black correction
+通过校准，在增强暗部细节时维持色彩还原度	Calibrated: more shadow detail without altering colors
+原帧显示	Native frame rate
+解决播放特定帧视频时，不均匀补帧导致的画面抖动问题	Prevents judder from uneven frame interpolation on some videos
+原帧	Native frame rate
+游戏模式下不支持图像比例设置	Aspect ratio unavailable in game mode
+低延迟下不支持图像比例设置	Aspect ratio unavailable in low latency
+请在HDMI源下调整图像比例设置	Set the aspect ratio on an HDMI source
+请在HDMI源下调整HDMI模式	Set the HDMI mode on an HDMI source
+关闭3D	Turn off 3D
+左右3D转2D	Side-by-side 3D → 2D
+左右3D	Side-by-side 3D
+蓝光3D	Blu-ray 3D
+上下3D转2D	Top-bottom 3D → 2D
+上下3D	Top-bottom 3D
+明亮	Bright
+适用于白天或开灯环境使用	For daytime or a lit room
+识别到支持的片源时，自动切换到HDR Vivid模式	Switches to HDR Vivid when the source supports it
+观影画面过渡更加顺滑，开启后将降低分辨率，如需低延迟请使用游戏模式-高帧率模式	Smoother motion but lower resolution; for low latency use Game mode – High frame rate
+AI画质	AI picture
+AI智能识别场景，自动匹配最优图像参数	AI recognizes the scene and adjusts the picture
+自动切换	Auto switch
+影院	Cinema
+色彩校正	Color correction
+蓝色	Blue
+青色	Cyan
+绿色	Green
+色相	Hue
+品红	Magenta
+红色	Red
+饱和度	Saturation
+肤色	Skin tone
+黄色	Yellow
+色彩优化	Color optimization
+色温1	Color temp 1
+色温2	Color temp 2
+色温3	Color temp 3
+蓝色偏移	Blue offset
+蓝色增益	Blue gain
+蓝	Blue
+冷	Cool
+绿色偏移	Green offset
+绿色增益	Green gain
+绿	Green
+红色偏移	Red offset
+红色增益	Red gain
+红	Red
+标准	Standard
+暖	Warm
+对比度	Contrast
+动态对比度	Dynamic contrast
+动态	Dynamic
+足球	Football
+游戏	Game
+Gamma指数	Gamma
+艳丽	Vivid
+色彩增强，适用于观看动画、记录片等	Enhanced colors, for animation and documentaries
+高级设置	Advanced settings
+高	High
+低	Low
+运动补偿	Motion compensation
+观影	Movie
+电影	Movie
+还原影院级色彩与对比度，适合暗场观影	Cinema colors and contrast, for a dark room
+降噪	Noise reduction
+关	Off
+办公	Office
+优化文字和图表显示，适合办公场景	Optimized text and charts, for work
+局部对比度	Local contrast
+性能	Performance
+亮度MAX | 较大噪音，不推荐观影	Max brightness | louder, not recommended for movies
+至臻120Hz	Ultimate 120Hz
+锐度	Detail
+运动	Sports
+动态流畅，适合观看体育赛事等	Smooth motion, for sports
+画质均衡，适用日常大多数场景	Balanced picture for most uses
+电视	TV
+舒适画质，适合日常观看电视剧/综艺	Comfortable picture for shows
+用户	User
+原始比例	Original ratio
+臻彩	Rich color
+柔和	Soft
+柔和舒适，适合长时间观看	Soft and relaxing, for long viewing
+IMAX Enhanced模式下暂不支持	Not available in IMAX Enhanced
+IMAX Enhanced不支持风格滤镜	Style filters unavailable in IMAX Enhanced
+IMAX Enhanced专属图像模式生效中	IMAX Enhanced picture mode active
+电影D65（推荐）	Cinema D65 (recommended)
+开始导入	Start import
+批量设置数据导入完成	Settings import complete
+检查到批量设置文件，是否导入？	Settings file found. Import it?
+导入时出现异常，请重试	Import error, retry
+•︎请使用FAT32格式的U盘连接投影\n•︎导入过程中请勿操作投影	• Use a FAT32 USB drive\n• Don't touch the projector during import
+批量设置数据导入中......	Importing settings…
+实时画面校正	Real-time picture correction
+输入已达最大限制	Input limit reached
+安装方式	Installation type
+请接入U盘后重试	Insert a USB drive and retry
+XGIMI Sound+低音炮	XGIMI Sound+ subwoofer
+XGIMI Sound+内部扬声器 (低音)	XGIMI Sound+ internal speakers (bass)
+光圈调节	Iris adjustment
+开启后我们将推送软件新版本到您的设备，您可以通过论坛发帖分享您的使用感受和建议，我们会不定期挑选优质回复给予奖励，您的建议会让我们产品做的更好	Get new versions early; share feedback on the forum, the best get rewarded
+保持3D模式	Stay in 3D
+全键盘	Full keyboard
+九宫格	9-key keyboard
+吊装场景下暂不支持	Not supported on ceiling mount
+画面自动定位	Auto picture positioning
+画面自动定位启动失败	Auto positioning failed
+云台自动转向，将画面调整至最佳投影位置	The motorized gimbal turns the picture to the best position
+极速模式下不能触发一键校准	One-click calibration unavailable in ultra-fast
+请确认画面矩形、且校准完成前不要移动设备，\n 否则会影响自动梯形校正效果	Rectangular picture; don't move the device until done,\n or auto keystone will be off
+长按查看更多功能	Long press for more options
+查看更多功能	More options
+工程测试图样	Test pattern
+已恢复至默认画面	Default picture restored
+精准校正	Precise correction
+四点画面调整	4-point adjustment
+恢复默认画面	Restore default picture
+八点画面调整	8-point adjustment
+局域网	Local network
+简体中文	Simplified Chinese
+语言/Language	Language
+法律信息	Legal information
+隐私政策	Privacy policy
+隐私政策（摘要版）	Privacy policy (summary)
+第三方共享信息清单	Third-party sharing list
+用户协议	Terms of use
+个人信息收集清单	Personal data collection list
+均衡	Balanced
+鲜艳	Vivid
+沉浸	Immersive
+节能	Eco
+护眼	Eye care
+清新	Fresh
+高亮	High brightness
+高能	High power
+镜头锁定	Lens lock
+请先关闭「镜头锁定」再重试	Turn off "Lens lock" first
+镜头设置	Lens settings
+镜头位移	Lens shift
+已调整到上限	Limit reached
+校准	Calibrate
+陀螺仪水平校准	Gyroscope level calibration
+若自动梯形校正后投影出现旋转，请使用陀螺仪水平校准	Picture tilted after auto keystone? Calibrate the gyroscope
+吊装背投	Ceiling, rear projection
+选择生效的光源	Choose the active light source
+光源1	Light source 1
+光源2	Light source 2
+全开	All on
+光源模式	Light source mode
+切换不同的光源模式，选择偏好的显示效果	Switch light source mode for your preferred display
+光源使用时间	Light source usage time
+色温智能跟随日光调节，提供自然规律的生活照明	Color follows daylight for natural lighting
+延时关灯键	Delayed light-off key
+可配置【延时关灯键】，定义每次按下后自动关灯的延迟时间	Set the light-off delay for each key press
+生日快乐	Happy birthday
+灯光模式	Lighting mode
+节律光	Circadian light
+小夜灯	Night light
+阅读	Reading
+放松	Relax
+工作	Work
+罗曼蒂克	Romantic
+关灯	Lights off
+灯	Light
+将用于获取所在地天气、出行等服务信息	Used for local weather and travel info
+为解决您的问题，我们将上传日志开启期间的系统操作记录，不会侵犯您的任何隐私，感谢您的配合	To solve your issue, we'll upload the system log for this period, with no private data. Thank you
+长按恢复默认画面	Long press: default picture
+手动对焦	Manual focus
+当前投影角度过大，请正投后重试	Angle too large, project straight on and retry
+与德国 CONNECT TESTLAB 联合开发，通过精细拆解显示效果，基于高色准的显示进一步精调参数，以最大化还原色彩和细节表现，实现最佳色彩准确度。	Developed with CONNECT TESTLAB (Germany): fine-tuned for maximum color and detail accuracy.
+大师色准模式	Master color mode
+与德国 CONNECT TESTLAB 联合开发，最大化还原色彩表现，实现最佳色彩准确度	Developed with CONNECT TESTLAB (Germany): maximum color accuracy
+内存信息	Memory
+菜单旋转	Menu rotation
+默认	Default
+左旋90度	Rotate left 90°
+右旋90度	Rotate right 90°
+连接帮助	Connection help
+麦克风	Microphone
+1. 按电源键打开麦克风\n2. 长按电源键重新配对	1. Press the mic power button\n2. Long press to re-pair
+连接有问题？请试试\n以下办法：	Connection problem? Try\nthis:
+米家	Mi Home
+至少输入8个字符	At least 8 characters
+密码长度应大于等于5个字符	Password must be at least 5 characters
+搜索	Search
+自定义模式下不支持%1$s自适应	%1$s adaptation unavailable in custom mode
+性能模式下不支持%1$s自适应	%1$s adaptation unavailable in performance mode
+3D设置下不支持%1$s自适应	%1$s adaptation unavailable in 3D
+打开失败	Failed to open
+请先连接手机蓝牙播放音乐	Connect your phone via Bluetooth and play music first
+蓝牙音乐	Bluetooth music
+未在播放	Not playing
+未知音乐	Unknown track
+未知歌手	Unknown artist
+%s图像模式下，不支持抗彩虹效应	Anti-rainbow unavailable in %s picture mode
+办公模式	Office mode
+开启后，投影可与车载系统进行配对连接	Allows pairing with the car system
+开机动画	Boot animation
+开机时显示开机动画	Show the boot animation at startup
+长辈色彩优化	Senior color optimization
+针对长辈视觉特点优化色彩，提高长辈使用体验	Colors optimized for older eyes
+导出批量设置	Export settings
+将设置中除Wi-Fi和投影ID外的其他参数导出到U盘	Exports all settings except Wi-Fi and projector ID to USB
+地理位置	Location
+导入批量设置	Import settings
+多点校正	Multi-point correction
+网格数量	Grid points
+开始校正	Start correction
+切换网格数量将恢复默认画面，是否继续？	Changing the grid restores the default picture. Continue?
+投影数据同步	Projector sync
+连接方式	Connection type
+设备模式	Device role
+同步开关	Sync
+开启后，将主控设备的亮度或设置参数同步至被控机器	Syncs the master's brightness or settings to the other projectors
+亮度同步	Brightness sync
+开启后将保证同步的投影亮度一致	Same brightness on synced projectors
+主控	Master
+被控	Slave
+画质同步	Picture sync
+开机后将主控设备的画质参数同步给被控设备	At startup, copies the master's picture settings to slaves
+设置同步	Settings sync
+将主控设备设置内除画质参数和亮度、网络设置、ID设置、设备名称外的其他设置参数同步给被控设备	Copies all master settings to slaves except picture, brightness, network, ID and name
+同步内容设置	Synced content
+投影ID设置	Projector ID
+移焦或者按返回键退出时保存	Saved when changing field or pressing Back
+更多设置	More settings
+更多墙面设置	More wall settings
+str开机	Quick start (STR)
+色觉优化	Color blindness optimization
+色觉异常人群可使用色觉优化来区分颜色	Helps color-blind viewers tell colors apart
+观影灯光联动	Lights linked to viewing
+投影开机时，灯光将切换至观影模式	Lights switch to movie mode when the projector turns on
+清除后，无法使用遥控器控制此投影设备，可\n长按@和$重新配对	Without pairing the remote won't work;\nhold @ and $ to re-pair
+清除音乐控制器配对信息	Remove music controller pairing
+一碰同屏	Tap to cast
+保持手机和投影在同一局域网，手机轻碰音乐控制器可实现同屏。（仅支持华为NFC手机，且EMUI11及以上版本）	Phone and projector on the same network; tap the music controller to cast (Huawei NFC, EMUI 11+ only)
+一碰传音	Tap to transfer audio
+手机轻碰音乐控制器，可将手机播放的音乐传到投影上。(仅支持安卓NFC手机)	Tap the music controller with your phone to send music to the projector (Android NFC only)
+音乐控制器	Music controller
+导致动态黑位增强失效	disables dynamic black enhancement
+关闭 Turbo Light	Turn off Turbo Light
+Turbo light 是通过光学变焦缩小画面以提升亮度。关闭后可能出现画面大小和亮度变化。	Turbo Light shrinks the picture with optical zoom for more brightness. Turning it off may change size and brightness.
+请关闭“Turbo Light”后再试	Turn off "Turbo Light" and retry
+原帧显示下不支持至臻120Hz	Ultimate 120Hz unavailable with native frame rate
+原帧显示下不支持3D设置	3D settings unavailable with native frame rate
+%s输入错误	%s incorrect
+当前配置已保存	Configuration saved
+连接中	Connecting…
+请输入" %s "的密码	Enter the password for "%s"
+忽略此网络	Forget this network
+忽略后，设备将不会再加入此网络	The device won't join this network again
+忽略网络	Forget network
+密码错误，请重新输入密码	Wrong password, try again
+已保存	Saved
+热点已关闭	Hotspot off
+未知异常，请稍后再试	Unknown error, try again later
+成功打开 %s 热点	Hotspot %s turned on
+名称	Name
+密码	Password
+常规信息	General information
+清除蓝牙配对信息	Remove Bluetooth pairing
+清除配对后，不再保留该设备信息	This device's info will be deleted
+共享中	Sharing
+扫描查找设备	Scan for devices
+已扫描设备	Devices found
+确定	OK
+已配对	Paired
+网络修复失败	Network repair failed
+已对网络进行修复	Network repaired
+网络受限	Limited network
+同时使用Wi-Fi和热点将导致网速变慢	Wi-Fi and hotspot at the same time slow the connection
+无线热点	Wireless hotspot
+DNS服务器	DNS server
+默认网关	Default gateway
+IP地址	IP address
+IP修复	Repair IP
+IP地址获取	Obtaining IP
+子网掩码	Subnet mask
+配置方式	Configuration
+Wi-Fi详情	Wi-Fi details
+Wi-Fi连接	Wi-Fi connection
+有线网络	Wired network
+USB(%s的U盘)	USB (%s's drive)
+USB有线同屏	Wired USB screen mirroring
+网络不可用	Network unavailable
+无法连接此网络	Can't connect to this network
+无法保存网络	Can't save network
+忽略	Ignore
+显示密码	Show password
+请输入%s	Enter %s
+至少输入5个字符	At least 5 characters
+新版本	New version
+无网络连接	No network connection
+勿扰模式	Do not disturb
+开启后，关机时将无风扇噪音，但无法使用语音、投屏和蓝牙唤醒功能	When off, no fan noise, but no wake by voice, casting or Bluetooth
+仍要开启	Turn on anyway
+结束	End
+开始	Start
+设定时间	Schedule
+未检测到可导入的文件	No importable file found
+请插入电源适配器后重试	Plug in the power adapter and retry
+IMAX Enhanced下不支持调节	Not adjustable in IMAX Enhanced
+当前HDMI模式下不支持	Unavailable in this HDMI mode
+HDR Vivid片源下不支持调节	Not adjustable with HDR Vivid content
+移轴后不支持此功能，请恢复默认画面后重试	Unavailable after lens shift, restore the default picture
+请关闭投影数据同步-亮度同步后重试	Turn off brightness sync and retry
+请关闭投影数据同步-画质同步后重试	Turn off picture sync and retry
+当前画质同步模式不支持此功能	Unavailable in this picture sync mode
+办公模式下不支持色彩空间	Color space unavailable in office mode
+图像模式-办公下不支持动态黑位增强	Dynamic black unavailable in Office picture mode
+办公模式下，不支持长辈色彩优化	Senior colors unavailable in office mode
+办公模式下，光圈不可调节	Iris not adjustable in office mode
+仅对HDR10生效	HDR10 only
+仅支持一个存储分区的外接存储	Single-partition external storage only
+请打开画面拼接再使用	Turn on edge blending first
+通过手机扫码上传图片，并设置为开机图	Upload a picture from your phone (QR code) as the boot image
+光学无损	Lossless optics
+光学变焦	Optical zoom
+光学变焦与移轴	Optical zoom & lens shift
+其他设置	Other settings
+密码:	Password:
+暂停	Pause
+执行画面校准	Run picture correction
+性能模式下不支持亮度调节	Brightness not adjustable in performance mode
+节能模式下不支持性能模式	Performance mode unavailable in power saving
+性能模式下不支持墙面颜色适配	Wall adaptation unavailable in performance mode
+性能图像模式下不支持基础设置	Basic settings unavailable in Performance picture mode
+性能图像模式下不支持专业设置	Pro settings unavailable in Performance picture mode
+性能模式下，不支持长辈色彩优化	Senior colors unavailable in performance mode
+性能模式下，光圈不可调节	Iris not adjustable in performance mode
+个性化推荐	Personalized recommendations
+根据观影记录进行智能化内容推荐；关闭后，将根据全网热度展示内容	Recommendations from your history; off: trending content
+风格滤镜	Style filters
+画面校正增强	Enhanced picture correction
+抗彩虹效应	Anti-rainbow
+识别到FILMMAKER MODE片源时,自动切换至对应模式	Switches to FILMMAKER MODE when the source supports it
+亮度与色彩	Brightness & color
+亮度模式	Brightness mode
+对比度增强	Contrast boost
+开启后，画面对比度将增强，暗部细节更加清晰可见	Higher contrast, more visible shadow detail
+杜比视界	Dolby Vision
+100寸	100 inches
+110寸	110 inches
+120寸	120 inches
+130寸	130 inches
+135寸	135 inches
+140寸	140 inches
+150寸	150 inches
+160寸	160 inches
+170寸	170 inches
+180寸	180 inches
+190寸	190 inches
+200寸	200 inches
+250寸	250 inches
+300寸	300 inches
+80寸	80 inches
+88寸	88 inches
+90寸	90 inches
+杜比视界明亮	Dolby Vision Bright
+适合在明亮环境下使用	For a lit room
+杜比视界设置	Dolby Vision settings
+幕布增益	Screen gain
+设置幕布参数，以获取最佳杜比视界效果。*仅支持官方配套幕布，使用其他幕布或不使用幕布无法达到最佳效果	Set up the screen for best Dolby Vision. *Official screen only, otherwise results won't be optimal
+幕布尺寸	Screen size
+杜比视界柔和	Dolby Vision Dark
+适合在黑暗环境下使用	For a dark room
+采用突破性的高动态范围 (HDR) 和广色域影像技术，实现令人惊叹的画面质量	Cutting-edge HDR and wide color gamut for stunning picture quality
+根据内容动态调整亮度和细节平衡	Balances brightness and detail by content
+还原导演意图，适用于体验原汁原味的电影	True to the director's intent
+对焦设置	Focus settings
+模式选项	Mode options
+色彩空间	Color space
+HDR片源下不支持色彩空间	Color space unavailable with HDR content
+原始	Native
+HDR增强	HDR boost
+支持IMAX Enhanced内容，提供沉浸式体验	IMAX Enhanced support, immersive experience
+为 IMAX Enhanced 片源提供震撼影音和独占画幅	Exclusive sound and aspect ratio for IMAX Enhanced content
+已调整到最大	Maximum reached
+已调整到最小	Minimum reached
+亮度与色彩风格	Brightness & color style
+四点校正	4-point correction
+手动梯形校正	Manual keystone
+手动画面调整	Manual picture adjustment
+选择符合观看内容的图像模式，自定义色彩空间、运动补偿等	Picture mode by content; color space, motion compensation…
+根据观看内容选择，自定义运动补偿等，仅在视频或HDMI下生效	By content; motion compensation… (video or HDMI only)
+请输入自定义名称	Enter a name
+判断画面问题	Identify the picture issue
+画面旋转	Picture rotation
+已旋转至最大角度	Maximum rotation reached
+恢复初始角度	Original angle
+超分辨率	Super resolution
+通过AI算法提升图像清晰度与细节	AI improves sharpness and detail
+Windows HDR映射	Windows HDR mapping
+适用于接入Windows设备的HDR映射方案	HDR mapping for Windows devices
+端口号	Port
+PJLink开关	PJLink
+打开后，可通过PJLink协议控制本机	When on: control the projector via PJLink
+平面调整	Flatness adjustment
+播放	Play
+试听VIP	VIP preview
+播放VIP	VIP playback
+播放列表	Playlist
+通电自动开机	Power on when plugged in
+我的蓝牙设备:	My Bluetooth devices:
+专家校正	Expert correction
+可使用一键画面校准、自动对焦、墙面颜色适配、智能防射眼等功能	One-click correction, autofocus, wall adaptation, eye protection…
+画面智能避障	Smart obstacle avoidance
+自动梯形校正时智能调整画面大小和位置，避开墙面开关等障碍物	Adjusts picture size and position to avoid switches and obstacles
+画面校正时，智能避开墙面开关等障碍物	Avoids switches and obstacles during correction
+投影方式	Projection type
+选择设备投影方向，以调节画面翻转	Choose the orientation to flip the picture
+投影亮度	Projection brightness
+投影ID	Projector ID
+全自动云台	Auto gimbal
+云台位移	Gimbal movement
+开机云台还原	Gimbal position at startup
+开机时，自动恢复至上次观影角度，无需每次手动调整	Returns to the last viewing angle at startup
+关机云台复位	Gimbal retract at shutdown
+关机时，云台将自动收起至开机前位置，维持美观角度	The gimbal folds back at shutdown
+开关机复位	Position at power on / off
+开机自动恢复至上次观影角度，关机云台将自动收起，无需手动调整	Returns to the last angle at startup, folds back at shutdown
+手推屏	Hand push screen
+拉：将手握拳放在画面内，出现提示后缓慢向后拉	Pull: fist in the picture, pull back slowly after the prompt
+推：将手靠近画面边缘外，出现提示后缓慢向前推	Push: hand near the edge, push slowly after the prompt
+学习手推屏	Learn the gesture
+人在画面边缘时，通过推拉控制画面位移	Move the picture with a hand gesture at the edge
+背投	Rear projection
+观看者和投影仪位于画面两侧	Viewer and projector on opposite sides of the picture
+红灯温度	Red laser temperature
+[{key:ZOOM_UI_SYSTEM_SETTING,name:缩放,pkg:com.android.newsettings,category:[]}]	[{key:ZOOM_UI_SYSTEM_SETTING,name:Zoom,pkg:com.android.newsettings,category:[]}]
+[{key:ZOOM_MODE_SYSTEM_SETTING,name:缩放,value:1,valueType:0,pkg:com.android.newsettings,category:[]}]	[{key:ZOOM_MODE_SYSTEM_SETTING,name:Zoom,value:1,valueType:0,pkg:com.android.newsettings,category:[]}]
+遥控器模式	Remote mode
+鼠标	Mouse
+遥控器对焦	Remote focus
+遥控器ID	Remote ID
+还原	Restore
+恢复至默认画面大小？	Restore the default picture size?
+将清除当前画面校正效果	The current picture correction will be cleared
+恢复画面参数至出厂默认设置	Restores factory picture settings
+已还原校准	Calibration restored
+配置已恢复默认	Default configuration restored
+已恢复最大默认画面	Default maximum size restored
+应用打开失败，请稍后重试	Couldn't open the app, try again
+正在加载中…	Loading…
+三色激光	RGB laser
+提供高色彩鲜艳的显示效果，推荐对彩边、散斑不敏感的人群使用	Very vivid colors; for people not sensitive to color fringing and speckle
+画面位移	Picture shift
+已调整到最低	Lowest
+已调整到最左	Leftmost
+已调整到最右	Rightmost
+已调整到最高	Highest
+墙面记忆	Wall memory
+添加	Add
+更新画面参数	Update picture
+画面参数包括画面形状、大小	Picture settings: shape and size
+将当前的画面参数更新至选择的画面	Applies the current settings to the selected picture
+记忆不同投影角度的画面参数，手掰云台至对应位置后一键应用，无需再次调整即享大屏观影	Remembers the picture for each angle; turn the gimbal and apply in one click
+巨幕模式下仅支持手动梯形校正	Only manual keystone is available in giant screen mode
+屏保	Screensaver
+屏幕保护	Screensaver
+3分钟	3 minutes
+1个小时	1 hour
+等待时间	Wait time
+分段	Segments
+可用网络	Available networks
+机器序列号	Serial number
+串口ID组	Serial ID group
+与串口ID号组成本机的串口ID，用于响应针对本串口ID的控制指令	With the serial ID number, forms the projector's serial ID for commands
+串口ID号	Serial ID number
+与串口ID组组成本机的串口ID，用于响应针对本串口ID的控制指令	With the serial ID group, forms the projector's serial ID for commands
+并联	Parallel
+串联	Serial
+主控模式	Master mode
+串口应答（全部）	Serial reply (all)
+开启后，当接收到所有ID同时执行的命令时，本机会进行应答，请注意所有设备只能设置一台设备进行应答	Replies to commands sent to all IDs; only one device should reply
+串口应答（组）	Serial reply (group)
+开启后，当接收到ID组同时执行的命令时，本机会进行应答，请注意相同串口ID组内只能设置一台设备进行应答	Replies to group commands; only one device per group should reply
+串口控制开关	Serial control
+关闭后，将不再执行任何串口指令	When off, no serial commands are executed
+串口控制	Serial control
+可通过串口指令控制本机	Control the projector via serial commands
+此功能需配套使用极米官方「USB转RS232转换器」，方可使用RS232串口控制功能	Requires the official XGIMI USB-to-RS232 adapter
+串口类型	Serial port type
+蓝牙可被发现	Bluetooth discoverable
+关闭后已配对手机无法再连接，其他设备不受影响	When off, paired phones can't reconnect; other devices can
+蓝牙绝对音量	Bluetooth absolute volume
+开启后，投影音量将与蓝牙设备音量始终保持同步，可能会导致音量无法调节。	Volume synced with the Bluetooth device; may lock volume control.
+常规开机时显示开机动画	Animation on normal startup
+手机蓝牙唤醒	Wake via phone Bluetooth
+当投影仪待机时，手机可蓝牙唤醒投影仪	Your phone can wake the projector from standby via Bluetooth
+开机图	Boot image
+无	None
+智能防射眼	Smart eye protection
+•︎同步时间约4分钟\n•同步过程中请勿操作设备，同步完成将自动退出	• About 4 minutes\n• Don't touch the device; it closes automatically when done
+设置同步已完成	Sync complete
+同步失败，请重试	Sync failed, retry
+设置数据同步中......	Syncing settings…
+设置同步中	Syncing…
+全部设置	All settings
+请重新尝试连接	Try connecting again
+正在连接...	Connecting…
+按遥控器	Press the
+键调整设备音量	key to adjust volume
+请确保“%s"已打开，并重新尝试连接	Make sure "%s" is on, then try again
+%s断开	%s disconnected
+断开连接...	Disconnecting…
+音频共享失败	Audio sharing failed
+音频共享中	Audio sharing on
+可共享设备	Shareable devices
+保持蓝牙音频设备可被发现，选择2个共享	Make audio devices discoverable, choose 2
+如「HDMI控制投影」已开启并接收到CEC开机信号时，优先进入对应HDMI通道，此时「开机源」设置将不生效	If "HDMI controls projector" is on and receives a CEC signal, that HDMI input overrides the "Startup source"
+优先考虑与连接设备的兼容性	Prioritize compatibility
+HDMI 2.0 支持全色彩范围的 4K 60Hz	HDMI 2.0: 4K 60Hz full range
+HDMI 2.1 支持全色彩范围的 4K 60Hz	HDMI 2.1: 4K 60Hz full range
+1. 将同屏器接入电脑、电视盒子、游戏机等信号源\n2. 长按同屏器按钮以配对投影设备	1. Plug the transmitter into a PC, TV box, console…\n2. Hold its button to pair
+无线同屏器\n即插即用，小屏秒变大屏	Wireless transmitter\nPlug and project
+一键即玩	One-click play
+HDMI连接的设备可控制投影自动切换至其画面	HDMI devices can switch the projector to their input
+开机源	Startup source
+HDMI 设置	HDMI settings
+信号源设置	Input source settings
+信号源备份	Backup source
+主信号	Main signal
+备份信号	Backup signal
+全局设置	Global settings
+画面拼接	Edge blending
+使用2台投影仪拼接更大的投影画面\n此功能仅在信号源下可用，输入源必须连接投影的HDMI或HDBaseT端口	Two projectors for a bigger picture\nSource only, via HDMI or HDBaseT
+HDMI即插即播	HDMI plug and play
+HDMI模式	HDMI mode
+兼容模式	Compatibility mode
+增强模式	Enhanced mode
+静音模式	Silent mode
+基本	Basic
+显示	Display
+扩展	Extended
+安装	Installation
+梯形校正	Keystone correction
+智能自动对焦	Smart autofocus
+投影仪移动时自动对焦，保持画面清晰	Autofocus when the projector moves
+选择“上升”或“下降”，将幕布调至最佳观看高度	"Raise" or "Lower" the screen to the right height
+下降	Lower
+完成	Done
+上升	Raise
+智能模式	Smart mode
+灵动屏	Split screen
+支持将屏幕分为“左右屏”及“画中画”两种模式	Two modes: "left/right" and "picture-in-picture"
+灵动墙面	Dynamic wall
+天花板观影	Ceiling viewing
+创建新墙面	New wall
+自定义1	Custom 1
+日常观影	Everyday viewing
+保存当前画面参数	Save current picture
+保存	Save
+画面参数包括当前云台角度与画面形状	Settings: gimbal angle and picture shape
+将当前的画面参数保存至选择的墙面	Saves the current picture to the selected wall
+我的墙面	My walls
+天窗	Skylight
+适用于专家用户，可使用光学移轴等高阶功能	For experts: optical lens shift and other advanced features
+退出巨幕模式后重试	Exit giant screen mode and retry
+一键切换，云台自动转向新墙面，并同步将投影画面精准适配至该预设位置	One click: the gimbal turns to the wall and the picture fits it
+当前已自动切换为“光纤/ARC”，可切换输出格式	Switched to "Optical/ARC", output format can be changed
+当声音输出设备接入后，自动切换为对应输出。关闭后，可手动切换声音输出	Switches to the connected audio device automatically; off: manual
+DTS音效	DTS sound
+哈曼音效	Harman sound
+全局音效	Global sound
+声光影氛围	Sound & light ambiance
+手动切换	Manual
+K歌	Karaoke
+优化K歌音效，麦克风语音键可用	Karaoke-optimized sound, mic key active
+会议	Meeting
+优化会议音效，防止误碰麦克风语音键	Meeting-optimized sound, prevents accidental mic key presses
+音量	Volume
+AI音效	AI sound
+低音增强	Bass boost
+提高嘈杂背景音中人声的清晰度	Clearer voices over noisy backgrounds
+人声清晰	Clear voice
+杜比全景声	Dolby Atmos
+自动调节剧烈的音量变化	Smooths sudden volume changes
+自动音量平衡	Auto volume leveling
+原声	Original sound
+哈曼卡顿原声	Harman Kardon original
+哈曼卡顿	Harman Kardon
+鸿鹄音效	Honghu sound
+搭配专属Total Immersion 天空音效、Total Surround 环绕音效,沉浸观影视听享受	With Total Immersion and Total Surround for immersive sound
+音乐	Music
+新闻	News
+体育	Sports
+虚拟环绕声	Virtual surround
+根据播放内容选择偏好的音效	Choose the sound by content
+音效模式	Sound mode
+音效	Sound effects
+人声	Voice
+选择“自动”，并使用 HDMI 2.1以上线材连接支持eARC的音频系统，可输出高质量声音	"Auto" + HDMI 2.1 cable to an eARC system: high-quality sound
+选择“关闭”，声音将通过HDMI-ARC向功放输出	"Off": sound to the amp via HDMI-ARC
+eARC 模式	eARC mode
+光纤/ARC	Optical/ARC
+光纤/ARC-Passthrough	Optical/ARC-Passthrough
+光纤/ARC-PCM	Optical/ARC-PCM
+光纤/ARC-AUTO	Optical/ARC-AUTO
+内部扬声器+XGIMI Sound	Internal speakers + XGIMI Sound
+内部扬声器+低音炮	Internal speakers + subwoofer
+内部扬声器+XGIMI Sound+低音炮	Internal speakers + XGIMI Sound + subwoofer
+增强音效	Enhanced sound
+可为当前音效模式自定义增强音效	Customize the enhancement of the current sound mode
+当前已自动切换为“音响系统”，可控制发声的设备组合	Switched to "Audio system", speaker combination adjustable
+音量调节	Volume control
+音量平衡	Balance
+XGIMI Sound 组合	XGIMI Sound combination
+取消音响组合	Cancel combination
+声道配置	Channel configuration
+连接状态	Connection status
+当前声道	Current channel
+左声道(L)	Left (L)
+左前	Front left
+左	Left
+右声道(R)	Right (R)
+右前	Front right
+右	Right
+左环绕(LS)	Surround left (LS)
+左后	Rear left
+右环绕(RS)	Surround right (RS)
+右后	Rear right
+取消组合	Ungroup
+取消后，将无法享受增强音质	Cancelling removes the sound enhancement
+清除 “XGIMI Sound 组合” 配对后，可长按音箱按钮重新发起配对	To re-pair, hold the speaker button
+创建音响组合	Create speaker combination
+清除 “XGIMI Sound” 配对后，可长按音箱按钮重新发起配对	To re-pair, hold the speaker button
+空间位置	Room position
+灵动分屏模式下不支持系统设置	System settings unavailable in split screen
+3D模式	3D mode
+强度	Strength
+通过AI算法，提升视频清晰度	AI improves video sharpness
+[{"key": "SUPPORT_GMUI6_MISCKEY","pkg": "com.xgimi.misckey","name": "是否支持Gmui6"}]	[{"key": "SUPPORT_GMUI6_MISCKEY","pkg": "com.xgimi.misckey","name": "Supports Gmui6"}]
+曲面调整	Curved surface adjustment
+曲面1	Curve 1
+曲面2	Curve 2
+曲面3	Curve 3
+曲面4	Curve 4
+曲面5	Curve 5
+曲面6	Curve 6
+适用于投影面非平面的使用场景	For non-flat projection surfaces
+切换悬浮歌词	Toggle floating lyrics
+画质同步中，请稍后重试	Picture sync in progress, try again later
+开机自动对焦	Autofocus at startup
+温度	Temperature
+系统升级	System upgrade
+系统更新	System update
+系统版本	System version
+蓝牙音乐播控栏	Bluetooth music control bar
+白昼主题	Light theme
+暗夜主题	Dark theme
+根据日出日落时间启动切换白昼、暗夜主题；此功能需要连接网络	Switches light/dark with sunrise and sunset; needs network
+黑色	Black
+主题风格	Theme
+白色	White
+4K视频下不支持3D设置	3D settings unavailable in 4K video
+游戏模式下不支持3D设置	3D settings unavailable in game mode
+HDR视频下不支持3D设置	3D settings unavailable in HDR video
+3D模式下，不支持抗彩虹效应	Anti-rainbow unavailable in 3D
+请播放视频或接入信号源后重试	Play a video or connect a source and retry
+3D设置下不支持图像比例设置	Aspect ratio unavailable in 3D
+请关闭3D设置后重试	Turn off 3D and retry
+3D设置下不支持画面校正	Picture correction unavailable in 3D
+3D设置下不支持原帧显示	Native frame rate unavailable in 3D
+3D设置下不支持墙面颜色适配	Wall adaptation unavailable in 3D
+3D播放下不支持画面高帧率	High frame rate unavailable in 3D
+天猫精灵	Tmall Genie
+配置3D模式，需搭配3D眼镜方可体验立体效果	3D mode; 3D glasses required
+根据视频画面内容，AI实时调整对比度，仅在SDR视频下生效	AI adjusts contrast in real time (SDR video only)
+安装引导，简化设备调试流程	Installation guide to simplify setup
+自动调整投影焦距，确保画面清晰	Adjusts focus automatically for a sharp picture
+通过信号处理调整画面的整体明暗观感	Adjusts perceived brightness via signal processing
+调整投影光机的物理输出亮度	Adjusts the light engine's physical brightness
+适用于打造家庭影院体验	For a home cinema experience
+专业工具精确校准六基色和肤色	Pro tools to calibrate the 6 primary colors and skin tone
+智能识别内容，自动调整色彩	Recognizes content and adjusts colors
+选择设备所能呈现的色彩范围标准	Choose the color standard to display
+调整画面色调冷暖	Adjusts warm/cool tint
+调整画面最亮与最暗部分的差异	Adjusts the gap between bright and dark areas
+提供多项校正功能	Several correction features
+根据画面内容自动调整整体对比度	Adjusts contrast based on the picture
+调整从黑到白的亮度响应曲线	Adjusts the brightness curve from black to white
+Gamma曲线的具体数值。2.2为通用标准，2.4更适合暗室观影。	Gamma curve value. 2.2 = standard, 2.4 = dark room.
+提升高动态范围（HDR）内容的整体效果	Improves HDR content
+选择适合观看内容的预设画质模式	Choose the picture mode for the content
+精准控制进光量，优化亮度层次，增强画面对比度	Precise light control, more gradation and contrast
+分区调整画面不同区域的对比度，增强立体感	Contrast adjusted by zones for more depth
+手动微调投影焦距，精准控制清晰度	Precise manual focus
+通过手动调整多个校准点校正画面形状	Corrects the picture shape via several points
+通过插帧技术，使运动画面更流畅，减少拖影	Frame interpolation for smoother motion
+减少画面中的噪点，使图像更纯净	Reduces noise for a cleaner picture
+一键自动优化，确保画面方正清晰	One-click optimization: square, sharp picture
+一键自动优化，移轴无损构图，确保画面方正清晰	One-click optimization with lossless lens shift: square, sharp picture
+光学级调整，实现画面的无损缩放与位移	Optical adjustment: lossless zoom and shift
+调整画面基础参数	Basic picture settings
+移动时，实时确保画面方正清晰	Square, sharp picture in real time while moving
+恢复所有图像参数至默认值	Resets all picture settings to default
+调整色彩鲜艳程度	Adjusts color intensity
+仅在数码变焦后，才可用画面位移调整画面位置	Picture shift only available after digital zoom
+旋转画面方向，适配安装环境	Rotates the picture to suit the installation
+调整图像边缘清晰度	Adjusts edge sharpness
+采用画质优先算法，自动避开障碍时，最大限度减少画面损失。	Quality first: minimal picture loss when avoiding obstacles.
+采用画质优先算法，自动识别精准对齐幕布时，最大限度减少画面损失。	Quality first: minimal picture loss when aligning to the screen.
+应用特殊视觉效果（如复古、黑白）	Visual effects (retro, black & white…)
+请将更新文件存放在（FAT32格式）U盘根目录中，并将U盘插入投影仪的USB2.0接口	Copy the file to the root of a FAT32 USB drive and plug it into the USB 2.0 port
+校准画面中白色的准确性，避免偏色	Calibrates white to avoid color casts
+画面对焦	Focus
+梯形校正至中心圆为正圆	Correct until the center circle is round
+画面调整	Picture adjustment
+大小和位置	Size & position
+智能	Smart
+定时切换需要连接网络	Scheduled switching needs network
+性能模式下暂不支持色彩调节	Color adjustment unavailable in performance mode
+自定义模式不支持%1$s自适应	%1$s adaptation unavailable in custom mode
+自定义名称不能为空	Name can't be empty
+名称已重复，请重新输入	Name already used, enter another
+文件检测出错，错误代码：001	File check error, code: 001
+手动设置时间可能会导致设备无法访问网络	Setting the time manually may block network access
+性能模式下暂不支持亮度调节	Brightness not adjustable in performance mode
+性能模式下暂不支持对比度增强	Contrast boost unavailable in performance mode
+请先恢复Turbo Light后重试	Restore Turbo Light first
+当前方向到达极限，无法继续移动	Limit reached in this direction
+网络异常，请检查后重试	Network error, check and retry
+服务器异常，请稍后重试	Server error, try again later
+暂无历史版本	No previous versions
+打开智能幕布应用失败，请检查是否安装了此应用	Couldn't open the smart screen app; is it installed?
+性能模式不支持%1$s自适应	%1$s adaptation unavailable in performance mode
+请先插入U盘	Insert a USB drive first
+请先添加唤醒设备	Add a wake device first
+校准完成	Calibration complete
+当前距离过远，请调整	Too far, adjust
+当前距离过近，请调整	Too close, adjust
+当前距离合适	Distance OK
+校准失败	Calibration failed
+距离过远,校准失败	Too far, calibration failed
+距离过近,校准失败	Too close, calibration failed
+当前刷新率已不可提升	Refresh rate already at maximum
+确定开启Turbo Light ？	Turn on Turbo Light?
+当环境光过强时，应用Turbo Light效果可通过光学变焦提升画面亮度，同时画面缩放0–20%	Strong ambient light: Turbo Light boosts brightness via optical zoom, picture shrinks 0–20%
+请将亮度调整为10后重试	Set brightness to 10 and retry
+恢复	Restore
+点击后恢复到Turbo Light之前的画面亮度和大小	Returns to the brightness and size before Turbo Light
+Turbo Light 自适应	Adaptive Turbo Light
+环境光过强时，自动通过光学变焦提升画面亮度，同时画面缩放 0-20%	Strong ambient light: optical zoom for more brightness, picture shrinks 0–20%
+环境光过强时，应用 Turbo Light 效果可提升画面亮度，同时画面缩放 0-20%	Strong ambient light: Turbo Light boosts brightness, picture shrinks 0–20%
+重启设备立即体验新版本	Restart to use the new version
+自动升级	Auto upgrade
+自动更新	Auto update
+在线更新	Online update
+在线升级	Online upgrade
+升级系统	Upgrade system
+U盘更新	USB update
+U盘升级	USB upgrade
+请将升级文件存放于FAT32格式的U盘根目录中，插入设备USB2.0接口（包名被修改后将不能被读取）	File at the root of a FAT32 USB drive, in the USB 2.0 port (don't rename the file)
+检测到安装包	Update package found
+未检测到安装包	No package found
+未检测到U盘	No USB drive found
+用户体验改进计划	Improvement program
+加入用户体验改进计划	Join the improvement program
+查看用户体验改进计划	View the improvement program
+俯仰角度	Tilt angle
+自动垂直梯形校正	Auto vertical keystone
+自动垂直梯形为开时不支持画面校正	Picture correction unavailable with auto vertical keystone on
+请在视频播放状态下切换至臻120Hz	Turn on Ultimate 120Hz while a video is playing
+IMAX 片源下暂不支持	Not available with IMAX content
+视频比例	Video ratio
+画面缩放 	Picture zoom
+蓝/黄滤镜	Blue/yellow filter
+灰度	Grayscale
+绿/红滤镜	Green/red filter
+红/绿滤镜	Red/green filter
+HDR Vivid下不支持动态黑位增强	Dynamic black unavailable in HDR Vivid
+音频输出格式	Audio output format
+透传	Passthrough
+语音助手	Voice assistant
+耳机	Headphones
+光纤	Optical
+内部扬声器	Internal speakers
+开机音乐	Startup music
+AC4对白增强	AC4 dialogue enhancement
+USB（Harman Kardon低音音响）	USB (Harman Kardon subwoofer)
+按键音	Key sounds
+麦克风模式	Mic mode
+麦克风音量	Mic volume
+声音输出	Sound output
+输出	Output
+可选择声音输出设备，音频输出格式	Choose the audio output device and format
+音画同步	Audio/video sync
+音响系统	Audio system
+墙面颜色适配	Wall color adaptation
+亮度调节导致墙面颜色适配失效	Brightness change cancels wall adaptation
+切换模式导致墙面颜色适配失效	Mode change cancels wall adaptation
+调节色彩导致墙面颜色适配失效	Color change cancels wall adaptation
+%1$s自适应导致墙面颜色适配失效	%1$s adaptation cancels wall adaptation
+开始适配	Start adaptation
+为获得最佳色彩效果，画面将自动升至最高亮度，并关闭环境亮度自适应相关功能	For best results, brightness goes to max and ambient light adaptation is turned off
+智能匹配投影墙面颜色，以达到最佳色彩效果	Adapts to the wall color for the best colors
+动态黑位增强导致墙面颜色适配失效	Dynamic black cancels wall adaptation
+画面校正时，画面颜色匹配墙面颜色	During correction, matches colors to the wall
+1.开启后，使用自动画面调整功能时将执行墙面\n颜色适配，以获得最佳色彩效果\n  \n2.自定义色彩风格、3D模式和亮度自适应下将\n不支持墙面颜色适配	1. When on, auto adjustment also adapts colors\nto the wall for the best result\n \n2. Unavailable with custom color style, 3D and\nadaptive brightness
+开启墙面颜色适配？	Turn on wall color adaptation?
+正在加载中	Loading
+请输入ssid	Enter SSID
+如出现加载异常或无内容显示，按【返回】退出	If it fails to load or stays empty, press Back
+网络认证	Network authentication
+请拔出网线后再连接Wi-Fi	Unplug the network cable before using Wi-Fi
+立即连接	Connect now
+Wi-Fi未连接	Wi-Fi not connected
+当前连接WIFI:   	Current Wi-Fi:
+有线MAC地址	Wired MAC address
+无线MAC地址	Wi-Fi MAC address
+网络好像有问题，错误码：%s	Network problem, code: %s
+请查看系统时间日期是否正确，错误码：%s	Check the system date and time, code: %s
+网络请求超时，错误码：%s	Request timed out, code: %s
+网络连接超时，错误码：%s	Connection timed out, code: %s
+未知异常，错误码：%s	Unknown error, code: %s
+未连接网络，错误码：%s	No network, code: %s
+存储空间不足，错误码：%s	Not enough storage, code: %s
+服务器开小差了，错误码：%s	Server not responding, code: %s
+暂无数据	No data
+出错啦！	Something went wrong!
+连接网络	Connect to network
+仅在杜比视界片源下支持调整	Only adjustable with Dolby Vision content
+Total Surround 环绕音效	Total Surround
+XGIMI Sound 音效	XGIMI Sound
+XGIMI Sound 专属音效使用中	XGIMI Sound effect active
+Total Immersion 天空音效	Total Immersion
+缩放与位移	Zoom & shift
+云台位移与缩放	Gimbal shift & zoom
+画面不清晰？按 @ 自动对焦	Blurry? Press @ for autofocus
+注意：移轴后防射眼会在部分范围时失效。墙面颜色适配、墙面记忆功能将不可用	Note: after lens shift, eye protection may not cover the whole area; wall adaptation and wall memory unavailable
+注意：移轴后防射眼会在部分范围时失效。墙面颜色适配、画面自动定位、灵动墙面功能将不可用	Note: after lens shift, eye protection may not cover the whole area; wall adaptation, auto positioning and dynamic wall unavailable
+画面比例	Aspect ratio
+转到首页	Navigate home
+转到上一层级	Navigate up
+更多选项	More options
+查看全部	See all
+选择应用	Choose an app
+Delete 键	delete
+Enter 键	enter
+空格键	space
+搜索…	Search…
+清除查询	Clear query
+搜索查询	Search query
+提交查询	Submit query
+语音搜索	Voice search
+分享对象	Share with
+与%s分享	Share with %s
+收起	Collapse
+已优化到%s模式	Optimized to %s mode
+AI画质增强	AI Picture Quality Enhancement
+后台服务已启动	Background Service Started
+启动防射眼弹窗	Enable Anti-Shoot Eye Pop-up Window
+启动外设断开提示	Enable Peripheral Disconnection Tip
+启动外设弹窗	Enable Peripheral Pop-up Window
+启动播放器动画	Start the player animation
+音效： 原生	Sound Effect: Native
+幕布	Curtain
+按 @ 退出	Press @ to exit
+关闭智能防射眼功能？	Turn Off Intelligent Eye Protection Function?
+感应区域内检测到人体移动，已调低投影亮度以减少人眼刺激	Human movement detected in the sensing area. Projection brightness has been reduced to minimize eye irritation.
+长按 @ 关闭功能	Long press @ to close
+下次可通过“快捷设置”\n快速访问U盘	Next time, you can quickly access the USB drive via Quick Settings
+长按 @ 查看	Long press @ to view
+按 @ 查看	Press @ to view
+下次可通过“快捷设置”\n快速进入信号源	Next time, you can quickly access the input source via Quick Settings
+电量不足	Low Power
+小黄人	Minions
+怪兽	Monster
+音效： %s	Sound Effect: %s
+麦克风电量低	Microphone Low Power
+手机蓝牙	Phone Bluetooth
+连接成功	Connected Successfully
+正在连接	Connecting…
+低音炮	Subwoofer
+手机APP	Phone APP
+可至“设置 > 视频”管理	Manage in Settings > Video
+可至“设置 > 图像”管理	Manage in Settings > Image
+可至“设置 > 亮度与显示”管理	Manage in Settings > Brightness & Display
+超分辨率已开启	Super Resolution Enabled
+30天过去了，看看%1$s有没有长高	30 days have passed, let's see if %1$s has grown taller
+记得测量%1$s等%2$s人的最新身高	Remember to measure the latest height of %1$s and %2$s
+短按麦克风 “开机键” 切换音效	Press the Power On button on the microphone briefly to switch sound effects.
+已退出智能防射眼	Intelligent Eye Protection has been exited
+按 @ 前往	Press @ to go
+可至“设置>通用”管理	Manage in Settings > General
+按 @ 去量身高	Press @ to measure height
