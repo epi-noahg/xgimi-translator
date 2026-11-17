@@ -1,7 +1,8 @@
 # XGIMI RS30 Ultra (China firmware, "XGIMI TV DOHKO", Android 14)
 # Disabled with: adb shell pm disable-user --user 0 <package>
-# Undo with:     adb shell pm enable <package>
-# Rebooted and tested: laser, focus, keystone, HDMI, Bluetooth remote all fine.
+# Undo with:     adb shell pm default-state --user 0 <package>
+#   (use default-state: "pm enable" does not always work on this firmware)
+# Tested: laser, focus, keystone, HDMI, Bluetooth remote all fine.
 
 com.xgimi.adservice            # ads
 com.xgimi.datareporter         # telemetry
@@ -10,19 +11,19 @@ com.xgimi.doubanfm             # Douban FM music
 com.xgimi.newappmarket         # XGIMI app store
 com.xgimi.payview              # payment screens
 com.xgimi.karaokesdk           # karaoke
-com.xgimi.gimiplayer           # stock video player
-com.xgimi.xhplayer             # stock video player
-com.xgimi.stream.video         # stock video streaming
-com.xgimi.instruction30        # user guide
 com.xgimi.duertts              # voice assistant (Baidu)
 com.xgimi.account              # XGIMI cloud account
-com.xgimi.bootwizard           # first-run setup wizard
 
 # DO NOT DISABLE
+# com.xgimi.xhplayer           HDMI input player! Disabling it breaks HDMI 1/2 (no picture, no auto-switch)
+# com.xgimi.gimiplayer         stock media player (kept to be safe)
+# com.xgimi.stream.video       stock video component (kept to be safe)
+# com.xgimi.bootwizard         setup wizard (kept to be safe)
 # com.xgimi.xgimiservice       core hub (HDMI, audio, updates; shutdown depends on it)
 # com.xgimi.shutdown           clean shutdown / laser cooling
 # com.xgimi.xgimiframeworkui   owns the HOME intent
 # com.xgimi.systemui
+# com.xgimi.tvinput            HDMI input service
 # com.xgimi.tof, com.xgimi.autokst, com.xgimi.smartaccessories   sensors, keystone, obstacle avoidance
 # com.xgimi.bluetoothservice, com.xgimi.remote
 # com.sogou.inputmethod.iot    the only keyboard installed
