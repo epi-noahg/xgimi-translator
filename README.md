@@ -117,7 +117,7 @@ adb shell run-as fr.traducteur.xgimi cat files/journal.txt
 
 ## Bonus: debloat list
 
-[`debloat-rs30-ultra.txt`](debloat-rs30-ultra.txt) lists the factory packages (ads, telemetry, duplicate players…) that can be disabled safely with `pm disable-user`. Undo with `pm enable`. It also lists the packages **not** to touch.
+[`debloat-rs30-ultra.txt`](debloat-rs30-ultra.txt) lists the factory packages (ads, telemetry, app store…) that can be disabled safely with `pm disable-user`. Undo with `pm default-state --user 0`. It also lists the packages **not** to touch.
 
 ---
 
