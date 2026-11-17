@@ -14,9 +14,7 @@ No root, fully offline, fully reversible.
 I only own an **RS30 Ultra**. According to the launch coverage, the four China-market RS30 models share:
 - the same chip (MediaTek MT9861);
 - the same system (GMUI 6.0);
-- the same core features (1.2–1.5× optical zoom, lens shift, adjustable iris, 240 Hz).
-
-They mainly differ in **brightness** (3,600 to 6,800 ISO lumens). The Ultra Max also has **higher native contrast** (7,000:1). So the Settings menus should be the same, and the translator should work, but this hasn't been checked on the other models.
+So the Settings menus should be the same, and the translator should work, but this hasn't been checked on the other models.
 
 If a model has menus the Ultra doesn't, those texts may stay in Chinese. Everything else gets translated normally.
 
@@ -44,6 +42,18 @@ An **accessibility service** that translates the screen on the fly:
 Translations show up about 0.4 s after each remote key press, and instantly on screens it has already translated. A watchdog restarts the service if the firmware kills it, at boot or after an update.
 
 ---
+
+On my RS30 Ultra the Android developer options are hidden, so here’s what worked for me:
+
+Download the SystemUI Tuner APK (by Zachary Wander, from GitHub or APKMirror) and put it on a FAT32 USB stick.
+On the projector, open the File Manager, find the APK on the USB stick and install it (allow unknown sources if it asks).
+Open SystemUI Tuner and go to Developer (开发者). Turn on ADB (启用 ADB) and Wireless ADB.
+Find the projector’s IP address in Settings → Network, then on your PC:
+adb connect <PROJECTOR_IP>:5555
+adb devices
+Accept the “Allow USB debugging?” prompt on the projector.
+
+Another user (RS30 Ultra Max) said he used an app called “Z7X-ADB” instead, so that’s an alternative if this doesn’t work for you.
 
 ## Install
 
