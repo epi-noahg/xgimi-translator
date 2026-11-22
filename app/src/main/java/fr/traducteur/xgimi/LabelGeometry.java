@@ -3,18 +3,17 @@ package fr.traducteur.xgimi;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 
-/** Mesures géométriques bon marché sur la capture d'écran, pour placer les étiquettes. */
+/** Cheap geometry measurements on the screenshot, used to place labels. */
 final class LabelGeometry {
     private LabelGeometry() {}
 
     /**
-     * Espace libre de même couleur de fond autour d'un texte, en coordonnées bitmap.
-     * Scanne 3 lignes (haut, milieu, bas de la boîte) vers la gauche et la droite
-     * et s'arrête au premier pixel qui s'écarte de {@code bg} de plus de {@code tol}
-     * (par canal) ou au bord / à {@code maxReach} pixels.
-     * Le scan commence après un petit retrait (pour ne pas lire les glyphes eux-mêmes).
+     * Same-background free space around a text box, in bitmap coords.
+     * Scans 3 rows (top/middle/bottom) outward, starting just outside the box so
+     * glyphs aren't sampled, stopping at the first pixel differing from {@code bg}
+     * by more than {@code tol} per channel, the edge, or {@code maxReach}.
      *
-     * @return {left, right} : bornes x extrêmes atteignables (left ≤ box.left, right ≥ box.right)
+     * @return {left, right} with left ≤ box.left, right ≥ box.right
      */
     static int[] freeSpan(Bitmap bmp, Rect box, int bg, int tol, int maxReach) {
         int w = bmp.getWidth(), h = bmp.getHeight();
@@ -34,7 +33,7 @@ final class LabelGeometry {
             while (x >= left && same(row[x - lo], br, bgG, bb, tol)) x--;
             left = Math.max(left, x + 1);
         }
-        // Marge de sécurité : ne pas coller au contenu voisin.
+        // Safety margin so labels don't touch neighboring content.
         int margin = Math.max(2, box.height() / 4);
         if (right < hi) right = Math.max(x1, right - margin);
         if (left > lo) left = Math.min(x0, left + margin);

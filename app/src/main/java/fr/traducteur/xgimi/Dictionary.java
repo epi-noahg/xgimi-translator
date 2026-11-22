@@ -48,7 +48,7 @@ public final class Dictionary {
         }
     }
 
-    /** Ordre du fichier conservé : à égalité en recherche approchée, l'entrée la plus haute (Paramètres) gagne. */
+    /** Keeps file order: on fuzzy-match ties, the earliest entry (Settings) wins. */
     private final HashMap<String, String> exact = new LinkedHashMap<>();
     private final ArrayList<Template> templates = new ArrayList<>();
 
@@ -104,7 +104,7 @@ public final class Dictionary {
             if (CJK.matcher(lit).find()) hasCjkLiteral = true;
             String t = m.group();
             if (t.equals("@") || t.equals("$")) {
-                // Une icône n'est jamais lue comme un idéogramme (« 按一次退出 » ≠ « 按@退出 »).
+                // An icon is never read as an ideogram ("按一次退出" ≠ "按@退出").
                 re.append("([^\\u3400-\\u9fff]{0,3}?)\\s*");
                 order.add(-1);
             } else {
@@ -255,16 +255,13 @@ public final class Dictionary {
 
     // ------------------------------------------------------------------ texte issu de l'OCR
 
-    /**
-     * Caractères traditionnels (ou japonais) que l'OCR renvoie à la place du simplifié.
-     * TRAD.charAt(i) devient SIMP.charAt(i).
-     */
+    /** Traditional (or Japanese) chars OCR returns instead of simplified: TRAD.charAt(i) -> SIMP.charAt(i). */
     private static final String TRAD =
             "系統設達検檢連開關鍵選擇備圖畫聲網絡藍調節顯語時間電視劇應換輸動態與螢標準頻體驗認證據數檔測鏡頭離後無線請確於這個為們來說話點擊進載刪除儲記憶資訊預對視雙單項計歷節錄廣樂戲紀綜藝軍愛優騰還幫" +
             "増辦傢亂區當發會長門問題實現從變邊復彈運轉過濟獲擴縮嗎書義業產業響場陽態濾燈氣溫風聽讀寫議論壇讓護級團隊屏幀這參";
     private static final String SIMP =
             "系统设达检检连开关键选择备图画声网络蓝调节显语时间电视剧应换输动态与萤标准频体验认证据数档测镜头离后无线请确于这个为们来说话点击进载删除储记忆资讯预对视双单项计历节录广乐戏纪综艺军爱优腾还帮" +
-            // 辦 -> 辨 : dans ce domaine l'OCR le lit pour « 分辨率 ».
+            // 辦 -> 辨: in this domain OCR reads it for "分辨率".
             "增辨家乱区当发会长门问题实现从变边复弹运转过济获扩缩吗书义业产业响场阳态滤灯气温风听读写议论坛让护级团队屏帧这参";
     private static final HashMap<Character, Character> T2S = new HashMap<>();
 
@@ -275,17 +272,17 @@ public final class Dictionary {
         }
     }
 
-    /** Caractère seul qu'on accepte de traduire quand l'OCR ne lit qu'un idéogramme. */
+    /** Single ideogram accepted for translation when OCR reads only one character. */
     private static final String SINGLE_OK = "开关高中低无是否左右";
-    /** Symboles parasites (icônes, chevrons, séparateurs) en bord de ligne. */
+    /** Junk symbols (icons, chevrons, separators) OCR leaves at line edges. */
     private static final String EDGE_JUNK = "|｜¦「」『』[]【】()（）<>〈〉《》‹›«»▲▼△▽►◄▶◀▸◂•·∙*-_:：;；,.。，、!！'\"“”‘’~`^/\\…";
     private static final Pattern TRAILING_CLOCK = Pattern.compile("^(.*?[^\\d:])\\s*(\\d{1,2}:\\d{2})$", Pattern.DOTALL);
-    /** 1 à 3 minuscules collées après un idéogramme : souvent une icône mal lue (« 移轴eoz »). */
+    /** 1-3 lowercase letters after an ideogram: usually a misread icon ("移轴eoz"). */
     private static final Pattern TRAILING_LOWER = Pattern.compile("^(.*[\\u3400-\\u9fff])[a-z]{1,3}$", Pattern.DOTALL);
 
-    private String[] fuzzyKeys;     // clé du dictionnaire
-    private String[] fuzzyCores;    // core(clé)
-    private HashMap<Character, int[]> fuzzyIndex; // caractère -> clés qui le contiennent
+    private String[] fuzzyKeys;
+    private String[] fuzzyCores;    // core(key)
+    private HashMap<Character, int[]> fuzzyIndex; // char -> indexes of keys containing it
     private int[] fuzzyCounts;
 
     static String toSimplified(String s) {
@@ -304,7 +301,7 @@ public final class Dictionary {
         return EDGE_JUNK.indexOf(c) >= 0 || Character.isWhitespace(c);
     }
 
-    /** Retire les symboles parasites aux deux bouts (« ▲120寸> » -> « 120寸 »). */
+    /** Strips edge junk ("▲120寸>" -> "120寸"). */
     static String stripEdges(String s) {
         int a = 0, b = s.length();
         while (a < b && isEdgeJunk(s.charAt(a))) a++;
@@ -327,9 +324,8 @@ public final class Dictionary {
     }
 
     /**
-     * Comme translate(), mais pour une ligne lue par l'OCR : caractères traditionnels,
-     * symboles et icônes collés aux bords, caractère mal reconnu…
-     * Ordre de préférence : exact > modèle > exact après retrait d'une icône > morceaux > approché.
+     * Like translate(), but tolerant of OCR noise (traditional chars, edge icons, misread chars).
+     * Preference: exact > template > exact minus icon > pieces > fuzzy.
      */
     public synchronized String translateFuzzy(CharSequence cs) {
         if (cs == null) return null;
@@ -345,7 +341,7 @@ public final class Dictionary {
 
     private String ocrLookup(String raw) {
         String s = stripEdges(toSimplified(raw.trim()));
-        // Une horloge collée en fin de ligne (« …字幕07:49 ») est recopiée telle quelle.
+        // A clock stuck to the line end ("…字幕07:49") is copied as is.
         Matcher clock = TRAILING_CLOCK.matcher(s);
         if (clock.matches() && hasChinese(clock.group(1))) {
             String t = ocrLookup(clock.group(1));
@@ -353,19 +349,18 @@ public final class Dictionary {
         }
         String c = core(norm(s));
         if (c.length() < 2) {
-            // Un idéogramme isolé est presque toujours une icône mal lue.
+            // A lone ideogram is almost always a misread icon.
             return c.length() == 1 && SINGLE_OK.indexOf(c.charAt(0)) >= 0 ? exact.get(c) : null;
         }
-        // 1. exact / modèle sur le texte nettoyé.
         String r = translateLine(s);
         if (r != null) return r;
-        // 2. icône collée au début : un idéogramme (« 岛专业设置 ») ou des lettres/symboles (« |未達接 »).
+        // Leading icon: an ideogram ("岛专业设置") or letters/symbols ("|未達接").
         String noLead = dropLeadingIcon(s);
         if (noLead != null) {
             r = translateLine(noLead);
             if (r != null) return r;
         }
-        // 3. lettres parasites en fin (« 光学变焦与移轴eoz »).
+        // Trailing junk letters ("光学变焦与移轴eoz").
         Matcher tl = TRAILING_LOWER.matcher(s);
         String noTail = tl.matches() ? stripEdges(tl.group(1)) : null;
         if (noTail != null) {
@@ -373,28 +368,27 @@ public final class Dictionary {
             if (r != null) return r;
         }
         String base = noTail != null ? noTail : s;
-        // 4. morceaux : chaque bloc chinois connu exactement, valeurs conservées (« 光圈调节ORIS »).
+        // Pieces: each CJK block known exactly, values kept ("光圈调节ORIS").
         r = ocrPieces(base);
         if (r != null) return r;
-        // 5. approché.
         r = fuzzy(core(norm(base)));
         if (r == null && noLead != null) r = fuzzy(core(norm(noLead)));
         return r;
     }
 
-    /** Texte sans son premier « glyphe d'icône », ou null si rien de plausible à retirer. */
+    /** Text without its first icon glyph, or null if nothing plausible to strip. */
     private static String dropLeadingIcon(String s) {
         if (s.isEmpty()) return null;
         char c0 = s.charAt(0);
         String rest;
         if (isCjk(c0)) {
             rest = s.substring(1);
-            // Le reste doit rester assez long pour ne pas transformer « 热门应用 » en « 应用 ».
+            // Remainder must stay long enough not to turn "热门应用" into "应用".
             if (core(rest).length() < 3) return null;
         } else if (Character.isLetter(c0)) {
             int i = 0;
             while (i < s.length() && i < 2 && Character.isLetter(s.charAt(i)) && !isCjk(s.charAt(i))) i++;
-            if (i >= s.length() || !isCjk(s.charAt(i))) return null; // « HDR10 » etc. : vraie valeur
+            if (i >= s.length() || !isCjk(s.charAt(i))) return null; // e.g. "HDR10": a real value
             rest = s.substring(i);
             if (core(rest).length() < 2) return null;
         } else {
@@ -405,8 +399,8 @@ public final class Dictionary {
     }
 
     /**
-     * Comme translatePieces, mais un bloc d'un seul idéogramme n'est accepté que collé
-     * à un chiffre (« 120寸 ») : sinon c'est souvent du bruit d'OCR.
+     * Like translatePieces, but a single-ideogram block is accepted only next to a digit
+     * ("120寸"); otherwise it is usually OCR noise.
      */
     private String ocrPieces(String text) {
         Matcher m = CJK_RUN.matcher(text);
@@ -424,7 +418,7 @@ public final class Dictionary {
         ArrayList<String> cores = new ArrayList<>();
         for (String k : exact.keySet()) {
             String c = core(k);
-            // Les clés de moins de 3 caractères ne sont jamais approchées (« 电视剧 » ≠ « 电视 »).
+            // Keys under 3 chars are never fuzzy-matched ("电视剧" ≠ "电视").
             if (c.length() < 3 || !hasChinese(c)) continue;
             keys.add(k);
             cores.add(c);
@@ -436,7 +430,7 @@ public final class Dictionary {
             String c = fuzzyCores[i];
             for (int j = 0; j < c.length(); j++) {
                 char ch = c.charAt(j);
-                if (c.indexOf(ch) != j) continue; // une fois par clé
+                if (c.indexOf(ch) != j) continue;
                 ArrayList<Integer> l = tmp.get(ch);
                 if (l == null) tmp.put(ch, l = new ArrayList<>());
                 l.add(i);
@@ -452,7 +446,6 @@ public final class Dictionary {
         fuzzyCounts = new int[fuzzyCores.length];
     }
 
-    /** Distance maximale tolérée pour un texte de cette longueur. */
     static int maxDistance(int len) {
         if (len < 3) return 0;
         if (len <= 5) return 1;
@@ -460,7 +453,7 @@ public final class Dictionary {
         return len / 4;
     }
 
-    /** Recherche approchée sur le « core » ; ne parcourt que les clés partageant assez de caractères. */
+    /** Fuzzy search on core(); only scans keys sharing enough characters. */
     private String fuzzy(String c) {
         int len = c.length();
         int maxDist = maxDistance(len);
@@ -482,7 +475,7 @@ public final class Dictionary {
                 }
             }
         }
-        // Chaque modification fait perdre au plus un caractère commun.
+        // Each edit loses at most one shared character.
         int minShared = Math.max(2, distinct - maxDist);
         String best = null;
         int bestDist = maxDist + 1;
@@ -496,7 +489,7 @@ public final class Dictionary {
             String kc = fuzzyCores[k];
             int lenDiff = Math.abs(kc.length() - len);
             if (lenDiff > maxDist) continue;
-            // Textes courts (3–4) : seulement une substitution, jamais un ajout/retrait.
+            // Short texts (3-4): substitution only, never insertion/deletion.
             if (len <= 4 && lenDiff != 0) continue;
             int d = levenshtein(c, kc, bestDist + 1);
             if (d > maxDist) continue;

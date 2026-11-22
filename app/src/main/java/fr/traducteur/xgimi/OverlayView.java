@@ -31,7 +31,7 @@ public final class OverlayView extends View {
         final float sizePx;       // taille du texte d'origine (0 si inconnue)
         final boolean center;     // centrer (boutons) ou aligner à gauche
 
-        /** Bornes x (écran) jusqu'où l'étiquette peut s'étendre sur un fond identique. */
+        /** Screen x bounds the label may extend to over the same background. */
         int roomLeft = Integer.MIN_VALUE, roomRight = Integer.MAX_VALUE;
 
         // Calculé au moment de la mise en page
@@ -48,7 +48,7 @@ public final class OverlayView extends View {
             this.center = center;
         }
 
-        /** Espace libre autorisé (coordonnées écran), cf. {@link LabelGeometry#freeSpan}. */
+        /** Allowed free space (screen coords), see {@link LabelGeometry#freeSpan}. */
         public Label withRoom(int left, int right) {
             roomLeft = Math.min(left, rect.left);
             roomRight = Math.max(right, rect.right);
@@ -88,9 +88,8 @@ public final class OverlayView extends View {
     }
 
     /**
-     * Mise en page : garder une taille lisible proche du chinois, élargir d'abord
-     * dans l'espace libre (droite ; gauche+droite si centré), puis réduire,
-     * puis 2 lignes, puis ellipse à la taille minimale.
+     * Keep a readable size close to the Chinese text: widen into free space first
+     * (right; both sides if centered), then shrink, then 2 lines, then ellipsize at min size.
      */
     private void layoutLabel(Label l, int screenW) {
         Rect r = l.rect;
@@ -110,7 +109,6 @@ public final class OverlayView extends View {
         StaticLayout lay = null;
         float size = start;
         float need = 0;
-        // 1) une ligne, en réduisant au besoin jusqu'à min, dans l'espace libre
         while (true) {
             textPaint.setTextSize(size);
             need = textPaint.measureText(one);
@@ -121,7 +119,6 @@ public final class OverlayView extends View {
             int w = Math.max(baseW, (int) Math.ceil(need));
             lay = build(one, w, l.center, 1);
         } else {
-            // 2) deux lignes si la hauteur le permet à une taille >= min
             float two = Math.min(start, availH / 2.05f);
             if (two >= min * 0.9f && !one.isEmpty()) {
                 textPaint.setTextSize(two);
@@ -129,7 +126,6 @@ public final class OverlayView extends View {
                 if (fits(t, maxW, (int) (availH * 1.05f))) lay = t;
             }
             if (lay == null) {
-                // 3) ellipse à la taille minimale
                 textPaint.setTextSize(min);
                 lay = build(one, maxW, l.center, 1);
             }
@@ -161,7 +157,6 @@ public final class OverlayView extends View {
             box.top -= grow;
             box.bottom += grow;
         }
-        // Texte : à gauche (ou centré) dans la boîte ; le layout a sa propre largeur.
         l.textX = l.center ? box.centerX() - lay.getWidth() / 2f : box.left + pad;
         l.textY = box.top + (box.height() - lay.getHeight()) / 2f;
         l.layout = lay;
@@ -199,8 +194,8 @@ public final class OverlayView extends View {
         getLocationOnScreen(loc);
         canvas.save();
         canvas.translate(-loc[0], -loc[1]);
-        // Petit rayon + débord de 2 px : les coins arrondis ne doivent pas laisser
-        // dépasser de morceaux de glyphes chinois (artefacts « : » au bord).
+        // Small radius + 2 px overflow: rounded corners must not let Chinese glyph
+        // fragments show at the edges (stray "：" artifacts).
         float radius = 1.5f * density;
         for (int i = 0, n = labels.size(); i < n; i++) {
             Label l = labels.get(i);

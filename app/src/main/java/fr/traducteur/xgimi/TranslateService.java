@@ -158,24 +158,24 @@ public class TranslateService extends AccessibilityService
     private boolean ocrAgain = false;
     private int ocrGeneration = 0;
     private long lastKeyAt = 0;
-    private long keyUpAt = 0;              // dernier relâchement de touche (mesure du délai touche -> étiquettes)
-    private int[] refSignature = null;     // capture plein écran (avec nos étiquettes) : mode de secours uniquement
-    private int[] lastSig = null;          // empreinte de la fenêtre (sans nos étiquettes) des étiquettes affichées
-    private Rect lastSigBounds = new Rect(); // zone de l'écran couverte par lastSig
-    private List<OverlayView.Label> shown = new ArrayList<>(); // étiquettes OCR affichées
-    private int[] inFlightSig = null;      // empreinte de l'image en cours de lecture par l'OCR
-    private boolean confirmed = false;     // image en cours de lecture confirmée stable par une 2e capture
-    private List<OverlayView.Label> basis = new ArrayList<>(); // étiquettes de l'écran lastSig (avant retraits)
+    private long keyUpAt = 0;              // last key release (measures key-to-labels latency)
+    private int[] refSignature = null;     // full-screen capture incl. our labels: fallback mode only
+    private int[] lastSig = null;          // window signature (without our labels) of the shown labels
+    private Rect lastSigBounds = new Rect();
+    private List<OverlayView.Label> shown = new ArrayList<>();
+    private int[] inFlightSig = null;      // signature of the image being OCR'd
+    private boolean confirmed = false;     // in-flight image confirmed stable by a second capture
+    private List<OverlayView.Label> basis = new ArrayList<>(); // labels of the lastSig screen (before removals)
     private boolean ocrFromWatch = false;  // la traduction en cours a été lancée par la surveillance
     private String lastLabelsKey = "";
     private int idleRepeats = 0;           // relances inutiles d'affilée (écran animé)
 
-    /** Fenêtre traduite par OCR (Paramètres XGIMI : fenêtre SYSTÈME plein écran). */
+    /** OCR-translated window (XGIMI Settings: full-screen SYSTEM window). */
     private int ocrWindowId = -1;
     private final Rect ocrWindowBounds = new Rect();
     private int windowShotFailures = 0;
 
-    /** Délai après le relâchement d'une touche avant la capture (fin de l'animation de focus). */
+    /** Wait after key release for the focus animation to finish. */
     private static final long KEY_DELAY_MS = 120;
 
     private final Runnable refreshRunnable = this::refreshNow;
@@ -252,7 +252,7 @@ public class TranslateService extends AccessibilityService
         if (instance == this) instance = null;
         Journal.log("service arrêté");
         handler.removeCallbacksAndMessages(null);
-        diskWriter.shutdown(); // les écritures en cours se terminent
+        diskWriter.shutdown();
         try {
             getSharedPreferences(PREFS, MODE_PRIVATE).unregisterOnSharedPreferenceChangeListener(this);
         } catch (Exception ignored) {
@@ -321,9 +321,8 @@ public class TranslateService extends AccessibilityService
     }
 
     /**
-     * Touches de la télécommande : en mode OCR, on retraduit après chaque appui.
-     * On ne vide jamais l'écran : les anciennes étiquettes restent jusqu'à ce que la nouvelle
-     * traduction soit prête (seules celles dont la zone a changé sont retirées entre-temps).
+     * Remote keys: in OCR mode, re-translate after each press. Old labels stay until the new
+     * translation is ready; only those whose area changed are removed meanwhile.
      */
     @Override
     protected boolean onKeyEvent(KeyEvent event) {
@@ -359,7 +358,7 @@ public class TranslateService extends AccessibilityService
                 || pkg.equals("android");
     }
 
-    /** Lecteurs vidéo / entrée HDMI : jamais d'OCR (aucun menu à traduire, CPU gaspillé). */
+    /** Video players / HDMI input: never OCR (no menus to translate, wasted CPU). */
     static boolean isNoOcr(String pkg) {
         return pkg.equals("com.xgimi.xhplayer")
                 || pkg.equals("com.xgimi.gimiplayer")
@@ -606,11 +605,9 @@ public class TranslateService extends AccessibilityService
     }
 
     /**
-     * Capture la fenêtre traduite puis affiche la traduction mémorisée, ou lance l'OCR sur la
-     * seule zone qui a changé. Les étiquettes affichées ne sont jamais effacées en bloc : seules
-     * celles dont la zone a changé sont retirées. Une capture de contrôle suit chaque affichage
-     * (la limite d'Android est d'une capture par ~333 ms, fenêtre comprise) pour rattraper une
-     * animation qui n'était pas finie.
+     * Shows the cached translation, or OCRs only the changed area. A check capture follows each
+     * display (Android allows ~1 capture per 333 ms, window captures included) to catch
+     * unfinished animations.
      */
     private void startOcr() {
         if (!enabled || !ocrMode || recognizer == null) return;
@@ -640,8 +637,8 @@ public class TranslateService extends AccessibilityService
                 finishOcr();
                 return;
             }
-            // Capture de contrôle dès que la limite d'Android le permet, pendant l'OCR :
-            // si l'image bougeait encore (défilement), l'écran final est souvent déjà connu.
+            // Check capture as soon as Android's rate limit allows, during OCR: if the image was
+            // still scrolling, the final screen is often already cached.
             inFlightSig = sig;
             confirmed = false;
             handler.removeCallbacks(verifyRunnable);
@@ -655,8 +652,8 @@ public class TranslateService extends AccessibilityService
     }
 
     /**
-     * Zone à relire (coordonnées de la capture) : cellules changées depuis {@link #lastSig},
-     * élargie aux étiquettes qu'elle touche. null = tout relire.
+     * Area to re-read (capture coords): cells changed since {@link #lastSig}, grown to the
+     * labels it touches. null = re-read everything.
      */
     private Rect changedCrop(int[] sig, Rect area, int bw, int bh) {
         if (lastSig == null || !area.equals(lastSigBounds) || sig.length != lastSig.length) return null;
@@ -674,7 +671,7 @@ public class TranslateService extends AccessibilityService
         }
         if (x1 < 0) return null;
         float fx = area.width() / (float) bw, fy = area.height() / (float) bh;
-        // en coordonnées écran, avec une marge d'une hauteur de ligne
+        // screen coords, with a one-line-height margin
         Rect crop = new Rect(area.left + (int) (x0 * bw / SIG_W * fx) - 64, area.top + (int) (y0 * bh / SIG_H * fy) - 48,
                 area.left + (int) ((x1 + 1) * bw / SIG_W * fx) + 64, area.top + (int) ((y1 + 1) * bh / SIG_H * fy) + 48);
         boolean grown = true;
@@ -698,7 +695,7 @@ public class TranslateService extends AccessibilityService
         final long t0 = SystemClock.uptimeMillis();
         Rect c = changedCrop(sig, area, bmp.getWidth(), bmp.getHeight());
         final Rect crop = c != null ? c : new Rect(0, 0, bmp.getWidth(), bmp.getHeight());
-        // Image réduite : l'OCR est beaucoup plus rapide et le texte reste lisible.
+        // Downscaled: OCR is much faster and text stays readable.
         final float scale = bmp.getWidth() > 1300 ? 0.75f : 1f;
         android.graphics.Matrix m = new android.graphics.Matrix();
         m.setScale(scale, scale);
@@ -710,7 +707,7 @@ public class TranslateService extends AccessibilityService
             finishOcr();
             return;
         }
-        // Étiquettes conservées : hors de la zone relue, donc inchangées.
+        // Kept labels: outside the re-read area, so unchanged.
         float fx = area.width() / (float) bmp.getWidth(), fy = area.height() / (float) bmp.getHeight();
         final Rect cropOnScreen = new Rect(area.left + (int) (crop.left * fx), area.top + (int) (crop.top * fy),
                 area.left + (int) (crop.right * fx), area.top + (int) (crop.bottom * fy));
@@ -750,7 +747,7 @@ public class TranslateService extends AccessibilityService
         }
     }
 
-    /** Passage des coordonnées de l'image lue par l'OCR à celles de l'écran. */
+    /** Maps OCR image coords to screen coords. */
     private static final class Mapping {
         final float ox, oy, kx, ky;
 
@@ -762,7 +759,6 @@ public class TranslateService extends AccessibilityService
         }
     }
 
-    /** Remplace d'un coup les étiquettes affichées. */
     private void show(List<OverlayView.Label> labels, int[] sig, Rect area, int gen) {
         basis = labels;
         shown = new ArrayList<>(labels);
@@ -772,7 +768,7 @@ public class TranslateService extends AccessibilityService
         if (!usingWindowShots()) rememberOverlayLook(gen);
     }
 
-    /** Retire les étiquettes dont la zone de l'écran a changé depuis leur traduction. */
+    /** Removes labels whose screen area changed since they were translated. */
     private void dropStale(int[] sig, Rect area) {
         if (lastSig == null || shown.isEmpty() || sig.length != lastSig.length
                 || !area.equals(lastSigBounds) || area.isEmpty()) return;
@@ -799,7 +795,7 @@ public class TranslateService extends AccessibilityService
         return false;
     }
 
-    /** Après un affichage : une capture de contrôle rattrape une animation ou un texte apparu en retard. */
+    /** After a display, a check capture catches a late animation or text. */
     private void afterShown() {
         handler.removeCallbacks(verifyRunnable);
         if (!ocrFromWatch && !confirmed && usingWindowShots()) handler.postDelayed(verifyRunnable, 300);
@@ -807,8 +803,8 @@ public class TranslateService extends AccessibilityService
     }
 
     /**
-     * Compare l'écran actuel à celui traduit (ou en cours de lecture). S'il a changé : traduction
-     * mémorisée affichée tout de suite si l'écran est connu, sinon nouvelle lecture.
+     * Compares the current screen with the translated (or in-flight) one. If changed: show the
+     * cached translation when the screen is known, otherwise re-read.
      */
     private void verify() {
         if (!enabled || !ocrMode) return;
@@ -824,7 +820,7 @@ public class TranslateService extends AccessibilityService
             dropStale(sig, area);
             CachedScreen cs = findCached(sig, false);
             if (cs != null) {
-                ocrGeneration++; // la lecture en cours portait sur une image périmée
+                ocrGeneration++; // in-flight read was on a stale image
                 show(cs.labels, sig, area, ocrGeneration);
                 Journal.log("OCR : étiquettes affichées (écran déjà vu, " + cs.labels.size()
                         + " textes, après animation) " + sinceKey());
@@ -832,7 +828,7 @@ public class TranslateService extends AccessibilityService
             }
             Journal.log("OCR : l'écran a encore changé, nouvelle lecture");
             if (ocrBusy) {
-                ocrGeneration++; // résultat en cours périmé : on relira l'image finale
+                ocrGeneration++; // in-flight result is stale: the final image will be re-read
                 ocrAgain = true;
             } else {
                 scheduleOcr(0);
@@ -846,8 +842,8 @@ public class TranslateService extends AccessibilityService
         final int[] signature;
         final List<OverlayView.Label> labels;
         /**
-         * Cellules comparées après un appui {x0, y0, x1, y1} : les colonnes des textes (les menus)
-         * sur toute la hauteur, pas le fond d'écran à côté, qui change tout seul (diaporama).
+         * Cells compared after a key press {x0, y0, x1, y1}: text (menu) columns over the full
+         * height, excluding the wallpaper beside them, which changes on its own (slideshow).
          */
         final int[] zone;
 
@@ -857,7 +853,7 @@ public class TranslateService extends AccessibilityService
             this.zone = zone;
         }
 
-        /** zoned : ignore le fond d'écran hors des colonnes de texte ; sinon tout l'écran compte. */
+        /** zoned: ignore wallpaper outside text columns; otherwise the whole screen counts. */
         boolean matches(int[] sig, boolean zoned) {
             if (!zoned) return sameScreen(sig, signature);
             if (sig.length != signature.length) return false;
@@ -872,7 +868,7 @@ public class TranslateService extends AccessibilityService
         }
     }
 
-    /** Colonnes des étiquettes (avec une marge) sur toute la hauteur ; tout l'écran s'il n'y en a pas. */
+    /** Label columns (with margin) over the full height; whole screen if there are none. */
     private static int[] zoneOf(List<OverlayView.Label> labels, Rect area) {
         if (labels.isEmpty() || area.isEmpty()) return new int[]{0, 0, SIG_W - 1, SIG_H - 1};
         int left = Integer.MAX_VALUE, right = Integer.MIN_VALUE;
@@ -888,8 +884,8 @@ public class TranslateService extends AccessibilityService
 
     private final ArrayList<CachedScreen> screenCache = new ArrayList<>();
 
-    // Les écrans traduits sont aussi gardés sur disque : après un redémarrage, l'affichage est
-    // immédiat dès la première visite. Le fichier est ignoré si l'app (donc le dictionnaire) a changé.
+    // Translated screens are also cached on disk so they show instantly after a restart.
+    // The file is ignored if the app (hence the dictionary) changed.
     private static final int CACHE_MAGIC = 0x58474333;
     private final java.util.concurrent.ExecutorService diskWriter =
             java.util.concurrent.Executors.newSingleThreadExecutor();
@@ -945,7 +941,7 @@ public class TranslateService extends AccessibilityService
         });
     }
 
-    /** Appelé hors du fil principal. */
+    /** Called off the main thread. */
     private List<CachedScreen> loadScreenCache(String lang) {
         ArrayList<CachedScreen> list = new ArrayList<>();
         java.io.File f = cacheFile(lang);
@@ -990,7 +986,7 @@ public class TranslateService extends AccessibilityService
         return null;
     }
 
-    /** Même écran ? Quelques points d'écart seulement (bruit d'image) ; un texte changé en touche bien plus. */
+    /** Same screen? Image noise differs by a few points only; changed text touches many more. */
     private static boolean sameScreen(int[] a, int[] b) {
         if (a.length != b.length) return false;
         int changed = 0;
@@ -1000,7 +996,7 @@ public class TranslateService extends AccessibilityService
         return true;
     }
 
-    /** Mode de secours (capture plein écran) : mémorise l'aspect de l'écran avec nos étiquettes. */
+    /** Fallback mode (full-screen capture): remembers the screen's look including our labels. */
     private void rememberOverlayLook(final int gen) {
         handler.postDelayed(() -> shoot(b -> {
             if (b != null && gen == ocrGeneration) refSignature = signature(b);
@@ -1115,14 +1111,14 @@ public class TranslateService extends AccessibilityService
         });
     }
 
-    // ------------------------------------------------------------------ capture de la fenêtre traduite
+    // ------------------------------------------------------------------ translated-window capture
 
-    /** Reçoit une capture de la zone {@code area} de l'écran ; valable seulement pendant l'appel. */
+    /** Receives a capture of screen area {@code area}; valid only during the call. */
     private interface AreaShotCallback {
         void onShot(Bitmap bmp, Rect area);
     }
 
-    /** Android 14+ : capture de la seule fenêtre traduite, sans notre surimpression. */
+    /** Android 14+: captures only the translated window, without our overlay. */
     private boolean usingWindowShots() {
         return Build.VERSION.SDK_INT >= 34 && ocrWindowId >= 0 && windowShotFailures < 3;
     }
@@ -1163,7 +1159,7 @@ public class TranslateService extends AccessibilityService
         shootHidden(cb);
     }
 
-    /** Secours : capture plein écran après avoir masqué notre surimpression. */
+    /** Fallback: full-screen capture after hiding our overlay. */
     private void shootHidden(final AreaShotCallback cb) {
         overlay.setVisibility(View.INVISIBLE);
         handler.postDelayed(() -> shoot(b -> {
@@ -1310,10 +1306,10 @@ public class TranslateService extends AccessibilityService
         return new int[]{bg, fg};
     }
 
-    /** Grille d'échantillonnage : un point tous les 10 px environ, assez fin pour voir un texte changer. */
+    /** Sampling grid: about one point per 10 px, fine enough to see text change. */
     private static final int SIG_W = 192, SIG_H = 108;
 
-    /** Empreinte de l'écran (luminosité sur une grille SIG_W x SIG_H). */
+    /** Screen signature (luminance on a SIG_W x SIG_H grid). */
     private static int[] signature(Bitmap bmp) {
         int gw = SIG_W, gh = SIG_H;
         int[] s = new int[gw * gh];
