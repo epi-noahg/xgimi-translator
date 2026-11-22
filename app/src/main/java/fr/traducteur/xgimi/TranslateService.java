@@ -18,6 +18,7 @@ import android.view.Display;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.WindowManager;
+import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.view.accessibility.AccessibilityWindowInfo;
@@ -90,10 +91,12 @@ public class TranslateService extends AccessibilityService
         loadedLang = lang;
         new Thread(() -> {
             final Dictionary d = loadDictionary(lang);
+            final List<CachedScreen> saved = loadScreenCache(lang);
             handler.post(() -> {
                 if (!lang.equals(loadedLang)) return;
                 dict = d;
                 screenCache.clear();
+                screenCache.addAll(saved);
                 colorCache.clear();
                 lastLabelsKey = "";
                 if (overlay != null) overlay.clear();
@@ -155,15 +158,31 @@ public class TranslateService extends AccessibilityService
     private boolean ocrAgain = false;
     private int ocrGeneration = 0;
     private long lastKeyAt = 0;
-    private int[] refSignature = null; // aspect de l'écran (avec nos étiquettes) après la dernière traduction
+    private long keyUpAt = 0;              // dernier relâchement de touche (mesure du délai touche -> étiquettes)
+    private int[] refSignature = null;     // capture plein écran (avec nos étiquettes) : mode de secours uniquement
+    private int[] lastSig = null;          // empreinte de la fenêtre (sans nos étiquettes) des étiquettes affichées
+    private Rect lastSigBounds = new Rect(); // zone de l'écran couverte par lastSig
+    private List<OverlayView.Label> shown = new ArrayList<>(); // étiquettes OCR affichées
+    private int[] inFlightSig = null;      // empreinte de l'image en cours de lecture par l'OCR
+    private boolean confirmed = false;     // image en cours de lecture confirmée stable par une 2e capture
+    private List<OverlayView.Label> basis = new ArrayList<>(); // étiquettes de l'écran lastSig (avant retraits)
     private boolean ocrFromWatch = false;  // la traduction en cours a été lancée par la surveillance
     private String lastLabelsKey = "";
     private int idleRepeats = 0;           // relances inutiles d'affilée (écran animé)
+
+    /** Fenêtre traduite par OCR (Paramètres XGIMI : fenêtre SYSTÈME plein écran). */
+    private int ocrWindowId = -1;
+    private final Rect ocrWindowBounds = new Rect();
+    private int windowShotFailures = 0;
+
+    /** Délai après le relâchement d'une touche avant la capture (fin de l'animation de focus). */
+    private static final long KEY_DELAY_MS = 120;
 
     private final Runnable refreshRunnable = this::refreshNow;
     private final Runnable refreshLateRunnable = this::refreshNow;
     private final Runnable ocrRunnable = this::startOcr;
     private final Runnable watchRunnable = this::watch;
+    private final Runnable verifyRunnable = this::verify;
 
     // ------------------------------------------------------------------ cycle de vie
 
@@ -191,10 +210,12 @@ public class TranslateService extends AccessibilityService
             }
             final Dictionary fd = d;
             final TextRecognizer fr = r;
+            final List<CachedScreen> saved = loadScreenCache(lang);
             handler.post(() -> {
                 if (instance != TranslateService.this) return; // service arrêté entre-temps
                 recognizer = fr;
                 dict = fd;
+                if (lang.equals(loadedLang)) screenCache.addAll(0, saved);
                 scheduleRefresh();
             });
         }, "chargement").start();
@@ -231,6 +252,7 @@ public class TranslateService extends AccessibilityService
         if (instance == this) instance = null;
         Journal.log("service arrêté");
         handler.removeCallbacksAndMessages(null);
+        diskWriter.shutdown(); // les écritures en cours se terminent
         try {
             getSharedPreferences(PREFS, MODE_PRIVATE).unregisterOnSharedPreferenceChangeListener(this);
         } catch (Exception ignored) {
@@ -298,7 +320,11 @@ public class TranslateService extends AccessibilityService
         scheduleRefresh();
     }
 
-    /** Touches de la télécommande : en mode OCR, on retraduit après chaque appui. */
+    /**
+     * Touches de la télécommande : en mode OCR, on retraduit après chaque appui.
+     * On ne vide jamais l'écran : les anciennes étiquettes restent jusqu'à ce que la nouvelle
+     * traduction soit prête (seules celles dont la zone a changé sont retirées entre-temps).
+     */
     @Override
     protected boolean onKeyEvent(KeyEvent event) {
         if (enabled && ocrMode && overlay != null) {
@@ -308,10 +334,11 @@ public class TranslateService extends AccessibilityService
             if (event.getAction() == KeyEvent.ACTION_DOWN) {
                 ocrGeneration++;          // une traduction en cours serait périmée
                 handler.removeCallbacks(ocrRunnable);
-                overlay.clear();          // l'écran va changer
+                handler.removeCallbacks(verifyRunnable);
             } else if (event.getAction() == KeyEvent.ACTION_UP) {
+                keyUpAt = lastKeyAt;
                 Journal.log("touche " + event.getKeyCode());
-                scheduleOcr(260);         // le temps que l'animation se termine
+                scheduleOcr(KEY_DELAY_MS);
             }
         }
         return false; // on ne bloque jamais la touche
@@ -330,6 +357,15 @@ public class TranslateService extends AccessibilityService
                 || pkg.equals("com.android.newsettings")
                 || pkg.equals("com.android.systemui")
                 || pkg.equals("android");
+    }
+
+    /** Lecteurs vidéo / entrée HDMI : jamais d'OCR (aucun menu à traduire, CPU gaspillé). */
+    static boolean isNoOcr(String pkg) {
+        return pkg.equals("com.xgimi.xhplayer")
+                || pkg.equals("com.xgimi.gimiplayer")
+                || pkg.equals("com.xgimi.stream.video")
+                || pkg.equals("com.xgimi.tvinput")
+                || pkg.equals("com.xgimi.screensaver");
     }
 
     // ------------------------------------------------------------------ lecture de l'écran (mode TEXTE)
@@ -390,7 +426,11 @@ public class TranslateService extends AccessibilityService
                 topAppFound = true;
                 // Fenêtre d'app XGIMI au premier plan sans aucun texte lisible : c'est une image -> OCR
                 wantOcr = target && chineseSeen[0] == 0 && recognizer != null && !shotsUnavailable
-                        && Build.VERSION.SDK_INT >= 30;
+                        && Build.VERSION.SDK_INT >= 30 && !isNoOcr(pkg.toString());
+                if (wantOcr) {
+                    ocrWindowId = w.getId();
+                    ocrWindowBounds.set(wb);
+                }
             }
             boolean fullScreen = (long) wb.width() * wb.height() >= screenArea * 0.95;
             if (wtype == AccessibilityWindowInfo.TYPE_APPLICATION
@@ -546,11 +586,15 @@ public class TranslateService extends AccessibilityService
         Journal.log("mode OCR : " + on);
         ocrGeneration++;
         refSignature = null;
+        lastSig = null;
+        shown = new ArrayList<>();
+        basis = new ArrayList<>();
         handler.removeCallbacks(ocrRunnable);
         handler.removeCallbacks(watchRunnable);
+        handler.removeCallbacks(verifyRunnable);
         if (overlay != null) overlay.clear();
         if (on) {
-            scheduleOcr(300);
+            scheduleOcr(KEY_DELAY_MS);
             handler.postDelayed(watchRunnable, 1500);
         }
     }
@@ -561,6 +605,13 @@ public class TranslateService extends AccessibilityService
         handler.postDelayed(ocrRunnable, delay);
     }
 
+    /**
+     * Capture la fenêtre traduite puis affiche la traduction mémorisée, ou lance l'OCR sur la
+     * seule zone qui a changé. Les étiquettes affichées ne sont jamais effacées en bloc : seules
+     * celles dont la zone a changé sont retirées. Une capture de contrôle suit chaque affichage
+     * (la limite d'Android est d'une capture par ~333 ms, fenêtre comprise) pour rattraper une
+     * animation qui n'était pas finie.
+     */
     private void startOcr() {
         if (!enabled || !ocrMode || recognizer == null) return;
         if (ocrBusy) {
@@ -569,66 +620,224 @@ public class TranslateService extends AccessibilityService
         }
         ocrBusy = true;
         final int gen = ++ocrGeneration;
-        Journal.log("OCR : lancement n°" + gen);
-        overlay.clear(); // nos étiquettes ne doivent pas apparaître sur la capture
-        handler.postDelayed(() -> shoot(bmp -> {
-            if (bmp == null || gen != ocrGeneration) {
-                Journal.log("OCR : " + (bmp == null ? "pas de capture" : "annulé (touche pressée)"));
+        final long t0 = SystemClock.uptimeMillis();
+        shootTarget((bmp, area) -> {
+            if (bmp == null || gen != ocrGeneration || !ocrMode) {
+                if (bmp == null) Journal.log("OCR : pas de capture");
                 finishOcr();
                 return;
             }
-            final long t0 = SystemClock.uptimeMillis();
+            final long shotMs = SystemClock.uptimeMillis() - t0;
             final int[] sig = signature(bmp);
-            // Écran déjà vu ? On réaffiche directement la traduction mémorisée.
-            for (int i = screenCache.size() - 1; i >= 0; i--) {
-                CachedScreen cs = screenCache.get(i);
-                if (similar(sig, cs.signature)) {
-                    screenCache.remove(i);
-                    screenCache.add(cs);
-                    Journal.log("OCR : écran déjà vu, traduction immédiate (" + cs.labels.size() + " textes)");
-                    overlay.setLabels(new ArrayList<>(cs.labels));
-                    rememberOverlayLook(gen);
-                    finishOcr();
-                    return;
+            dropStale(sig, area);
+            CachedScreen cs = findCached(sig, !ocrFromWatch);
+            if (cs != null || (lastSig != null && area.equals(lastSigBounds) && sameScreen(sig, lastSig))) {
+                List<OverlayView.Label> labels = cs != null ? cs.labels : basis;
+                show(labels, sig, area, gen);
+                Journal.log("OCR : étiquettes affichées (écran déjà vu, " + labels.size() + " textes) "
+                        + sinceKey() + ", capture en " + shotMs + " ms");
+                afterShown();
+                finishOcr();
+                return;
+            }
+            // Capture de contrôle dès que la limite d'Android le permet, pendant l'OCR :
+            // si l'image bougeait encore (défilement), l'écran final est souvent déjà connu.
+            inFlightSig = sig;
+            confirmed = false;
+            handler.removeCallbacks(verifyRunnable);
+            if (!ocrFromWatch && usingWindowShots()) handler.postDelayed(verifyRunnable, 340);
+            runOcr(bmp, area, sig, gen, shotMs);
+        });
+    }
+
+    private String sinceKey() {
+        return ocrFromWatch ? "(surveillance)" : "+" + (SystemClock.uptimeMillis() - keyUpAt) + " ms après la touche";
+    }
+
+    /**
+     * Zone à relire (coordonnées de la capture) : cellules changées depuis {@link #lastSig},
+     * élargie aux étiquettes qu'elle touche. null = tout relire.
+     */
+    private Rect changedCrop(int[] sig, Rect area, int bw, int bh) {
+        if (lastSig == null || !area.equals(lastSigBounds) || sig.length != lastSig.length) return null;
+        int x0 = SIG_W, y0 = SIG_H, x1 = -1, y1 = -1;
+        for (int y = 0; y < SIG_H; y++) {
+            for (int x = 0; x < SIG_W; x++) {
+                int i = y * SIG_W + x;
+                if (Math.abs(sig[i] - lastSig[i]) > 18) {
+                    if (x < x0) x0 = x;
+                    if (x > x1) x1 = x;
+                    if (y < y0) y0 = y;
+                    if (y > y1) y1 = y;
                 }
             }
-            // Image réduite : l'OCR est beaucoup plus rapide et le texte reste lisible.
-            final Bitmap own;
-            if (bmp.getWidth() > 1300) {
-                own = Bitmap.createScaledBitmap(bmp, bmp.getWidth() * 3 / 4, bmp.getHeight() * 3 / 4, true);
-            } else {
-                own = bmp.copy(Bitmap.Config.ARGB_8888, false);
+        }
+        if (x1 < 0) return null;
+        float fx = area.width() / (float) bw, fy = area.height() / (float) bh;
+        // en coordonnées écran, avec une marge d'une hauteur de ligne
+        Rect crop = new Rect(area.left + (int) (x0 * bw / SIG_W * fx) - 64, area.top + (int) (y0 * bh / SIG_H * fy) - 48,
+                area.left + (int) ((x1 + 1) * bw / SIG_W * fx) + 64, area.top + (int) ((y1 + 1) * bh / SIG_H * fy) + 48);
+        boolean grown = true;
+        while (grown) {
+            grown = false;
+            for (OverlayView.Label l : basis) {
+                if (Rect.intersects(crop, l.rect) && !crop.contains(l.rect)) {
+                    crop.union(l.rect);
+                    grown = true;
+                }
             }
-            if (own == null) {
-                finishOcr();
+        }
+        if (!crop.intersect(area)) return null;
+        if ((long) crop.width() * crop.height() > (long) area.width() * area.height() * 7 / 10) return null;
+        return new Rect((int) ((crop.left - area.left) / fx), (int) ((crop.top - area.top) / fy),
+                Math.min(bw, (int) Math.ceil((crop.right - area.left) / fx)),
+                Math.min(bh, (int) Math.ceil((crop.bottom - area.top) / fy)));
+    }
+
+    private void runOcr(Bitmap bmp, final Rect area, final int[] sig, final int gen, long shotMs) {
+        final long t0 = SystemClock.uptimeMillis();
+        Rect c = changedCrop(sig, area, bmp.getWidth(), bmp.getHeight());
+        final Rect crop = c != null ? c : new Rect(0, 0, bmp.getWidth(), bmp.getHeight());
+        // Image réduite : l'OCR est beaucoup plus rapide et le texte reste lisible.
+        final float scale = bmp.getWidth() > 1300 ? 0.75f : 1f;
+        android.graphics.Matrix m = new android.graphics.Matrix();
+        m.setScale(scale, scale);
+        final Bitmap own;
+        try {
+            own = Bitmap.createBitmap(bmp, crop.left, crop.top, crop.width(), crop.height(), m, true);
+        } catch (Throwable t) {
+            Journal.log("OCR : image illisible", t);
+            finishOcr();
+            return;
+        }
+        // Étiquettes conservées : hors de la zone relue, donc inchangées.
+        float fx = area.width() / (float) bmp.getWidth(), fy = area.height() / (float) bmp.getHeight();
+        final Rect cropOnScreen = new Rect(area.left + (int) (crop.left * fx), area.top + (int) (crop.top * fy),
+                area.left + (int) (crop.right * fx), area.top + (int) (crop.bottom * fy));
+        final ArrayList<OverlayView.Label> kept = new ArrayList<>();
+        if (c != null) {
+            for (OverlayView.Label l : basis) if (!Rect.intersects(l.rect, cropOnScreen)) kept.add(l);
+        }
+        final Mapping map = new Mapping(area.left + crop.left * fx, area.top + crop.top * fy, fx / scale, fy / scale);
+        Journal.log("OCR : lecture de " + (c == null ? "tout l'écran" : "la zone " + cropOnScreen.toShortString())
+                + " " + sinceKey() + " (capture " + shotMs + " ms, préparation "
+                + (SystemClock.uptimeMillis() - t0) + " ms)");
+        final long t1 = SystemClock.uptimeMillis();
+        try {
+            recognizer.process(InputImage.fromBitmap(own, 0))
+                    .addOnSuccessListener(text -> {
+                        try {
+                            Journal.log("OCR : terminé en " + (SystemClock.uptimeMillis() - t1) + " ms");
+                            onOcrResult(text, own, gen, sig, area, map, kept);
+                        } catch (Throwable t) {
+                            Log.w(TAG, "Erreur après OCR", t);
+                            Journal.log("erreur après OCR", t);
+                        }
+                        own.recycle();
+                        finishOcr();
+                    })
+                    .addOnFailureListener(e -> {
+                        Log.w(TAG, "OCR en échec", e);
+                        Journal.log("OCR en échec", e);
+                        own.recycle();
+                        finishOcr();
+                    });
+        } catch (Throwable t) {
+            Log.w(TAG, "OCR impossible", t);
+            Journal.log("OCR impossible", t);
+            own.recycle();
+            finishOcr();
+        }
+    }
+
+    /** Passage des coordonnées de l'image lue par l'OCR à celles de l'écran. */
+    private static final class Mapping {
+        final float ox, oy, kx, ky;
+
+        Mapping(float ox, float oy, float kx, float ky) {
+            this.ox = ox;
+            this.oy = oy;
+            this.kx = kx;
+            this.ky = ky;
+        }
+    }
+
+    /** Remplace d'un coup les étiquettes affichées. */
+    private void show(List<OverlayView.Label> labels, int[] sig, Rect area, int gen) {
+        basis = labels;
+        shown = new ArrayList<>(labels);
+        overlay.setLabels(new ArrayList<>(labels));
+        lastSig = sig;
+        lastSigBounds.set(area);
+        if (!usingWindowShots()) rememberOverlayLook(gen);
+    }
+
+    /** Retire les étiquettes dont la zone de l'écran a changé depuis leur traduction. */
+    private void dropStale(int[] sig, Rect area) {
+        if (lastSig == null || shown.isEmpty() || sig.length != lastSig.length
+                || !area.equals(lastSigBounds) || area.isEmpty()) return;
+        ArrayList<OverlayView.Label> kept = new ArrayList<>(shown.size());
+        for (OverlayView.Label l : shown) {
+            if (!regionChanged(sig, lastSig, l.rect, area)) kept.add(l);
+        }
+        if (kept.size() == shown.size()) return;
+        shown = kept;
+        overlay.setLabels(new ArrayList<>(kept));
+    }
+
+    private static boolean regionChanged(int[] a, int[] b, Rect r, Rect area) {
+        int x0 = Math.max(0, (r.left - area.left) * SIG_W / area.width());
+        int x1 = Math.min(SIG_W - 1, (r.right - area.left) * SIG_W / area.width());
+        int y0 = Math.max(0, (r.top - area.top) * SIG_H / area.height());
+        int y1 = Math.min(SIG_H - 1, (r.bottom - area.top) * SIG_H / area.height());
+        for (int y = y0; y <= y1; y++) {
+            for (int x = x0; x <= x1; x++) {
+                int i = y * SIG_W + x;
+                if (Math.abs(a[i] - b[i]) > 18) return true;
+            }
+        }
+        return false;
+    }
+
+    /** Après un affichage : une capture de contrôle rattrape une animation ou un texte apparu en retard. */
+    private void afterShown() {
+        handler.removeCallbacks(verifyRunnable);
+        if (!ocrFromWatch && !confirmed && usingWindowShots()) handler.postDelayed(verifyRunnable, 300);
+        confirmed = false;
+    }
+
+    /**
+     * Compare l'écran actuel à celui traduit (ou en cours de lecture). S'il a changé : traduction
+     * mémorisée affichée tout de suite si l'écran est connu, sinon nouvelle lecture.
+     */
+    private void verify() {
+        if (!enabled || !ocrMode) return;
+        final int gen = ocrGeneration;
+        shootTarget((b, area) -> {
+            if (b == null || gen != ocrGeneration || !ocrMode) return;
+            int[] sig = signature(b);
+            int[] cur = ocrBusy ? inFlightSig : lastSig;
+            if (cur != null && sameScreen(sig, cur)) {
+                if (ocrBusy) confirmed = true;
                 return;
             }
-            try {
-                recognizer.process(InputImage.fromBitmap(own, 0))
-                        .addOnSuccessListener(text -> {
-                            try {
-                                Journal.log("OCR : terminé en " + (SystemClock.uptimeMillis() - t0) + " ms");
-                                onOcrResult(text, own, gen, sig);
-                            } catch (Throwable t) {
-                                Log.w(TAG, "Erreur après OCR", t);
-                                Journal.log("erreur après OCR", t);
-                            }
-                            own.recycle();
-                            finishOcr();
-                        })
-                        .addOnFailureListener(e -> {
-                            Log.w(TAG, "OCR en échec", e);
-                            Journal.log("OCR en échec", e);
-                            own.recycle();
-                            finishOcr();
-                        });
-            } catch (Throwable t) {
-                Log.w(TAG, "OCR impossible", t);
-                Journal.log("OCR impossible", t);
-                own.recycle();
-                finishOcr();
+            dropStale(sig, area);
+            CachedScreen cs = findCached(sig, false);
+            if (cs != null) {
+                ocrGeneration++; // la lecture en cours portait sur une image périmée
+                show(cs.labels, sig, area, ocrGeneration);
+                Journal.log("OCR : étiquettes affichées (écran déjà vu, " + cs.labels.size()
+                        + " textes, après animation) " + sinceKey());
+                return;
             }
-        }), 50);
+            Journal.log("OCR : l'écran a encore changé, nouvelle lecture");
+            if (ocrBusy) {
+                ocrGeneration++; // résultat en cours périmé : on relira l'image finale
+                ocrAgain = true;
+            } else {
+                scheduleOcr(0);
+            }
+        });
     }
 
     // ------------------------------------------------------------------ mémoire des écrans déjà traduits
@@ -636,24 +845,162 @@ public class TranslateService extends AccessibilityService
     private static final class CachedScreen {
         final int[] signature;
         final List<OverlayView.Label> labels;
+        /**
+         * Cellules comparées après un appui {x0, y0, x1, y1} : les colonnes des textes (les menus)
+         * sur toute la hauteur, pas le fond d'écran à côté, qui change tout seul (diaporama).
+         */
+        final int[] zone;
 
-        CachedScreen(int[] signature, List<OverlayView.Label> labels) {
+        CachedScreen(int[] signature, List<OverlayView.Label> labels, int[] zone) {
             this.signature = signature;
             this.labels = labels;
+            this.zone = zone;
         }
+
+        /** zoned : ignore le fond d'écran hors des colonnes de texte ; sinon tout l'écran compte. */
+        boolean matches(int[] sig, boolean zoned) {
+            if (!zoned) return sameScreen(sig, signature);
+            if (sig.length != signature.length) return false;
+            int changed = 0;
+            for (int y = zone[1]; y <= zone[3]; y++) {
+                for (int x = zone[0]; x <= zone[2]; x++) {
+                    int i = y * SIG_W + x;
+                    if (Math.abs(sig[i] - signature[i]) > 18 && ++changed > 4) return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    /** Colonnes des étiquettes (avec une marge) sur toute la hauteur ; tout l'écran s'il n'y en a pas. */
+    private static int[] zoneOf(List<OverlayView.Label> labels, Rect area) {
+        if (labels.isEmpty() || area.isEmpty()) return new int[]{0, 0, SIG_W - 1, SIG_H - 1};
+        int left = Integer.MAX_VALUE, right = Integer.MIN_VALUE;
+        for (OverlayView.Label l : labels) {
+            left = Math.min(left, l.rect.left);
+            right = Math.max(right, l.rect.right);
+        }
+        int m = 3;
+        return new int[]{
+                Math.max(0, (left - area.left) * SIG_W / area.width() - m), 0,
+                Math.min(SIG_W - 1, (right - area.left) * SIG_W / area.width() + m), SIG_H - 1};
     }
 
     private final ArrayList<CachedScreen> screenCache = new ArrayList<>();
 
-    /** Même écran (à quelques pixels près, ex. une horloge) ? */
-    private static boolean similar(int[] a, int[] b) {
-        if (a.length != b.length) return false;
-        int changed = 0;
-        for (int i = 0; i < a.length; i++) if (Math.abs(a[i] - b[i]) > 18) changed++;
-        return changed <= a.length / 400;
+    // Les écrans traduits sont aussi gardés sur disque : après un redémarrage, l'affichage est
+    // immédiat dès la première visite. Le fichier est ignoré si l'app (donc le dictionnaire) a changé.
+    private static final int CACHE_MAGIC = 0x58474333;
+    private final java.util.concurrent.ExecutorService diskWriter =
+            java.util.concurrent.Executors.newSingleThreadExecutor();
+
+    private java.io.File cacheFile(String lang) {
+        return new java.io.File(getFilesDir(), "ecrans_" + lang + ".bin");
     }
 
-    /** Mémorise l'aspect de l'écran avec nos étiquettes, pour détecter les changements ensuite. */
+    private long appStamp() {
+        try {
+            return getPackageManager().getPackageInfo(getPackageName(), 0).lastUpdateTime;
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    private void saveScreenCache() {
+        final ArrayList<CachedScreen> snapshot = new ArrayList<>(screenCache);
+        final java.io.File f = cacheFile(loadedLang);
+        final long stamp = appStamp();
+        diskWriter.execute(() -> {
+            java.io.File tmp = new java.io.File(f.getPath() + ".tmp");
+            try (java.io.DataOutputStream out = new java.io.DataOutputStream(
+                    new java.io.BufferedOutputStream(new java.io.FileOutputStream(tmp)))) {
+                out.writeInt(CACHE_MAGIC);
+                out.writeLong(stamp);
+                out.writeInt(snapshot.size());
+                for (CachedScreen cs : snapshot) {
+                    out.writeInt(cs.signature.length);
+                    for (int v : cs.signature) out.writeByte(v);
+                    for (int v : cs.zone) out.writeInt(v);
+                    out.writeInt(cs.labels.size());
+                    for (OverlayView.Label l : cs.labels) {
+                        out.writeInt(l.rect.left);
+                        out.writeInt(l.rect.top);
+                        out.writeInt(l.rect.right);
+                        out.writeInt(l.rect.bottom);
+                        out.writeUTF(l.text);
+                        out.writeInt(l.bg);
+                        out.writeInt(l.fg);
+                        out.writeFloat(l.sizePx);
+                        out.writeBoolean(l.center);
+                        out.writeInt(l.roomLeft);
+                        out.writeInt(l.roomRight);
+                    }
+                }
+            } catch (Exception e) {
+                Journal.log("mémoire des écrans non enregistrée", e);
+                return;
+            }
+            //noinspection ResultOfMethodCallIgnored
+            tmp.renameTo(f);
+        });
+    }
+
+    /** Appelé hors du fil principal. */
+    private List<CachedScreen> loadScreenCache(String lang) {
+        ArrayList<CachedScreen> list = new ArrayList<>();
+        java.io.File f = cacheFile(lang);
+        if (!f.exists()) return list;
+        try (java.io.DataInputStream in = new java.io.DataInputStream(
+                new java.io.BufferedInputStream(new java.io.FileInputStream(f)))) {
+            if (in.readInt() != CACHE_MAGIC || in.readLong() != appStamp()) return list;
+            int n = in.readInt();
+            for (int i = 0; i < n; i++) {
+                int[] sig = new int[in.readInt()];
+                for (int j = 0; j < sig.length; j++) sig[j] = in.readUnsignedByte();
+                int[] zone = {in.readInt(), in.readInt(), in.readInt(), in.readInt()};
+                int nl = in.readInt();
+                ArrayList<OverlayView.Label> labels = new ArrayList<>(nl);
+                for (int j = 0; j < nl; j++) {
+                    Rect r = new Rect(in.readInt(), in.readInt(), in.readInt(), in.readInt());
+                    OverlayView.Label l = new OverlayView.Label(r, in.readUTF(), in.readInt(), in.readInt(),
+                            in.readFloat(), in.readBoolean());
+                    l.roomLeft = in.readInt();
+                    l.roomRight = in.readInt();
+                    labels.add(l);
+                }
+                list.add(new CachedScreen(sig, labels, zone));
+            }
+            Journal.log("mémoire des écrans : " + list.size() + " écrans rechargés");
+        } catch (Exception e) {
+            Journal.log("mémoire des écrans illisible", e);
+            list.clear();
+        }
+        return list;
+    }
+
+    private CachedScreen findCached(int[] sig, boolean zoned) {
+        for (int i = screenCache.size() - 1; i >= 0; i--) {
+            CachedScreen cs = screenCache.get(i);
+            if (cs.matches(sig, zoned)) {
+                screenCache.remove(i);
+                screenCache.add(cs);
+                return cs;
+            }
+        }
+        return null;
+    }
+
+    /** Même écran ? Quelques points d'écart seulement (bruit d'image) ; un texte changé en touche bien plus. */
+    private static boolean sameScreen(int[] a, int[] b) {
+        if (a.length != b.length) return false;
+        int changed = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (Math.abs(a[i] - b[i]) > 18 && ++changed > 4) return false;
+        }
+        return true;
+    }
+
+    /** Mode de secours (capture plein écran) : mémorise l'aspect de l'écran avec nos étiquettes. */
     private void rememberOverlayLook(final int gen) {
         handler.postDelayed(() -> shoot(b -> {
             if (b != null && gen == ocrGeneration) refSignature = signature(b);
@@ -664,17 +1011,17 @@ public class TranslateService extends AccessibilityService
         ocrBusy = false;
         if (ocrAgain) {
             ocrAgain = false;
-            scheduleOcr(60);
+            scheduleOcr(0);
         }
     }
 
-    private void onOcrResult(Text text, Bitmap bmp, int gen, int[] sig) {
+    private void onOcrResult(Text text, Bitmap bmp, int gen, int[] sig, Rect area, Mapping map,
+                             List<OverlayView.Label> kept) {
         if (gen != ocrGeneration || !ocrMode || !enabled) return;
-        DisplayMetrics dm = realMetrics();
-        float sx = dm.widthPixels / (float) Math.max(1, bmp.getWidth());
-        float sy = dm.heightPixels / (float) Math.max(1, bmp.getHeight());
 
-        ArrayList<OverlayView.Label> labels = new ArrayList<>();
+        ArrayList<OverlayView.Label> labels = new ArrayList<>(kept);
+
+        int nNew = 0;
         StringBuilder seen = new StringBuilder();
         int nLines = 0;
         for (Text.TextBlock block : text.getTextBlocks()) {
@@ -689,7 +1036,8 @@ public class TranslateService extends AccessibilityService
                 String fr = dict.translateFuzzy(s);
                 if (nLines <= 40) seen.append("\n      « ").append(s).append(" » -> ").append(fr == null ? "?" : fr);
                 if (fr != null) {
-                    labels.add(ocrLabel(bmp, box, fr, sx, sy));
+                    labels.add(ocrLabel(bmp, box, fr, map));
+                    nNew++;
                     continue;
                 }
                 // La ligne réunit peut-être plusieurs textes : on essaie morceau par morceau.
@@ -698,15 +1046,21 @@ public class TranslateService extends AccessibilityService
                     String es = el.getText();
                     if (eb == null || !Dictionary.hasChinese(es)) continue;
                     String f2 = dict.translateFuzzy(es);
-                    if (f2 != null) labels.add(ocrLabel(bmp, eb, f2, sx, sy));
+                    if (f2 != null) {
+                        labels.add(ocrLabel(bmp, eb, f2, map));
+                        nNew++;
+                    }
                 }
             }
         }
-        overlay.setLabels(labels);
-        Journal.log("OCR : " + nLines + " lignes lues, " + labels.size() + " traduites" + seen);
-        if (labels.isEmpty()) Journal.saveCapture(bmp);
-        screenCache.add(new CachedScreen(sig, new ArrayList<>(labels)));
+        show(labels, sig, area, gen);
+        Journal.log("OCR : étiquettes affichées " + sinceKey() + " ; " + nLines + " lignes lues, "
+                + nNew + " traduites, " + kept.size() + " conservées" + seen);
+        afterShown();
+        if (nNew == 0 && kept.isEmpty()) Journal.saveCapture(bmp);
+        screenCache.add(new CachedScreen(sig, new ArrayList<>(labels), zoneOf(labels, area)));
         if (screenCache.size() > 40) screenCache.remove(0);
+        saveScreenCache();
 
         StringBuilder k = new StringBuilder();
         for (OverlayView.Label l : labels) k.append(l.text).append('@').append(l.rect.top / 20).append(';');
@@ -715,21 +1069,24 @@ public class TranslateService extends AccessibilityService
         else idleRepeats = 0;
         lastLabelsKey = key;
         ocrFromWatch = false;
-
-        rememberOverlayLook(gen);
     }
 
-    private OverlayView.Label ocrLabel(Bitmap bmp, Rect boxInBmp, String fr, float sx, float sy) {
+    private OverlayView.Label ocrLabel(Bitmap bmp, Rect boxInBmp, String fr, Mapping map) {
         int padX = Math.max(3, boxInBmp.height() / 5);
         int padY = Math.max(2, boxInBmp.height() / 8);
         Rect padded = new Rect(boxInBmp.left - padX, boxInBmp.top - padY,
                 boxInBmp.right + padX, boxInBmp.bottom + padY);
         int[] colors = useScreenshotColors ? measureColors(bmp, padded, 0)
                 : new int[]{OverlayView.fallbackBg(false), OverlayView.fallbackFg(false)};
-        Rect onScreen = new Rect((int) (padded.left * sx), (int) (padded.top * sy),
-                (int) (padded.right * sx), (int) (padded.bottom * sy));
-        float size = boxInBmp.height() * sy * 0.95f;
-        return new OverlayView.Label(onScreen, fr, colors[0], colors[1], size, false);
+        Rect onScreen = new Rect((int) (map.ox + padded.left * map.kx), (int) (map.oy + padded.top * map.ky),
+                (int) (map.ox + padded.right * map.kx), (int) (map.oy + padded.bottom * map.ky));
+        float size = boxInBmp.height() * map.ky * 0.95f;
+        OverlayView.Label lab = new OverlayView.Label(onScreen, fr, colors[0], colors[1], size, false);
+        if (useScreenshotColors) {
+            int[] span = LabelGeometry.freeSpan(bmp, padded, colors[0], 18, (int) (640 / map.kx));
+            lab.withRoom((int) (map.ox + span[0] * map.kx), (int) (map.ox + span[1] * map.kx));
+        }
+        return lab;
     }
 
     /** Vérifie régulièrement si l'écran a changé sans appui de touche (ex. valeur mise à jour). */
@@ -738,6 +1095,16 @@ public class TranslateService extends AccessibilityService
         handler.postDelayed(watchRunnable, 1500);
         if (ocrBusy || SystemClock.uptimeMillis() - lastKeyAt < 800) return;
         if (idleRepeats >= 2) return; // écran animé : on attend le prochain appui de touche
+        if (usingWindowShots()) {
+            shootTarget((b, area) -> {
+                if (b == null || !ocrMode || ocrBusy) return;
+                if (lastSig == null || !sameScreen(signature(b), lastSig)) {
+                    ocrFromWatch = true;
+                    scheduleOcr(0);
+                }
+            });
+            return;
+        }
         shoot(b -> {
             if (b == null || !ocrMode || ocrBusy) return;
             int[] sig = signature(b);
@@ -746,6 +1113,81 @@ public class TranslateService extends AccessibilityService
                 scheduleOcr(0);
             }
         });
+    }
+
+    // ------------------------------------------------------------------ capture de la fenêtre traduite
+
+    /** Reçoit une capture de la zone {@code area} de l'écran ; valable seulement pendant l'appel. */
+    private interface AreaShotCallback {
+        void onShot(Bitmap bmp, Rect area);
+    }
+
+    /** Android 14+ : capture de la seule fenêtre traduite, sans notre surimpression. */
+    private boolean usingWindowShots() {
+        return Build.VERSION.SDK_INT >= 34 && ocrWindowId >= 0 && windowShotFailures < 3;
+    }
+
+    private void shootTarget(final AreaShotCallback cb) {
+        if (usingWindowShots()) {
+            final Rect area = new Rect(ocrWindowBounds);
+            try {
+                takeScreenshotOfWindow(ocrWindowId, getMainExecutor(), new TakeScreenshotCallback() {
+                    @Override
+                    public void onSuccess(ScreenshotResult result) {
+                        windowShotFailures = 0;
+                        Bitmap sw = toSoftware(result);
+                        try {
+                            cb.onShot(sw, area);
+                        } finally {
+                            if (sw != null) sw.recycle();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(int errorCode) {
+                        if (errorCode == ERROR_TAKE_SCREENSHOT_INTERVAL_TIME_SHORT) {
+                            handler.postDelayed(() -> shootTarget(cb), 100);
+                            return;
+                        }
+                        windowShotFailures++;
+                        Journal.log("capture de fenêtre refusée, code " + errorCode);
+                        shootHidden(cb);
+                    }
+                });
+                return;
+            } catch (Throwable t) {
+                windowShotFailures = 3;
+                Journal.log("capture de fenêtre indisponible", t);
+            }
+        }
+        shootHidden(cb);
+    }
+
+    /** Secours : capture plein écran après avoir masqué notre surimpression. */
+    private void shootHidden(final AreaShotCallback cb) {
+        overlay.setVisibility(View.INVISIBLE);
+        handler.postDelayed(() -> shoot(b -> {
+            overlay.setVisibility(View.VISIBLE);
+            DisplayMetrics dm = realMetrics();
+            cb.onShot(b, new Rect(0, 0, dm.widthPixels, dm.heightPixels));
+        }), 50);
+    }
+
+    private static Bitmap toSoftware(ScreenshotResult result) {
+        Bitmap sw = null;
+        try {
+            HardwareBuffer hb = result.getHardwareBuffer();
+            Bitmap hw = Bitmap.wrapHardwareBuffer(hb, result.getColorSpace());
+            if (hw != null) {
+                sw = hw.copy(Bitmap.Config.ARGB_8888, false);
+                hw.recycle();
+            }
+            hb.close();
+        } catch (Throwable t) {
+            Log.w(TAG, "Capture illisible", t);
+            Journal.log("capture illisible", t);
+        }
+        return sw;
     }
 
     // ------------------------------------------------------------------ captures d'écran (file d'attente)
@@ -778,19 +1220,7 @@ public class TranslateService extends AccessibilityService
                 public void onSuccess(ScreenshotResult result) {
                     shotInFlight = false;
                     shotFailures = 0;
-                    Bitmap sw = null;
-                    try {
-                        HardwareBuffer hb = result.getHardwareBuffer();
-                        Bitmap hw = Bitmap.wrapHardwareBuffer(hb, result.getColorSpace());
-                        if (hw != null) {
-                            sw = hw.copy(Bitmap.Config.ARGB_8888, false);
-                            hw.recycle();
-                        }
-                        hb.close();
-                    } catch (Throwable t) {
-                        Log.w(TAG, "Capture illisible", t);
-                        Journal.log("capture illisible", t);
-                    }
+                    Bitmap sw = toSoftware(result);
                     deliver(batch, sw);
                     if (sw != null) sw.recycle();
                     pumpShots();
@@ -880,16 +1310,20 @@ public class TranslateService extends AccessibilityService
         return new int[]{bg, fg};
     }
 
-    /** Empreinte grossière de l'écran (grille 64x36 de luminosité). */
+    /** Grille d'échantillonnage : un point tous les 10 px environ, assez fin pour voir un texte changer. */
+    private static final int SIG_W = 192, SIG_H = 108;
+
+    /** Empreinte de l'écran (luminosité sur une grille SIG_W x SIG_H). */
     private static int[] signature(Bitmap bmp) {
-        int gw = 64, gh = 36;
+        int gw = SIG_W, gh = SIG_H;
         int[] s = new int[gw * gh];
         int w = bmp.getWidth();
         int h = bmp.getHeight();
+        int[] row = new int[w];
         for (int y = 0; y < gh; y++) {
+            bmp.getPixels(row, 0, w, 0, Math.min(h - 1, y * h / gh + h / gh / 2), w, 1);
             for (int x = 0; x < gw; x++) {
-                int c = bmp.getPixel(Math.min(w - 1, x * w / gw + w / gw / 2), Math.min(h - 1, y * h / gh + h / gh / 2));
-                s[y * gw + x] = luminance(c);
+                s[y * gw + x] = luminance(row[Math.min(w - 1, x * w / gw + w / gw / 2)]);
             }
         }
         return s;
