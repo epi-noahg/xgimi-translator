@@ -8,7 +8,8 @@ No root, fully offline, fully reversible.
 | Model | Status |
 |---|---|
 | **RS30 Ultra** (`XGIMI TV DOHKO`, Android 14) | ✅ Tested, works |
-| RS30 Pro / Pro Max / Ultra Max (China) | ❓ Not tested, should work |
+| **RS30 Pro** (`XGIMI TV DOHKO`, product `athena3pro`, Android 14) | ✅ Tested, works |
+| RS30 Pro Max / Ultra Max (China) | ❓ Not tested, should work |
 | Horizon 30 series (global) | ➖ Not needed: runs Google TV with normal language settings |
 
 I only own an **RS30 Ultra**. According to the launch coverage, the four China-market RS30 models share:
